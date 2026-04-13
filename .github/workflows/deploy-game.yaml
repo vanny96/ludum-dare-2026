@@ -49,6 +49,11 @@ jobs:
           mkdir -v -p ~/.config/
           mv /root/.config/godot ~/.config/godot
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      
+      - name: Install missing Linux libs
+        run: |
+          apt-get update
+          apt-get install -y libfontconfig1
 
       - name: Create and push exports
         env:
