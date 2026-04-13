@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="<game-name>"
+config/name="ludum-dare-2026"
 run/main_scene="uid://rpj6wtste4ls"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"

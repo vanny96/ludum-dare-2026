@@ -1,18 +1,18 @@
 godot:
   version: 4.6.1
 itch_io:
-  name: <game-name>
-  game: vanny96/<game-name>
+  name: ludum-dare-2026
+  game: vanny96/ludum-dare-2026
   exports:
   - name: Web
-	tag: web
-	exportDir: /tmp/web
-	exportRelease: /tmp/web/index.html
+    tag: web
+    exportDir: /tmp/web
+    exportRelease: /tmp/web/index.html
   - name: Windows Desktop
-	tag: windows
-	exportDir: /tmp/windows
-	exportRelease: /tmp/windows/<game-name>.exe
+    tag: windows
+    exportDir: /tmp/windows
+    exportRelease: /tmp/windows/ludum-dare-2026.exe
   - name: macOS
-	tag: mac
-	exportDir: /tmp/mac
-	exportRelease: /tmp/mac/<game-name>.app
+    tag: mac
+    exportDir: /tmp/mac
+    exportRelease: /tmp/mac/ludum-dare-2026.app
