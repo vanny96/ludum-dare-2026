@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_qsouf")
 
 [node name="HFlowContainer" type="HBoxContainer" parent="." unique_id=1936409503]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-theme_override_constants/separation = 30
 
 [node name="Image" type="TextureRect" parent="HFlowContainer" unique_id=1589028292]
 custom_minimum_size = Vector2(200, 200)
@@ -23,10 +23,5 @@ layout_mode = 2
 texture = ExtResource("1_17npx")
 expand_mode = 3
 stretch_mode = 5
-
-[node name="Replay" type="Button" parent="HFlowContainer" unique_id=1807537929]
-visible = false
-layout_mode = 2
-text = "Replay"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1952655909]

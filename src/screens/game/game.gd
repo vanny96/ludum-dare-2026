@@ -29,15 +29,19 @@ func set_to_camera(i: int):
 	self.current_camera_idx = i
 	
 func _ready() -> void:
-	#self.buttons.dot.connect(func(): computer.add_char("."))
-	#self.buttons.boop.connect(func(): computer.add_char("|"))
-	#self.buttons.dash.connect(func(): computer.add_char("-"))
-	#self.buttons.space.connect(func(): computer.add_char(" "))
-	self.left.pressed.connect(func(): self.set_to_camera(self.current_camera_idx - 1))
-	self.right.pressed.connect(func(): self.set_to_camera(self.current_camera_idx + 1))
-	
+	self.buttons.dot.connect(func(): computer.add_char("."))
+	self.buttons.boop.connect(func(): computer.add_char("|"))
+	self.buttons.dash.connect(func(): computer.add_char("-"))
+	self.buttons.space.connect(func(): computer.add_char(" "))
+	self.signal_emitter.dot_played.connect(computer.add_char.bind("."))
+	self.signal_emitter.boop_played.connect(computer.add_char.bind("|"))
+	self.signal_emitter.dash_played.connect(computer.add_char.bind("-"))
+	self.signal_emitter.space_played.connect(computer.add_char.bind(" "))
+	self.signal_emitter.end_of_word_played.connect(computer.add_char.bind("/"))
 	self.signal_emitter.replay.connect(play_message)
 	self.submit_buttons.submit_answer.connect(submit_answer)
+	
+	play_message()
 
 func play_message():
 	signal_emitter.play_message(current_message.get_encrypted_message())
@@ -58,5 +62,6 @@ func submit_answer(enemy: bool):
 	
 	if current_day_idx < daily_messages.size():
 		current_message = daily_messages[current_day_idx].messages[current_message_idx]
+		play_message()
 	else:
 		print("All messages processed.")
