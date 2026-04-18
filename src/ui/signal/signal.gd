@@ -1,11 +1,7 @@
 class_name SignalPanel extends PanelContainer
 
 signal replay
-signal dot_played
-signal dash_played
-signal boop_played
-signal space_played
-signal end_of_word_played
+signal signal_played(symbol: String)
 
 const SPEAKER = preload("uid://copa0m4oo0g2p")
 const SPEAKER_SOUND = preload("uid://cmtgw5gp41fat")
@@ -28,6 +24,7 @@ func play_message(message: Array[EncryptedMessage.MorseSignal]):
 			EncryptedMessage.MorseSignal.EndOfWord: await self.end_of_word()
 
 func dot():
+	signal_played.emit(".")
 	audio_stream_player.stream = DOT
 	audio_stream_player.play()
 	self.image.texture = SPEAKER_SOUND
@@ -35,6 +32,7 @@ func dot():
 	self.image.texture = SPEAKER
 	
 func dash():
+	signal_played.emit("-")
 	audio_stream_player.stream = DASH
 	audio_stream_player.play()
 	self.image.texture = SPEAKER_SOUND_2
@@ -42,6 +40,7 @@ func dash():
 	self.image.texture = SPEAKER
 	
 func boop():
+	signal_played.emit("|")
 	audio_stream_player.stream = BOOP
 	audio_stream_player.play()
 	self.image.texture = SPEAKER_SOUND
@@ -50,6 +49,8 @@ func boop():
 
 func space():
 	await get_tree().create_timer(0.2).timeout
+	signal_played.emit(" ")
 	
 func end_of_word():
 	await get_tree().create_timer(0.4).timeout
+	signal_played.emit("/")

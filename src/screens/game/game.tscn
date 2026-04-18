@@ -141,10 +141,9 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Right"
 
-[node name="TextureButton" type="Button" parent="." unique_id=917125478]
+[node name="Next" type="Button" parent="." unique_id=917125478]
 offset_left = 435.0
 offset_top = 865.0
 offset_right = 735.0
 offset_bottom = 905.0
-theme_override_styles/normal = ExtResource("14_b2esr")
 text = "Next"
