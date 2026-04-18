@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var cameras: Array[Camera2D] = [
-	$Camera1, $Camera2, $Camera3, $Camera4	
+	$Camera1, $Camera2, $Camera3
 ]
 @onready var current_camera_idx: int = 0
 
