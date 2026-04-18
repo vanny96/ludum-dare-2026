@@ -1,17 +1,35 @@
 [gd_scene format=3 uid="uid://c03fgrkv07ow"]
 
-[ext_resource type="Texture2D" uid="uid://b3pmxtfp2xuce" path="res://src/ui/catalogue/assets/face.png" id="1_8bhkb"]
+[ext_resource type="Script" uid="uid://mvtusi60lott" path="res://src/ui/catalogue/spy.gd" id="1_2pb74"]
 [ext_resource type="Texture2D" uid="uid://boprscxbsdlbg" path="res://src/ui/catalogue/assets/pin.png" id="2_6yx0d"]
+[ext_resource type="Resource" uid="uid://dm5pf8kru1k2k" path="res://resources/spies/viper.tres" id="2_x8nlg"]
 [ext_resource type="StyleBox" uid="uid://dact5u1762vlx" path="res://src/ui/buttons/assets/button_style.tres" id="3_bov8p"]
+[ext_resource type="PackedScene" uid="uid://h3koug8j8vrn" path="res://src/ui/books/spynote/SpyNote.tscn" id="5_3e42l"]
 
-[node name="Spy" type="Control" unique_id=1364740593]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4sj06"]
+load_path = "res://.godot/imported/face.png-5d27ba6b1f3872e0e6d9d03c3f486ba1.ctex"
+
+[node name="Spy" type="Control" unique_id=1364740593 node_paths=PackedStringArray("face", "name_label", "notes_button", "spy_note_canvas", "spy_note")]
 custom_minimum_size = Vector2(200, 152)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -76.0
+offset_right = 100.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2pb74")
+spy = ExtResource("2_x8nlg")
+face = NodePath("VBoxContainer/NameFace/Face")
+name_label = NodePath("VBoxContainer/NameFace/NameLabel")
+notes_button = NodePath("VBoxContainer/PinNote/Button")
+spy_note_canvas = NodePath("CanvasLayer")
+spy_note = NodePath("CanvasLayer/SpyNote")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1636819118]
 layout_mode = 1
@@ -35,20 +53,33 @@ layout_mode = 2
 
 [node name="Face" type="TextureRect" parent="VBoxContainer/NameFace" unique_id=667753335]
 layout_mode = 2
-texture = ExtResource("1_8bhkb")
+texture = SubResource("CompressedTexture2D_4sj06")
 
-[node name="Label" type="Label" parent="VBoxContainer/NameFace" unique_id=509472875]
+[node name="NameLabel" type="Label" parent="VBoxContainer/NameFace" unique_id=509472875]
 layout_mode = 2
-text = "Piet hendriks"
+text = "VIPER"
 
 [node name="PinNote" type="HBoxContainer" parent="VBoxContainer" unique_id=1357525651]
 layout_mode = 2
 
 [node name="TextureRect" type="TextureButton" parent="VBoxContainer/PinNote" unique_id=1025366231]
 layout_mode = 2
+size_flags_horizontal = 3
 texture_normal = ExtResource("2_6yx0d")
 
 [node name="Button" type="Button" parent="VBoxContainer/PinNote" unique_id=283446608]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/normal = ExtResource("3_bov8p")
 text = "Notes"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1716648990]
+visible = false
+
+[node name="SpyNote" parent="CanvasLayer" unique_id=1129416725 instance=ExtResource("5_3e42l")]
+visible = false
+top_level = true
+z_index = 10
+offset_top = -475.0
+offset_bottom = 475.0
+metadata/_edit_use_anchors_ = true

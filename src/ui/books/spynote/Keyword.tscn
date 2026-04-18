@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bqcbge8v2lsmy"]
+
+[ext_resource type="Script" uid="uid://ckw6l8kywlcrt" path="res://src/ui/books/spynote/keyword.gd" id="1_stvpd"]
+
+[node name="Keyword" type="RichTextLabel" unique_id=375129993]
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("1_stvpd")
+keyword = "TEST"
+keyword_template = "[u][color={color}]{keyword}"
+positive_color = Color(0, 0.40233073, 0, 1)
+negative_color = Color(0.56280726, 0, 0, 1)

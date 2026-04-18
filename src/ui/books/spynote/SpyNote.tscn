@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://h3koug8j8vrn"]
+
+[ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_omm0n"]
+[ext_resource type="Script" uid="uid://b8h244888t554" path="res://src/ui/books/spynote/spynote.gd" id="2_7yh4w"]
+[ext_resource type="PackedScene" uid="uid://bqcbge8v2lsmy" path="res://src/ui/books/spynote/Keyword.tscn" id="3_7yh4w"]
+[ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/books/assets/theme/page.png" id="3_hwva0"]
+
+[node name="SpyNote" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("name_value", "gender_value", "age_value", "positive_keywords_parent", "negative_keywords_parent")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.0
+offset_top = -310.0
+offset_right = 412.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+focus_mode = 1
+theme = ExtResource("1_omm0n")
+theme_type_variation = &"RulebookPanel"
+script = ExtResource("2_7yh4w")
+name_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/NameValue")
+gender_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/GenderValue")
+age_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/AgeValue")
+positive_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/PostiveKeywords")
+negative_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/NegativeKeywords")
+
+[node name="Page" type="HBoxContainer" parent="." unique_id=854456512]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PageLeft" type="PanelContainer" parent="Page" unique_id=216568599]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_omm0n")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page/PageLeft" unique_id=1448054836]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer" unique_id=1482230632]
+layout_mode = 2
+mouse_filter = 2
+text = "Agent Details"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="BaseData" type="GridContainer" parent="Page/PageLeft/VBoxContainer" unique_id=1941853423]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 50
+columns = 2
+
+[node name="NameLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=1712092077]
+layout_mode = 2
+text = "Name:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameValue" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=956501979]
+layout_mode = 2
+text = "Test Agent"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GenderLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=1932605628]
+layout_mode = 2
+text = "Gender:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="GenderValue" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=1944931374]
+layout_mode = 2
+text = "Male"
+fit_content = true
+autowrap_mode = 0
+
+[node name="AgeLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=431400193]
+layout_mode = 2
+text = "Age:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="AgeValue" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=928395751]
+layout_mode = 2
+text = "29"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSeparator" type="HSeparator" parent="Page/PageLeft/VBoxContainer" unique_id=40565200]
+layout_mode = 2
+
+[node name="KeywordsLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer" unique_id=1417805290]
+layout_mode = 2
+text = "Keywords"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Keywords" type="GridContainer" parent="Page/PageLeft/VBoxContainer" unique_id=100271239]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 50
+columns = 2
+
+[node name="PositiveLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/Keywords" unique_id=1214532966]
+layout_mode = 2
+text = "Positive"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NegativeLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/Keywords" unique_id=1360701397]
+layout_mode = 2
+text = "Negative"
+fit_content = true
+autowrap_mode = 0
+
+[node name="PostiveKeywords" type="VBoxContainer" parent="Page/PageLeft/VBoxContainer/Keywords" unique_id=1606466306]
+layout_mode = 2
+
+[node name="Keyword" parent="Page/PageLeft/VBoxContainer/Keywords/PostiveKeywords" unique_id=375129993 instance=ExtResource("3_7yh4w")]
+layout_mode = 2
+text = "[u][color=6700ff]Hello"
+keyword = "Hello"
+
+[node name="NegativeKeywords" type="VBoxContainer" parent="Page/PageLeft/VBoxContainer/Keywords" unique_id=54140541]
+layout_mode = 2
+
+[node name="Keyword" parent="Page/PageLeft/VBoxContainer/Keywords/NegativeKeywords" unique_id=1919451173 instance=ExtResource("3_7yh4w")]
+layout_mode = 2
+text = "[u][color=900000ff]Hello"
+keyword = "Hello"
+positive = false
+
+[node name="PageRight" type="PanelContainer" parent="Page" unique_id=1864925008]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_omm0n")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page/PageRight" unique_id=1969255308]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Page/PageRight/VBoxContainer" unique_id=943230164]
+layout_mode = 2
+mouse_filter = 2
+text = "Notes"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Page/PageRight/VBoxContainer" unique_id=1198858199]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Click to type"
+context_menu_enabled = false
+emoji_menu_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+
+[node name="Dragger" type="Control" parent="." unique_id=734381431]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Dragger" unique_id=1447941150]
+modulate = Color(1, 0.30980393, 0.047058824, 1)
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -10.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 1
+texture = ExtResource("3_hwva0")
+region_rect = Rect2(0, 5.4521685, 100, 94.54783)
+patch_margin_left = 10
+patch_margin_right = 10
+patch_margin_bottom = 10

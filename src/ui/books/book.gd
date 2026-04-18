@@ -17,7 +17,8 @@ func _gui_input(event: InputEvent) -> void:
 		global_position = get_global_mouse_position() - drag_offset
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(get_toggle_action_name()):
+	var toggle_action := get_toggle_action_name()
+	if toggle_action and event.is_action_pressed(toggle_action):
 		self.visible = !self.visible
 		if self.visible:
 			grab_focus()
