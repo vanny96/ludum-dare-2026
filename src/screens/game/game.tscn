@@ -21,9 +21,9 @@ color = Color(0.09793597, 0.3301223, 0.3108921, 1)
 
 [node name="Signal" parent="UI" unique_id=1605290793 instance=ExtResource("2_osde3")]
 anchors_preset = -1
-anchor_left = 0.05
+anchor_left = 0.018
 anchor_top = 0.7
-anchor_right = 0.1
+anchor_right = 0.08
 anchor_bottom = 0.9
 grow_horizontal = 1
 grow_vertical = 1
