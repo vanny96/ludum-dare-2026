@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_s3aed"]
 [ext_resource type="Script" uid="uid://k4uds137doij" path="res://src/ui/books/notebook/notebook.gd" id="2_lifnf"]
+[ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/books/assets/theme/page.png" id="3_rtx8g"]
 
 [node name="Notebook" type="PanelContainer" unique_id=1129416725]
 anchors_preset = 8
@@ -9,10 +10,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -252.0
-offset_top = -300.0
-offset_right = 252.0
-offset_bottom = 300.0
+offset_left = -412.0
+offset_top = -310.0
+offset_right = 412.0
+offset_bottom = 310.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -38,6 +39,7 @@ layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer" unique_id=1482230632]
 layout_mode = 2
+mouse_filter = 2
 text = "Notes"
 fit_content = true
 horizontal_alignment = 1
@@ -46,6 +48,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 placeholder_text = "Click to type"
+context_menu_enabled = false
+emoji_menu_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
 
 [node name="PageRight" type="PanelContainer" parent="Page" unique_id=1864925008]
 custom_minimum_size = Vector2(400, 600)
@@ -54,6 +60,44 @@ mouse_filter = 2
 theme = ExtResource("1_s3aed")
 theme_type_variation = &"PagePanel"
 
-[node name="TextEdit" type="TextEdit" parent="Page/PageRight" unique_id=1176445297]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page/PageRight" unique_id=1969255308]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Page/PageRight/VBoxContainer" unique_id=943230164]
+layout_mode = 2
+mouse_filter = 2
+text = "Notes"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Page/PageRight/VBoxContainer" unique_id=1198858199]
 layout_mode = 2
 size_flags_vertical = 3
+placeholder_text = "Click to type"
+context_menu_enabled = false
+emoji_menu_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+
+[node name="Dragger" type="Control" parent="." unique_id=734381431]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Dragger" unique_id=1447941150]
+modulate = Color(1, 0.30980393, 0.047058824, 1)
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -10.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 1
+texture = ExtResource("3_rtx8g")
+region_rect = Rect2(0, 5.4521685, 100, 94.54783)
+patch_margin_left = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
