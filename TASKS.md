@@ -5,8 +5,8 @@
 ### Immediate
 
 * Writing rules in rulebook: Alex
-* Agents notes: Gio 
-* Agents good and bad keywords: Gio
+* Agents notes: Gio DONE
+* Agents good and bad keywords: Gio DONE
 * Put UI buttons for opening note and rule books: Gio
 * Pin on map:
 * Loop through days:
