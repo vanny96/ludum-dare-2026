@@ -1,4 +1,4 @@
-class_name SubmitButtons extends HBoxContainer
+class_name SubmitButtons extends Control
 
 signal submit_answer(enemy: bool)
 
@@ -6,5 +6,5 @@ signal submit_answer(enemy: bool)
 @onready var enemy_button: Button = $Container/Enemy
 
 func _ready() -> void:
-	ally_button.pressed.emit(submit_answer.emit.bind(false))
-	enemy_button.pressed.emit(submit_answer.emit.bind(true))
+	ally_button.pressed.connect(submit_answer.emit.bind(false))
+	enemy_button.pressed.connect(submit_answer.emit.bind(true))

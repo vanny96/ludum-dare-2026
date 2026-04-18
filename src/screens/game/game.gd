@@ -5,6 +5,7 @@ extends Node2D
 @onready var buttons: MorseButtons = $UI/Buttons
 @onready var signal_emitter: SignalPanel = $UI/Signal
 @onready var computer: Computer = $UI/Computer
+@onready var submit_buttons: SubmitButtons = $UI/SubmitButtons
 @onready var current_message := daily_messages[current_day_idx].messages[current_message_idx]
 
 var current_day_idx: int = 0
@@ -19,6 +20,7 @@ func _ready() -> void:
 	self.buttons.dash.connect(func(): computer.add_char("-"))
 	self.buttons.space.connect(func(): computer.add_char(" "))
 	self.signal_emitter.replay.connect(play_message)
+	self.submit_buttons.submit_answer.connect(submit_answer)
 
 func play_message():
 	signal_emitter.play_message(current_message.get_encrypted_message())

@@ -59,8 +59,6 @@ anchor_top = 0.05
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
-
 [node name="SubmitButtons" parent="UI" unique_id=1264457131 instance=ExtResource("13_4caxw")]
 anchors_preset = 7
 anchor_left = 0.5
@@ -74,3 +72,5 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
+
+[node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
