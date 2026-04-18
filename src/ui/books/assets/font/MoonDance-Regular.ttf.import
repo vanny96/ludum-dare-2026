@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bvlxqenskbj0q"
-path="res://.godot/imported/MoonDance-Regular.ttf-f704999a88e476e0d0fce51e2e4f6a42.fontdata"
+path="res://.godot/imported/MoonDance-Regular.ttf-b71fb5b5f958ba1d419ef81755560fb1.fontdata"
 
 [deps]
 
-source_file="res://src/ui/rulebook/assets/font/MoonDance-Regular.ttf"
-dest_files=["res://.godot/imported/MoonDance-Regular.ttf-f704999a88e476e0d0fce51e2e4f6a42.fontdata"]
+source_file="res://src/ui/books/assets/font/MoonDance-Regular.ttf"
+dest_files=["res://.godot/imported/MoonDance-Regular.ttf-b71fb5b5f958ba1d419ef81755560fb1.fontdata"]
 
 [params]
 

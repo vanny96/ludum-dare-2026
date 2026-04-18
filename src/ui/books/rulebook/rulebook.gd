@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Book
 
 var pages: Array[Control] = []
 var current_page: int = 0
@@ -11,14 +11,16 @@ func _ready() -> void:
 	_update_page_visibility()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_rulebook"):
-		self.visible = !self.visible
+	super(event)
 	
-	if self.visible:
+	if self.visible and self.has_focus():
 		if event.is_action_pressed("move_right"):
 			_change_page(1)
 		elif event.is_action_pressed("move_left"):
 			_change_page(-1)
+
+func get_toggle_action_name() -> String:
+	return "toggle_rulebook"
 
 func _change_page(direction: int) -> void:
 	if pages.size() == 0: return

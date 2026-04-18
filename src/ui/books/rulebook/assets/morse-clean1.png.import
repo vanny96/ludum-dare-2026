@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bilv26tccnwbl"
-path="res://.godot/imported/page.png-5193fd9661f4e78546ab29f23f67aa55.ctex"
+uid="uid://bupwge5b68xe2"
+path="res://.godot/imported/morse-clean1.png-5627f4009e032a8b12cb2872c99461c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/rulebook/assets/theme/page.png"
-dest_files=["res://.godot/imported/page.png-5193fd9661f4e78546ab29f23f67aa55.ctex"]
+source_file="res://src/ui/books/rulebook/assets/morse-clean1.png"
+dest_files=["res://.godot/imported/morse-clean1.png-5627f4009e032a8b12cb2872c99461c1.ctex"]
 
 [params]
 
