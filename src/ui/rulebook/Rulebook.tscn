@@ -17,6 +17,7 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+focus_mode = 1
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
@@ -24,19 +25,23 @@ script = ExtResource("2_y32yx")
 [node name="Page1" type="HBoxContainer" parent="." unique_id=854456512]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Page1" unique_id=216568599]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageLeft" unique_id=706005339]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=412294181]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 1"
 fit_content = true
@@ -45,6 +50,7 @@ autowrap_mode = 0
 [node name="CodeDescription" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=201372700]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Super Secret Code Map"
@@ -53,21 +59,25 @@ autowrap_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="Page1/PageLeft/VBoxContainer" unique_id=1542792136]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("3_3h2gt")
 expand_mode = 5
 
 [node name="PageRight" type="PanelContainer" parent="Page1" unique_id=1864925008]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageRight" unique_id=1077657755]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer" unique_id=163709791]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 2"
 fit_content = true
@@ -77,19 +87,23 @@ autowrap_mode = 0
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Page2" unique_id=235781307]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageLeft" unique_id=216489208]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=450226905]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 3"
 fit_content = true
@@ -98,15 +112,18 @@ autowrap_mode = 0
 [node name="PageRight" type="PanelContainer" parent="Page2" unique_id=1060027897]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageRight" unique_id=27430960]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1904316434]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 4"
 fit_content = true
@@ -116,19 +133,23 @@ autowrap_mode = 0
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Page3" unique_id=1098185818]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageLeft" unique_id=170268624]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=30070064]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 5"
 fit_content = true
@@ -137,15 +158,18 @@ autowrap_mode = 0
 [node name="PageRight" type="PanelContainer" parent="Page3" unique_id=961407434]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageRight" unique_id=328168665]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer" unique_id=1610900800]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 bbcode_enabled = true
 text = "Page 6"
 fit_content = true
