@@ -4,7 +4,7 @@ extends Node2D
 @onready var computer: Computer = $UI/Computer
 
 func _ready() -> void:
-		
+	pass
 	
 
 func _process(delta: float) -> void:

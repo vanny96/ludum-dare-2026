@@ -11,7 +11,7 @@ signal space
 @onready var dash_btn: Button = $MarginContainer/VBoxContainer/Morse/LC3/Dash
 @onready var space_btn: Button = $MarginContainer/VBoxContainer/Space/Space
 
-func _init():
+func _ready() -> void:
 	self._register()
 
 func _input(event: InputEvent) -> void:
