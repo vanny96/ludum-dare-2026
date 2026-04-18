@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8w6wjcls4g2b"]
 
 [ext_resource type="Script" uid="uid://b6un2w8oby2md" path="res://src/ui/submitbuttons/submit_buttons.gd" id="1_d2etp"]
+[ext_resource type="StyleBox" uid="uid://dact5u1762vlx" path="res://src/ui/buttons/assets/button_style.tres" id="2_4uc0m"]
 
 [node name="SubmitButtons" type="Control" unique_id=811331781]
 layout_mode = 3
@@ -28,8 +29,10 @@ alignment = 1
 
 [node name="Ally" type="Button" parent="Container" unique_id=1496627968]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("2_4uc0m")
 text = "Ally"
 
 [node name="Enemy" type="Button" parent="Container" unique_id=1543510420]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("2_4uc0m")
 text = "Enemy"

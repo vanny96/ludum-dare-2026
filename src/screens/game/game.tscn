@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://cbpp42gc1ugct" path="res://resources/encrypted_messages/message_4_swine.tres" id="6_2kkvg"]
 [ext_resource type="Resource" uid="uid://76oxywkq5ak8" path="res://resources/encrypted_messages/message_5_swine_compromised.tres" id="7_wwvri"]
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
+[ext_resource type="StyleBox" uid="uid://dact5u1762vlx" path="res://src/ui/buttons/assets/button_style.tres" id="14_b2esr"]
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
@@ -23,26 +24,54 @@ metadata/_custom_type_script = "uid://c12aylqpvesix"
 script = ExtResource("1_qmidl")
 daily_messages = Array[ExtResource("2_ijd1l")]([SubResource("Resource_4caxw")])
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
+[node name="Camera1" type="Camera2D" parent="." unique_id=809105464]
+position = Vector2(959, 540)
 
-[node name="ColorRect" type="ColorRect" parent="UI" unique_id=817348377]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Camera2" type="Camera2D" parent="." unique_id=585564033]
+position = Vector2(1920, 540)
+
+[node name="Camera3" type="Camera2D" parent="." unique_id=1981896865]
+position = Vector2(2880, 540)
+
+[node name="Camera4" type="Camera2D" parent="." unique_id=529266136]
+position = Vector2(3840, 545)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=817348377]
+offset_left = -20034.0
+offset_top = -13035.0
+offset_right = 40924.0
+offset_bottom = 27151.0
 color = Color(0.09793597, 0.3301223, 0.3108921, 1)
 
-[node name="Signal" parent="UI" unique_id=1605290793 instance=ExtResource("2_osde3")]
+[node name="Computer" parent="." unique_id=642438928 instance=ExtResource("4_047u2")]
 anchors_preset = -1
-anchor_left = 0.018
-anchor_top = 0.7
-anchor_right = 0.08
-anchor_bottom = 0.9
+anchor_left = 0.1
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 173.0
+offset_top = 180.0
+offset_right = 955.0
+offset_bottom = 628.0
+
+[node name="Signal" parent="." unique_id=1605290793 instance=ExtResource("2_osde3")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.6
+anchor_right = 0.3
+anchor_bottom = 0.7
+offset_left = 480.0
+offset_top = 648.0
+offset_right = 680.0
+offset_bottom = 848.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
+
 [node name="Buttons" parent="UI" unique_id=2035185175 instance=ExtResource("3_osde3")]
+visible = false
 anchors_preset = -1
 anchor_left = 0.2
 anchor_top = 0.9
@@ -51,13 +80,6 @@ anchor_bottom = 0.9
 offset_right = 0.0
 offset_bottom = 0.0
 grow_vertical = 0
-
-[node name="Computer" parent="UI" unique_id=642438928 instance=ExtResource("4_047u2")]
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.05
-anchor_right = 0.5
-anchor_bottom = 0.5
 
 [node name="SubmitButtons" parent="UI" unique_id=1264457131 instance=ExtResource("13_4caxw")]
 anchors_preset = 7
@@ -74,3 +96,34 @@ grow_vertical = 0
 size_flags_vertical = 8
 
 [node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
+
+[node name="Left" type="Button" parent="UI" unique_id=1168788120]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_vertical = 2
+text = "Left"
+
+[node name="Right" type="Button" parent="UI" unique_id=1607406335]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Right"
+
+[node name="TextureButton" type="Button" parent="." unique_id=917125478]
+offset_left = 435.0
+offset_top = 865.0
+offset_right = 735.0
+offset_bottom = 905.0
+theme_override_styles/normal = ExtResource("14_b2esr")
+text = "Next"
