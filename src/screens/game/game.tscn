@@ -13,7 +13,8 @@
 [ext_resource type="Resource" uid="uid://cbpp42gc1ugct" path="res://resources/encrypted_messages/message_4_swine.tres" id="6_2kkvg"]
 [ext_resource type="Resource" uid="uid://76oxywkq5ak8" path="res://resources/encrypted_messages/message_5_swine_compromised.tres" id="7_wwvri"]
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
-[ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/rulebook/Rulebook.tscn" id="14_b2esr"]
+[ext_resource type="PackedScene" uid="uid://cowiv31ahpvla" path="res://src/ui/books/notebook/Notebook.tscn" id="14_2kkvg"]
+[ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
@@ -84,5 +85,16 @@ offset_top = -310.0
 offset_right = 0.0
 offset_bottom = 310.0
 grow_horizontal = 0
+
+[node name="Notebook" parent="UI" unique_id=648621706 instance=ExtResource("14_2kkvg")]
+visible = false
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = -310.0
+offset_right = 824.0
+offset_bottom = 310.0
+grow_horizontal = 1
 
 [node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]

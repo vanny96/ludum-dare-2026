@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cowiv31ahpvla"]
+
+[ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_s3aed"]
+[ext_resource type="Script" uid="uid://k4uds137doij" path="res://src/ui/books/notebook/notebook.gd" id="2_lifnf"]
+
+[node name="Notebook" type="PanelContainer" unique_id=1129416725]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -300.0
+offset_right = 252.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+focus_mode = 1
+theme = ExtResource("1_s3aed")
+theme_type_variation = &"RulebookPanel"
+script = ExtResource("2_lifnf")
+
+[node name="Page" type="HBoxContainer" parent="." unique_id=854456512]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PageLeft" type="PanelContainer" parent="Page" unique_id=216568599]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_s3aed")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Page/PageLeft" unique_id=1448054836]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer" unique_id=1482230632]
+layout_mode = 2
+text = "Notes"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Page/PageLeft/VBoxContainer" unique_id=795292335]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Click to type"
+
+[node name="PageRight" type="PanelContainer" parent="Page" unique_id=1864925008]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_s3aed")
+theme_type_variation = &"PagePanel"
+
+[node name="TextEdit" type="TextEdit" parent="Page/PageRight" unique_id=1176445297]
+layout_mode = 2
+size_flags_vertical = 3

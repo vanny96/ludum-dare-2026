@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b3dr3rogfv37e"]
 
-[ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/rulebook/assets/theme/rulebook_theme.tres" id="1_h4pn0"]
-[ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/rulebook/rulebook.gd" id="2_y32yx"]
-[ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/rulebook/assets/content/morse-clean1.png" id="3_3h2gt"]
+[ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
+[ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
+[ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
 
 [node name="Rulebook" type="PanelContainer" unique_id=1129416725]
 anchors_preset = 8

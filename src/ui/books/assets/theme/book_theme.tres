@@ -1,8 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://dydlnfrc4bise"]
 
-[ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/rulebook/assets/theme/page.png" id="1_t8aik"]
-[ext_resource type="Texture2D" uid="uid://b2lyy7pp0befa" path="res://src/ui/rulebook/assets/theme/rulebook.png" id="2_jxihg"]
-[ext_resource type="FontFile" uid="uid://bvlxqenskbj0q" path="res://src/ui/rulebook/assets/font/MoonDance-Regular.ttf" id="3_jxihg"]
+[ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/books/assets/theme/page.png" id="1_t8aik"]
+[ext_resource type="Texture2D" uid="uid://b2lyy7pp0befa" path="res://src/ui/books/assets/theme/book.png" id="2_jxihg"]
+[ext_resource type="FontFile" uid="uid://bvlxqenskbj0q" path="res://src/ui/books/assets/font/MoonDance-Regular.ttf" id="3_jxihg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1gth"]
 texture = ExtResource("1_t8aik")
@@ -18,6 +18,8 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eh51o"]
+
 [resource]
 default_font = ExtResource("3_jxihg")
 PagePanel/base_type = &"PanelContainer"
@@ -26,3 +28,9 @@ RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/font_sizes/normal_font_size = 32
 RulebookPanel/base_type = &"PanelContainer"
 RulebookPanel/styles/panel = SubResource("StyleBoxTexture_txlko")
+TextEdit/colors/caret_background_color = Color(0, 0, 0, 0)
+TextEdit/colors/caret_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.46666667)
+TextEdit/font_sizes/font_size = 32
+TextEdit/styles/normal = SubResource("StyleBoxEmpty_eh51o")

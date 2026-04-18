@@ -1,10 +1,7 @@
-extends PanelContainer
+extends Book
 
 var pages: Array[Control] = []
 var current_page: int = 0
-
-var dragging: bool = false
-var drag_offset: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	for child in get_children():
@@ -13,29 +10,17 @@ func _ready() -> void:
 	
 	_update_page_visibility()
 
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed:
-				dragging = true
-				drag_offset = get_global_mouse_position() - global_position
-			else:
-				dragging = false
-
-	if event is InputEventMouseMotion and dragging:
-		global_position = get_global_mouse_position() - drag_offset
-
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_rulebook"):
-		self.visible = !self.visible
-		if self.visible:
-			grab_focus()
+	super(event)
 	
 	if self.visible and self.has_focus():
 		if event.is_action_pressed("move_right"):
 			_change_page(1)
 		elif event.is_action_pressed("move_left"):
 			_change_page(-1)
+
+func get_toggle_action_name() -> String:
+	return "toggle_rulebook"
 
 func _change_page(direction: int) -> void:
 	if pages.size() == 0: return
