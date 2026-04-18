@@ -19,11 +19,11 @@ func play_message(message: Array[EncryptedMessage.MorseSignal]):
 		if s == EncryptedMessage.MorseSignal.Dot:
 			await self.dot()
 		if s == EncryptedMessage.MorseSignal.Dash:
-			self.dash()
+			await self.dash()
 		if s == EncryptedMessage.MorseSignal.Boop:
-			self.boop()
+			await self.boop()
 		if s == EncryptedMessage.MorseSignal.EndOfWord:
-			self.space()
+			await self.space()
 
 func _ready():
 	replay_btn.pressed.connect(func(): self.replay.emit())

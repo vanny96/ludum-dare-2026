@@ -2,7 +2,16 @@
 
 [ext_resource type="Script" uid="uid://b6un2w8oby2md" path="res://src/ui/submitbuttons/submit_buttons.gd" id="1_d2etp"]
 
-[node name="SubmitButtons" type="HBoxContainer" unique_id=1264457131]
+[node name="SubmitButtons" type="Control" unique_id=811331781]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 118.0
+offset_right = 118.0
+offset_bottom = 31.0
+script = ExtResource("1_d2etp")
+
+[node name="Container" type="HBoxContainer" parent="." unique_id=1264457131]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -16,12 +25,11 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 alignment = 1
-script = ExtResource("1_d2etp")
 
-[node name="Ally" type="Button" parent="." unique_id=1496627968]
+[node name="Ally" type="Button" parent="Container" unique_id=1496627968]
 layout_mode = 2
 text = "Ally"
 
-[node name="Enemy" type="Button" parent="." unique_id=1543510420]
+[node name="Enemy" type="Button" parent="Container" unique_id=1543510420]
 layout_mode = 2
 text = "Enemy"
