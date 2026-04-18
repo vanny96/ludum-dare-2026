@@ -1,10 +1,10 @@
 class_name Computer extends Control
-@onready var blips: RichTextLabel = $MarginContainer/Blips
+@onready var blips: RichTextLabel = %Blips
 
 
 
 func add_char(s: String):
-	blips.text += s
+	blips.simulate_typing(s)
 	
 func reset():
 	blips.text = ""	

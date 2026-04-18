@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cytnhn07d8yx3"]
+
+[ext_resource type="Texture2D" uid="uid://copa0m4oo0g2p" path="res://src/ui/signal/assets/speaker.png" id="1_17npx"]
+[ext_resource type="Script" uid="uid://bp2siq2pm3qss" path="res://src/ui/signal/signal.gd" id="1_qsouf"]
+
+[node name="Signal" type="PanelContainer" unique_id=1605290793]
+texture_filter = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qsouf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1589028292]
+layout_mode = 2
+texture = ExtResource("1_17npx")
+stretch_mode = 5
