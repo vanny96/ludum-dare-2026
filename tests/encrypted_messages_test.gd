@@ -6,6 +6,7 @@ extends Node
 func run_tests():
 	test_standard_sentence()
 	test_alphanumeric_mix()
+	test_sentence_with_boop()
 	test_caesar_then_morse()
 	test_reverse_morse_hello_world()
 	test_standard_sentence_array()
@@ -32,6 +33,17 @@ func test_alphanumeric_mix():
 	
 	assert(result == expected, "Alphanumeric mix failed. Result: " + result)
 	print("test_alphanumeric_mix: Passed")
+	
+func test_sentence_with_boop():
+	var base_test = EncryptedMessage.new()
+	base_test.plain_text = "ALPHA | test"
+	base_test.encryptions.append(MorseEncode.new())
+	
+	var result = base_test.get_encrypted_message_string()
+	var expected = ".- .-.. .--. .... .- / | / - . ... -"
+	
+	assert(result == expected, "Boop test failed. Result: %s Expected: %s" % [result, expected])
+	print("test_sentence_with_boop: Passed")
 	
 func test_caesar_then_morse():
 	var base_test = EncryptedMessage.new()

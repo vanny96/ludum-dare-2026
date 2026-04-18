@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://cbpp42gc1ugct"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_i7cmu"]
+[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="2_0u7kg"]
+[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_vphx0"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_2etr4"]
+
+[sub_resource type="Resource" id="Resource_ug23p"]
+script = ExtResource("2_vphx0")
+shifts_amount = 1
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[sub_resource type="Resource" id="Resource_boyim"]
+script = ExtResource("2_0u7kg")
+metadata/_custom_type_script = "uid://bsw0dn00rku1c"
+
+[resource]
+script = ExtResource("3_2etr4")
+plain_text = "SWINE | I like encoding and never make mistakes"
+encryptions = Array[ExtResource("1_i7cmu")]([SubResource("Resource_ug23p"), SubResource("Resource_boyim")])
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

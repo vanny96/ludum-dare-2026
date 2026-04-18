@@ -2,6 +2,7 @@ class_name EncryptedMessage extends Resource
 
 @export var plain_text: String = ""
 @export var encryptions: Array[Encryption] = []
+@export var enemy: bool = false
 
 func get_encrypted_message_string() -> String:
 	var encrypted_text = plain_text
