@@ -6,4 +6,4 @@ func add_char(s: String):
 	blips.simulate_typing(s)
 	
 func reset():
-	blips.text = ""
+	blips._display_text = ""

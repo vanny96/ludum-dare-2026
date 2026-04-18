@@ -7,7 +7,7 @@ class_name EncryptedMessage extends Resource
 func get_encrypted_message_string() -> String:
 	var encrypted_text = plain_text
 	for encryption in encryptions:
-		encrypted_text = encryption.encrypt(encrypted_text)
+		encrypted_text = encryption.encode(encrypted_text)
 	return encrypted_text
 	
 func get_encrypted_message() -> Array[MorseSignal]:

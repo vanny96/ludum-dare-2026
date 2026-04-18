@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
 [ext_resource type="PackedScene" uid="uid://b8pir64hau5y1" path="res://src/ui/catalogue/catalogue.tscn" id="16_wwvri"]
 [ext_resource type="PackedScene" uid="uid://mdx8f2o5axab" path="res://src/ui/world_map/worldmap.tscn" id="17_yqpbo"]
+[ext_resource type="PackedScene" uid="uid://5buboe08s5wb" path="res://src/ui/decoder/Decoder.tscn" id="18_vaiev"]
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
@@ -160,3 +161,9 @@ offset_left = 2421.0
 offset_top = 523.0
 offset_right = 2421.0
 offset_bottom = 523.0
+
+[node name="Decoder" parent="." unique_id=1280589066 instance=ExtResource("18_vaiev")]
+offset_left = 1496.0
+offset_top = 440.0
+offset_right = 1496.0
+offset_bottom = 440.0

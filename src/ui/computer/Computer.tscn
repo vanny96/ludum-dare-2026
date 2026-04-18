@@ -41,5 +41,5 @@ theme_override_font_sizes/bold_font_size = 1
 text = "---"
 fit_content = true
 scroll_active = false
-autowrap_mode = 0
+autowrap_mode = 2
 script = ExtResource("2_uwduk")
