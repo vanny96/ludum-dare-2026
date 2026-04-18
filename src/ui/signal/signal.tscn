@@ -12,7 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qsouf")
 
+[node name="Control" type="Control" parent="." unique_id=1307995339]
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1589028292]
 layout_mode = 2
 texture = ExtResource("1_17npx")
 stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1952655909]
