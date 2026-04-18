@@ -10,7 +10,7 @@ const MORSE_DATA = {
 	"9": "----.", "0": "-----", " ": "/", "|": "|"
 }
 
-func encrypt(input: String) -> String:
+func encode(input: String) -> String:
 	var result = []
 	input = input.to_upper()
 	

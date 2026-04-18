@@ -10,6 +10,7 @@ func run_tests():
 	test_caesar_then_morse()
 	test_reverse_morse_hello_world()
 	test_standard_sentence_array()
+	test_vigenere_standard()
 	print("All tests completed.")
 	
 func test_standard_sentence():
@@ -100,3 +101,18 @@ func test_standard_sentence_array():
 	
 	assert(result == expected, "Standard sentence failed. Result: please debug manually")
 	print("test_standard_sentence: Passed")
+	
+func test_vigenere_standard():
+	var base_test = EncryptedMessage.new()
+	base_test.plain_text = "Attack at Dawn"
+	
+	var vigenere = VigenereEncode.new()
+	vigenere.keyword = "LEMON"
+	
+	base_test.encryptions.append(vigenere)
+	
+	var result = base_test.get_encrypted_message_string()
+	var expected = "Lxfopv ef Rnhr"
+	
+	assert(result == expected, "Vigenere standard test failed. Result: " + result)
+	print("test_vigenere_standard: Passed")

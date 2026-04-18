@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://5buboe08s5wb"]
+
+[ext_resource type="Theme" uid="uid://b2ccc0kiatgsc" path="res://src/ui/decoder/assets/decoder_theme.tres" id="1_3pp83"]
+[ext_resource type="Script" uid="uid://cd6dlwhb0s5rv" path="res://src/ui/decoder/decoder.gd" id="2_p11yw"]
+[ext_resource type="PackedScene" uid="uid://3w4qfgmqcf1q" path="res://src/ui/decoder/row/DecoderRow.tscn" id="2_x1hub"]
+
+[node name="Decoder" type="Control" unique_id=1280589066 node_paths=PackedStringArray("decoder_rows_parent", "caesar_button", "caesar_input_node", "caesar_input_label", "caesar_decrease_button", "caesar_increase_button", "atbash_button")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3pp83")
+script = ExtResource("2_p11yw")
+decoder_rows_parent = NodePath("PanelContainer/VBoxContainer/DecoderRows")
+caesar_button = NodePath("PanelContainer/VBoxContainer/DecoderTypes/Ceasar")
+caesar_input_node = NodePath("PanelContainer/VBoxContainer/CaesarInput")
+caesar_input_label = NodePath("PanelContainer/VBoxContainer/CaesarInput/RichTextLabel")
+caesar_decrease_button = NodePath("PanelContainer/VBoxContainer/CaesarInput/Decrease")
+caesar_increase_button = NodePath("PanelContainer/VBoxContainer/CaesarInput/Increase")
+atbash_button = NodePath("PanelContainer/VBoxContainer/DecoderTypes/Atbash")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=682333112]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=996293212]
+layout_mode = 2
+
+[node name="DecoderLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=496881905]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "DECODER"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="DecoderLabel2" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=241182371]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]by SpyMasters"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=54634772]
+layout_mode = 2
+
+[node name="DecoderTypes" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=346385440]
+layout_mode = 2
+
+[node name="Ceasar" type="Button" parent="PanelContainer/VBoxContainer/DecoderTypes" unique_id=487863275]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CAESAR"
+
+[node name="Atbash" type="Button" parent="PanelContainer/VBoxContainer/DecoderTypes" unique_id=288285651]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ATBASH"
+
+[node name="CaesarInput" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=666638738]
+layout_mode = 2
+alignment = 1
+
+[node name="Decrease" type="Button" parent="PanelContainer/VBoxContainer/CaesarInput" unique_id=684546950]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "-"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/CaesarInput" unique_id=43697099]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Increase" type="Button" parent="PanelContainer/VBoxContainer/CaesarInput" unique_id=1473360007]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "+"
+
+[node name="DecoderRows" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=817893711]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+columns = 2
+
+[node name="LetterTranslation" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=503711282 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+
+[node name="LetterTranslation2" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=505316611 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "N"
+
+[node name="LetterTranslation3" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=83520896 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "B"
+
+[node name="LetterTranslation4" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=736918042 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "O"
+
+[node name="LetterTranslation5" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=914365845 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "C"
+
+[node name="LetterTranslation6" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1130267646 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "P"
+
+[node name="LetterTranslation7" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1828072374 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "D"
+
+[node name="LetterTranslation8" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=407283835 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "Q"
+
+[node name="LetterTranslation9" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=799675905 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "E"
+
+[node name="LetterTranslation10" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1120392712 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "R"
+
+[node name="LetterTranslation11" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=615320028 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "F"
+
+[node name="LetterTranslation12" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1531513909 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "S"
+
+[node name="LetterTranslation13" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=644160073 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "G"
+
+[node name="LetterTranslation14" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=813946035 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "T"
+
+[node name="LetterTranslation15" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1311030507 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "H"
+
+[node name="LetterTranslation16" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1141871577 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "U"
+
+[node name="LetterTranslation17" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=850856112 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "I"
+
+[node name="LetterTranslation18" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=536002181 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "V"
+
+[node name="LetterTranslation19" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1314621160 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "J"
+
+[node name="LetterTranslation20" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=395641476 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "W"
+
+[node name="LetterTranslation21" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=2029038820 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "K"
+
+[node name="LetterTranslation22" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=426630483 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "X"
+
+[node name="LetterTranslation23" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=263514115 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "L"
+
+[node name="LetterTranslation24" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=562212574 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "Y"
+
+[node name="LetterTranslation25" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=216620186 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "M"
+
+[node name="LetterTranslation26" parent="PanelContainer/VBoxContainer/DecoderRows" unique_id=1568932309 instance=ExtResource("2_x1hub")]
+layout_mode = 2
+letter = "Z"

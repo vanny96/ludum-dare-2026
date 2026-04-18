@@ -1,6 +1,4 @@
-class_name CeasarEncode extends Encryption
-
-@export var shifts_amount: int = 0
+class_name AtbashEncode extends Encryption
 
 func encode(input: String) -> String:
 	var result = ""
@@ -9,9 +7,9 @@ func encode(input: String) -> String:
 		var ascii = input.unicode_at(i)
 		
 		if ascii >= 65 and ascii <= 90:
-			result += char(posmod(ascii - 65 + shifts_amount, 26) + 65)
+			result += char(155 - ascii)
 		elif ascii >= 97 and ascii <= 122:
-			result += char(posmod(ascii - 97 + shifts_amount, 26) + 97)
+			result += char(219 - ascii)
 		else:
 			result += input[i]
 			

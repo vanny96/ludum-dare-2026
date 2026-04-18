@@ -30,6 +30,8 @@ func set_to_camera(i: int):
 	self.current_camera_idx = i
 	
 func _ready() -> void:
+	self.left.pressed.connect(func(): self.set_to_camera(self.current_camera_idx - 1))
+	self.right.pressed.connect(func(): self.set_to_camera(self.current_camera_idx + 1))
 	self.buttons.dot.connect(func(): computer.add_char("."))
 	self.buttons.boop.connect(func(): computer.add_char("|"))
 	self.buttons.dash.connect(func(): computer.add_char("-"))

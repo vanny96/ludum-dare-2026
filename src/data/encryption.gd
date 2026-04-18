@@ -2,4 +2,4 @@
 class_name Encryption extends Resource
 
 @abstract
-func encrypt(input: String) -> String
+func encode(input: String) -> String
