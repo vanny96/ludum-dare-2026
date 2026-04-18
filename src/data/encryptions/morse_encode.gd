@@ -15,7 +15,13 @@ func encrypt(input: String) -> String:
 	input = input.to_upper()
 	
 	for char in input:
-		if MORSE_DATA.has(char):
-			result.append(MORSE_DATA[char])
+		var morse = char_to_morse(char)
+		if morse:
+			result.append(morse)
+		else:
+			printerr("Invalid character found during morse translation. Letter %s not found" % char)
 			
 	return " ".join(result)
+	
+func char_to_morse(char: String) -> String:
+	return MORSE_DATA.get(char, "")

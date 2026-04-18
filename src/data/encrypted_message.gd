@@ -9,7 +9,7 @@ func get_encrypted_message_string() -> String:
 		encrypted_text = encryption.encrypt(encrypted_text)
 	return encrypted_text
 	
-func get_encypted_message() -> Array[MorseSignal]:
+func get_encrypted_message() -> Array[MorseSignal]:
 	var encrypted_text = get_encrypted_message_string()
 	var signals: Array[MorseSignal] = []
 	for letter in encrypted_text.split(""):
@@ -17,12 +17,13 @@ func get_encypted_message() -> Array[MorseSignal]:
 			".": signals.append(MorseSignal.Dot)
 			"-": signals.append(MorseSignal.Dash)
 			"|": signals.append(MorseSignal.Boop)
-			"/": signals.append(MorseSignal.EndOfWorld)
+			"/": signals.append(MorseSignal.EndOfWord)
+			" ": signals.append(MorseSignal.Space)
 			_: 
 				printerr("Invalid encrypted message. Unexpected character %s" % letter)
 				return []
 	return signals
 	
 enum MorseSignal {
-	Dash, Dot, Boop, EndOfWorld
+	Dash, Dot, Boop, EndOfWord, Space
 }
