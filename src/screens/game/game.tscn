@@ -1,16 +1,28 @@
 [gd_scene format=3 uid="uid://rpj6wtste4ls"]
 
-[ext_resource type="Script" uid="uid://cgsfxgyu5pqtx" path="res://src/screens/game/game.gd" id="1_8uh7m"]
-[ext_resource type="Texture2D" uid="uid://b86wu44udlodn" path="res://icon.svg" id="1_37kl0"]
-[ext_resource type="PackedScene" uid="uid://dd1y7jx28eabp" path="res://src/ui/pause_menu/PauseMenu.tscn" id="3_6uqi0"]
+[ext_resource type="Script" uid="uid://cgsfxgyu5pqtx" path="res://src/screens/game/game.gd" id="1_qmidl"]
+[ext_resource type="PackedScene" uid="uid://dd1y7jx28eabp" path="res://src/ui/pause_menu/PauseMenu.tscn" id="2_047u2"]
+[ext_resource type="PackedScene" uid="uid://b1wuuay28w42i" path="res://src/ui/buttons/buttons.tscn" id="3_osde3"]
+[ext_resource type="PackedScene" uid="uid://dpjpgk3ukisng" path="res://src/ui/computer/Computer.tscn" id="4_047u2"]
 
-[node name="Test" type="Node2D" unique_id=1570700222]
-script = ExtResource("1_8uh7m")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1096310801]
-position = Vector2(528, 241)
-texture = ExtResource("1_37kl0")
+[node name="Game" type="Node2D" unique_id=1570700222]
+script = ExtResource("1_qmidl")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
 
-[node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("3_6uqi0")]
+[node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
+
+[node name="Buttons" parent="UI" unique_id=2035185175 instance=ExtResource("3_osde3")]
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 1.0
+anchor_right = 0.6
+offset_right = 0.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="Computer" parent="UI" unique_id=642438928 instance=ExtResource("4_047u2")]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.5

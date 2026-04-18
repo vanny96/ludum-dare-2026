@@ -1,11 +1,11 @@
 extends Node2D
 
+@onready var buttons: MorseButtons = $UI/Buttons
+@onready var computer: Computer = $UI/Computer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Debugger.set_debug_info("Test", "Hello")
+		
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

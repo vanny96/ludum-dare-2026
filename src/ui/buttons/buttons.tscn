@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://b1wuuay28w42i"]
+
+[ext_resource type="Script" uid="uid://ctey65i7vf2se" path="res://src/ui/buttons/buttons.gd" id="1_l47e8"]
+[ext_resource type="StyleBox" uid="uid://dact5u1762vlx" path="res://src/ui/buttons/assets/button_style.tres" id="2_ud6ia"]
+
+[node name="Buttons" type="PanelContainer" unique_id=2035185175]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1358.0
+offset_bottom = -644.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l47e8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1302376140]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=146351995]
+layout_mode = 2
+
+[node name="Morse" type="Control" parent="MarginContainer/VBoxContainer" unique_id=144243181]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="LC" type="CenterContainer" parent="MarginContainer/VBoxContainer/Morse" unique_id=500780401]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_vertical = 2
+
+[node name="Dot" type="Button" parent="MarginContainer/VBoxContainer/Morse/LC" unique_id=301707455]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_ud6ia")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Morse/LC/Dot" unique_id=1687545423]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -34.5
+offset_right = 20.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LC2" type="CenterContainer" parent="MarginContainer/VBoxContainer/Morse" unique_id=166667293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boop" type="Button" parent="MarginContainer/VBoxContainer/Morse/LC2" unique_id=1506957706]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_ud6ia")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Morse/LC2/Boop" unique_id=133387893]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -34.5
+offset_right = 20.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LC3" type="CenterContainer" parent="MarginContainer/VBoxContainer/Morse" unique_id=880436612]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Dash" type="Button" parent="MarginContainer/VBoxContainer/Morse/LC3" unique_id=345478962]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_ud6ia")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/Morse/LC3/Dash" unique_id=1421577980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -34.5
+offset_right = 20.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1530212670]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Space" type="Button" parent="MarginContainer/VBoxContainer/Space" unique_id=372158028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_ud6ia")
+text = "Space"
