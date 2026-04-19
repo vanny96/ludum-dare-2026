@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
 [ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
-[ext_resource type="Texture2D" uid="uid://bghawut7pdv7d" path="res://kenney_assets/Default/keyboard_arrow_left.png" id="6_y1w5f"]
-[ext_resource type="Texture2D" uid="uid://ccdmf8npo0gh7" path="res://kenney_assets/Default/keyboard_arrow_right.png" id="7_pnqyo"]
+[ext_resource type="Texture2D" uid="uid://dkttrby7w03cm" path="res://src/ui/books/assets/sprites/keyboard_arrow_left.png" id="6_y1w5f"]
+[ext_resource type="Texture2D" uid="uid://dmejxxwr2bdnb" path="res://src/ui/books/assets/sprites/keyboard_arrow_right.png" id="7_pnqyo"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_y1w5f"]
 action = &"move_left"
