@@ -1,5 +1,6 @@
-extends Node2D
+class_name Game extends Node2D
 
+signal day_changed(d: int)
 
 @onready var cameras: Array[Camera2D] = [
 	$Camera1, $Camera2, $Camera3
@@ -24,7 +25,6 @@ var current_message_idx: int = 0
 var correct_guesses: int = 0
 var wrong_guesses: int = 0
 
-var day: int = 0
 
 func set_to_camera(i: int):
 	self.cameras[current_camera_idx % self.cameras.size()].enabled = false

@@ -1,6 +1,10 @@
 class_name AppearingPage extends Control
 
 @export var day_of_appear: int = 0
+@export var game: Game
+
+func _ready():
+	game.day_changed.connect(self._on_day_change)
 
 func _on_day_change(d: int):
 	if d >= self.day_of_appear:
