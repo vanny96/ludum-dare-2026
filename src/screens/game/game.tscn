@@ -152,10 +152,10 @@ offset_bottom = 905.0
 text = "Next"
 
 [node name="Catalogue" parent="." unique_id=234251754 instance=ExtResource("16_wwvri")]
-offset_left = 3163.0
-offset_top = 227.0
-offset_right = 3713.0
-offset_bottom = 883.0
+offset_left = 2959.0
+offset_top = 91.0
+offset_right = 3774.0
+offset_bottom = 991.0
 
 [node name="Worldmap" parent="." unique_id=79710952 instance=ExtResource("17_yqpbo")]
 offset_left = 2421.0

@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://b8pir64hau5y1"]
 
 [ext_resource type="PackedScene" uid="uid://c03fgrkv07ow" path="res://src/ui/catalogue/spy.tscn" id="1_ilbgr"]
+[ext_resource type="Resource" uid="uid://hbbrod7gccv8" path="res://resources/spies/funky.tres" id="2_pylqo"]
+[ext_resource type="Resource" uid="uid://b2e281g5ibx0h" path="res://resources/spies/jelly.tres" id="3_e6hov"]
+[ext_resource type="Resource" uid="uid://jwg8ffms7kx4" path="res://resources/spies/ringo.tres" id="4_h1p4j"]
+[ext_resource type="Resource" uid="uid://d0d0pn3kdwlfv" path="res://resources/spies/smile.tres" id="5_g6ps7"]
+[ext_resource type="Resource" uid="uid://bab3vudmvja6u" path="res://resources/spies/swamp.tres" id="6_3ybha"]
 
 [node name="Catalogue" type="PanelContainer" unique_id=234251754]
 anchors_preset = 8
@@ -17,31 +22,36 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=530159427]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1534226195]
 layout_mode = 2
-theme_override_constants/h_separation = 50
-theme_override_constants/v_separation = 50
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
 columns = 2
-
-[node name="Spy2" parent="MarginContainer/GridContainer" unique_id=1727683009 instance=ExtResource("1_ilbgr")]
-layout_mode = 2
-
-[node name="Spy3" parent="MarginContainer/GridContainer" unique_id=1174152066 instance=ExtResource("1_ilbgr")]
-layout_mode = 2
-
-[node name="Spy4" parent="MarginContainer/GridContainer" unique_id=1716702487 instance=ExtResource("1_ilbgr")]
-layout_mode = 2
-
-[node name="Spy5" parent="MarginContainer/GridContainer" unique_id=1364740593 instance=ExtResource("1_ilbgr")]
-layout_mode = 2
-
-[node name="Spy6" parent="MarginContainer/GridContainer" unique_id=1893660843 instance=ExtResource("1_ilbgr")]
-layout_mode = 2
 
 [node name="Spy" parent="MarginContainer/GridContainer" unique_id=581583109 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
+
+[node name="Spy2" parent="MarginContainer/GridContainer" unique_id=1727683009 instance=ExtResource("1_ilbgr")]
+layout_mode = 2
+spy = ExtResource("2_pylqo")
+
+[node name="Spy3" parent="MarginContainer/GridContainer" unique_id=1174152066 instance=ExtResource("1_ilbgr")]
+layout_mode = 2
+spy = ExtResource("3_e6hov")
+
+[node name="Spy4" parent="MarginContainer/GridContainer" unique_id=1716702487 instance=ExtResource("1_ilbgr")]
+layout_mode = 2
+spy = ExtResource("4_h1p4j")
+
+[node name="Spy5" parent="MarginContainer/GridContainer" unique_id=1364740593 instance=ExtResource("1_ilbgr")]
+layout_mode = 2
+spy = ExtResource("5_g6ps7")
+
+[node name="Spy6" parent="MarginContainer/GridContainer" unique_id=1893660843 instance=ExtResource("1_ilbgr")]
+layout_mode = 2
+spy = ExtResource("6_3ybha")

@@ -9,13 +9,14 @@ extends Control
 			
 @export_subgroup("Internal")
 @export var face: TextureRect
-@export var name_label: Label
+@export var name_label: RichTextLabel
 @export var notes_button: Button
 @export var spy_note_canvas: CanvasLayer
 @export var spy_note: SpyNote
 
 func _ready() -> void:
 	notes_button.pressed.connect(spy_note.show)
+	print("Ready %s" % name)
 	
 func _process(_delta: float) -> void:
 	if not Engine.is_editor_hint():

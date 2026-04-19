@@ -1,15 +1,14 @@
 [gd_resource type="Resource" script_class="Spy" format=3 uid="uid://dm5pf8kru1k2k"]
 
-[ext_resource type="Script" path="res://src/data/spy.gd" id="1_4sj06"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4sj06"]
-load_path = "res://.godot/imported/face.png-5d27ba6b1f3872e0e6d9d03c3f486ba1.ctex"
+[ext_resource type="Texture2D" uid="uid://bdhgctmpoenu" path="res://resources/spies/assets/viper.png" id="1_0gx2i"]
+[ext_resource type="Script" uid="uid://bcfp4h21ta8f8" path="res://src/data/spy.gd" id="1_4sj06"]
 
 [resource]
 script = ExtResource("1_4sj06")
 name = "VIPER"
 gender = "Unknown"
-picture = SubResource("CompressedTexture2D_4sj06")
+picture = ExtResource("1_0gx2i")
 age = 24
 good_keywords = Array[String](["Pain", "Suffer", "Kitty"])
 bad_keywords = Array[String](["Love", "Happy", "Milk"])
