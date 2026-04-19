@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
 [ext_resource type="PackedScene" uid="uid://cowiv31ahpvla" path="res://src/ui/books/notebook/Notebook.tscn" id="14_2kkvg"]
 [ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
+[ext_resource type="Texture2D" uid="uid://cxw3ayvh4edcx" path="res://assets/textures/arrowSilver_left.png" id="16_65fhu"]
 [ext_resource type="PackedScene" uid="uid://b8pir64hau5y1" path="res://src/ui/catalogue/catalogue.tscn" id="16_wwvri"]
+[ext_resource type="Texture2D" uid="uid://cfh3fbeq4m4di" path="res://assets/textures/arrowSilver_right.png" id="17_7vusn"]
 [ext_resource type="PackedScene" uid="uid://mdx8f2o5axab" path="res://src/ui/world_map/worldmap.tscn" id="17_yqpbo"]
 [ext_resource type="PackedScene" uid="uid://5buboe08s5wb" path="res://src/ui/decoder/Decoder.tscn" id="18_vaiev"]
 
@@ -121,28 +123,34 @@ grow_horizontal = 1
 
 [node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
 
-[node name="Left" type="Button" parent="UI" unique_id=1168788120]
-anchors_preset = 4
+[node name="Left" type="TextureButton" parent="UI" unique_id=1500445093]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = -1
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
+offset_left = 20.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
 grow_vertical = 2
-text = "Left"
+texture_normal = ExtResource("16_65fhu")
+stretch_mode = 0
 
-[node name="Right" type="Button" parent="UI" unique_id=1607406335]
-anchors_preset = 6
+[node name="Right" type="TextureButton" parent="UI" unique_id=1334775235]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -15.5
-offset_bottom = 15.5
+offset_left = -50.0
+offset_top = -25.0
+offset_right = -20.0
+offset_bottom = 25.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Right"
+texture_normal = ExtResource("17_7vusn")
+stretch_mode = 0
 
 [node name="Next" type="Button" parent="." unique_id=917125478]
 offset_left = 435.0
