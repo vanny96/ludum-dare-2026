@@ -8,7 +8,7 @@ class_name DayTransition extends CanvasLayer
 
 # Use only for first day
 func play_start_day(day: int):
-	panel.color.a = 1
+	panel.modulate.a = 1
 	text.text = ""
 	panel.visible = true
 	await type_message("DAY %s: START" % day)
@@ -17,7 +17,7 @@ func play_start_day(day: int):
 	panel.visible = false
 	
 func play_day_transition(from_day: int, to_day: int):
-	panel.color.a = 0
+	panel.modulate.a = 0
 	text.text = ""
 	panel.visible = true
 	await create_tween().tween_property(panel, "modulate:a", 1, 1).finished
@@ -30,7 +30,7 @@ func play_day_transition(from_day: int, to_day: int):
 	panel.visible = false
 	
 func play_end_game():
-	panel.color.a = 0
+	panel.modulate.a = 0
 	text.text = ""
 	panel.visible = true
 	await create_tween().tween_property(panel, "modulate:a", 1, 1).finished

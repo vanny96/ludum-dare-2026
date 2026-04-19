@@ -47,13 +47,12 @@ close_button = NodePath("Anchor/Close/TextureButton")
 layout_mode = 2
 
 [node name="Page1" type="HBoxContainer" parent="Pages" unique_id=1225432686]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Pages/Page1" unique_id=235781307]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -91,7 +90,7 @@ theme_override_constants/margin_bottom = 20
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageLeft/VBoxContainer/MarginContainer" unique_id=520887492]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "If you read this, you are chosen to be the next junior spymaster. Take heed of the task at hand:
 [ul] Decode the incoming message using our modern decoding system, found on page 2.
@@ -106,7 +105,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="PageRight" type="PanelContainer" parent="Pages/Page1" unique_id=1060027897]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -151,9 +150,9 @@ theme_override_constants/margin_bottom = 20
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=671703697]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "[font_size=15]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
+text = "[font_size=22]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
 fit_content = true
 autowrap_mode = 2
 
@@ -164,7 +163,7 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Pages/Page2" unique_id=216568599]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -202,7 +201,7 @@ theme_override_constants/margin_bottom = 20
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Spies are not always your ally. These are some tips to distinguish the enemy messages from our very own liars!
 [ul]Trust your instinct! Sometimes the message is just the truth.
@@ -213,7 +212,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="PageRight" type="PanelContainer" parent="Pages/Page2" unique_id=1864925008]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -251,7 +250,7 @@ theme_override_constants/margin_bottom = 20
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
 fit_content = true
@@ -274,7 +273,7 @@ theme_override_constants/margin_bottom = 20
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
 fit_content = true
@@ -286,7 +285,7 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="PageLeft" type="PanelContainer" parent="Pages/Page3" unique_id=1098185818]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -317,14 +316,14 @@ autowrap_mode = 0
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=1693878242]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=918462879]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Not all text is what it seems. If the text seems garbled to you, it might be encrypted. These are some cyphers and how to decode them.
 
@@ -338,7 +337,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="PageRight" type="PanelContainer" parent="Pages/Page3" unique_id=961407434]
-custom_minimum_size = Vector2(400, 600)
+custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
@@ -380,7 +379,7 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 1:
 • HQ is always an ally."
@@ -391,7 +390,7 @@ autowrap_mode = 2
 visible = false
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 2:
 • Agents needs a good keyword in the message
@@ -403,7 +402,7 @@ autowrap_mode = 2
 visible = false
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 3:
 • Agents use their preffered method of decoding.
@@ -415,7 +414,7 @@ autowrap_mode = 2
 visible = false
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 4:
 • Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. 
@@ -427,7 +426,7 @@ autowrap_mode = 2
 visible = false
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 5:
 • There is a traitor among the agents"
@@ -437,7 +436,7 @@ autowrap_mode = 2
 [node name="DecodeText2" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=820215842]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "More cyphers and extra rules will be added tomorrow."
 fit_content = true
