@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://cgsfxgyu5pqtx" path="res://src/screens/game/game.gd" id="1_qmidl"]
 [ext_resource type="PackedScene" uid="uid://dd1y7jx28eabp" path="res://src/ui/pause_menu/PauseMenu.tscn" id="2_047u2"]
 [ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="2_ijd1l"]
-[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="2_ls45d"]
 [ext_resource type="PackedScene" uid="uid://cytnhn07d8yx3" path="res://src/ui/signal/signal.tscn" id="2_osde3"]
 [ext_resource type="Resource" uid="uid://cnffi30n6hsfn" path="res://resources/encrypted_messages/day_1.tres" id="3_7vusn"]
 [ext_resource type="PackedScene" uid="uid://b1wuuay28w42i" path="res://src/ui/buttons/buttons.tscn" id="3_osde3"]
 [ext_resource type="PackedScene" uid="uid://dpjpgk3ukisng" path="res://src/ui/computer/Computer.tscn" id="4_047u2"]
-[ext_resource type="Resource" uid="uid://cji4kfnga2swd" path="res://resources/encrypted_messages/day_2/message_1_smile_intro.tres" id="10_8dx84"]
+[ext_resource type="Resource" uid="uid://5o0ehsj4tdpg" path="res://resources/encrypted_messages/day_2.tres" id="4_wsdsm"]
+[ext_resource type="Resource" uid="uid://dgqiltax0ie8a" path="res://resources/encrypted_messages/day_3.tres" id="5_cr6s4"]
+[ext_resource type="Resource" uid="uid://skgf8dnq45xe" path="res://resources/encrypted_messages/day_4.tres" id="6_qknql"]
+[ext_resource type="Resource" uid="uid://d4l77kyjdqxvd" path="res://resources/encrypted_messages/day_5.tres" id="7_8dx84"]
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
 [ext_resource type="PackedScene" uid="uid://cowiv31ahpvla" path="res://src/ui/books/notebook/Notebook.tscn" id="14_2kkvg"]
 [ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
@@ -22,16 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://cja2dwe052o38" path="res://src/ui/decoderv2/Decoder.tscn" id="23_wsdsm"]
 [ext_resource type="Script" uid="uid://cgrx3ldq2mom7" path="res://src/screens/game/day_end_transitions.gd" id="25_qknql"]
 
-[sub_resource type="Resource" id="Resource_ajye2"]
-script = ExtResource("2_ijd1l")
-messages = Array[ExtResource("2_ls45d")]([ExtResource("10_8dx84")])
-metadata/_custom_type_script = "uid://c12aylqpvesix"
-
 [node name="Game" type="Node2D" unique_id=1570700222 node_paths=PackedStringArray("rulebook", "day_transition")]
 script = ExtResource("1_qmidl")
 rulebook = NodePath("UI/Rulebook")
 day_transition = NodePath("DayEndTransitions")
-daily_messages = Array[ExtResource("2_ijd1l")]([ExtResource("3_7vusn"), SubResource("Resource_ajye2")])
+daily_messages = Array[ExtResource("2_ijd1l")]([ExtResource("3_7vusn"), ExtResource("4_wsdsm"), ExtResource("5_cr6s4"), ExtResource("6_qknql"), ExtResource("7_8dx84")])
 
 [node name="Camera1" type="Camera2D" parent="." unique_id=809105464]
 position = Vector2(960, 540)

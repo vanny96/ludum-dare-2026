@@ -1,8 +1,17 @@
 [gd_resource type="Resource" script_class="DailyMessages" format=3 uid="uid://d4l77kyjdqxvd"]
 
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="1_0atku"]
+[ext_resource type="Resource" uid="uid://b2nqcafk7xspb" path="res://resources/encrypted_messages/day_5/message_1_smile.tres" id="2_g12oc"]
+[ext_resource type="Resource" uid="uid://dbv68me7747cn" path="res://resources/encrypted_messages/day_5/message_2_viper.tres" id="3_ipavs"]
+[ext_resource type="Resource" uid="uid://bppq38itn33ps" path="res://resources/encrypted_messages/day_5/message_3_jelly.tres" id="4_ermna"]
+[ext_resource type="Resource" uid="uid://x2nirmiacn5c" path="res://resources/encrypted_messages/day_5/message_4_ringo.tres" id="5_o66lo"]
+[ext_resource type="Resource" uid="uid://bxvu6c1igwy5a" path="res://resources/encrypted_messages/day_5/message_5_swamp.tres" id="6_7dlpl"]
+[ext_resource type="Resource" uid="uid://cocufgs25l247" path="res://resources/encrypted_messages/day_5/message_6_jelly.tres" id="7_34o4u"]
 [ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="8_34o4u"]
+[ext_resource type="Resource" uid="uid://itrfcx1ct35j" path="res://resources/encrypted_messages/day_5/message_7_viper.tres" id="8_fcql4"]
+[ext_resource type="Resource" uid="uid://dggt6yxv28run" path="res://resources/encrypted_messages/day_5/message_8_swamp.tres" id="9_oqmqc"]
 
 [resource]
 script = ExtResource("8_34o4u")
+messages = Array[ExtResource("1_0atku")]([ExtResource("2_g12oc"), ExtResource("3_ipavs"), ExtResource("4_ermna"), ExtResource("5_o66lo"), ExtResource("6_7dlpl"), ExtResource("7_34o4u"), ExtResource("8_fcql4"), ExtResource("9_oqmqc")])
 metadata/_custom_type_script = "uid://c12aylqpvesix"

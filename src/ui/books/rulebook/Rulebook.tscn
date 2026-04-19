@@ -392,7 +392,7 @@ theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 2:
 • Agents needs a good keyword in the message
-• Agents don't travel East."
+• Agents today don't travel East."
 fit_content = true
 autowrap_mode = 2
 

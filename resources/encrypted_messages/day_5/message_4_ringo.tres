@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://x2nirmiacn5c"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_i6h7p"]
+[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_h0ce7"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_l6hyg"]
+
+[sub_resource type="Resource" id="Resource_opkeh"]
+script = ExtResource("2_h0ce7")
+shifts_amount = 3
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[sub_resource type="Resource" id="Resource_isx0p"]
+script = ExtResource("2_h0ce7")
+shifts_amount = 5
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[resource]
+script = ExtResource("3_l6hyg")
+sender = "RINGO"
+plain_text = "J€LLY is EVIL! A TR@ITOR! I REQU€ST SUPPORT!"
+encryptions = Array[ExtResource("1_i6h7p")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
+enemy = true
+metadata/_custom_type_script = "uid://s70u6m5sxcud"
