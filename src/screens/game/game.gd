@@ -32,12 +32,7 @@ func set_to_camera(i: int):
 func _ready() -> void:
 	self.left.pressed.connect(func(): self.set_to_camera(self.current_camera_idx - 1))
 	self.right.pressed.connect(func(): self.set_to_camera(self.current_camera_idx + 1))
-	self.buttons.dot.connect(func(): computer.add_char("."))
-	self.buttons.boop.connect(func(): computer.add_char("|"))
-	self.buttons.dash.connect(func(): computer.add_char("-"))
-	self.buttons.space.connect(func(): computer.add_char(" "))
 	self.signal_emitter.signal_played.connect(computer.add_char)
-	self.signal_emitter.replay.connect(play_message)
 	self.submit_buttons.submit_answer.connect(submit_answer)
 	
 	play_message()
