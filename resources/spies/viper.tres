@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Spy" format=3 uid="uid://dm5pf8kru1k2k"]
 
-[ext_resource type="Script" uid="uid://bcfp4h21ta8f8" path="res://src/data/spy.gd" id="1_4sj06"]
+[ext_resource type="Script" path="res://src/data/spy.gd" id="1_4sj06"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4sj06"]
 load_path = "res://.godot/imported/face.png-5d27ba6b1f3872e0e6d9d03c3f486ba1.ctex"

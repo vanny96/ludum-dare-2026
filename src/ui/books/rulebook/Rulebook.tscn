@@ -22,23 +22,24 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 
-[node name="Page1" type="HBoxContainer" parent="." unique_id=854456512]
+[node name="Page1" type="HBoxContainer" parent="." unique_id=1225432686]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="PageLeft" type="PanelContainer" parent="Page1" unique_id=216568599]
+[node name="PageLeft" type="PanelContainer" parent="Page1" unique_id=235781307]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageLeft" unique_id=706005339]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageLeft" unique_id=249678148]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=412294181]
+[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=1380327837]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -47,7 +48,60 @@ text = "Page 1"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CodeDescription" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=201372700]
+[node name="VSFD" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=1620541598]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "A guide to being a good spymaster"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Page1/PageLeft/VBoxContainer" unique_id=1622534094]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer/MarginContainer" unique_id=520887492]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "If you read this, you are chosen to be the next junior spymaster. Take heed of the task at hand:
+[ul] Decode the incoming message using our modern decoding system, found on page 2.
+Determinte if the message is from an adversarial spy or not. You can find a list of tips on page 3.
+Document the information where needed.
+Send your determination to the senior spymaster.
+[/ul]
+
+Make sure to do your task diligently. You will be docked pay for every mistake. You need our money more than we need you, so do your task quickly, cheaply and good at the same time.
+"
+fit_content = true
+autowrap_mode = 2
+
+[node name="PageRight" type="PanelContainer" parent="Page1" unique_id=1060027897]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_h4pn0")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Page1/PageRight" unique_id=1303698221]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2" unique_id=439416690]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Page 2"
+fit_content = true
+autowrap_mode = 0
+
+[node name="CodeDescription" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2" unique_id=1026195951]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -57,24 +111,45 @@ text = "Super Secret Code Map"
 fit_content = true
 autowrap_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="Page1/PageLeft/VBoxContainer" unique_id=1542792136]
+[node name="TextureRect" type="TextureRect" parent="Page1/PageRight/VBoxContainer2" unique_id=1948858273]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("3_3h2gt")
 expand_mode = 5
 
-[node name="PageRight" type="PanelContainer" parent="Page1" unique_id=1864925008]
+[node name="MarginContainer" type="MarginContainer" parent="Page1/PageRight/VBoxContainer2" unique_id=481632005]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=671703697]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[font_size=10]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
+fit_content = true
+autowrap_mode = 2
+
+[node name="Page2" type="HBoxContainer" parent="." unique_id=854456512]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PageLeft" type="PanelContainer" parent="Page2" unique_id=216568599]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageRight" unique_id=1077657755]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageLeft" unique_id=575457465]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer" unique_id=163709791]
+[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=924667756]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -83,24 +158,47 @@ text = "Page 2"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Page2" type="HBoxContainer" parent="." unique_id=1225432686]
-visible = false
+[node name="VSFD" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=1262004685]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+bbcode_enabled = true
+text = "Verifying spies for dummies"
+fit_content = true
+autowrap_mode = 0
 
-[node name="PageLeft" type="PanelContainer" parent="Page2" unique_id=235781307]
+[node name="MarginContainer" type="MarginContainer" parent="Page2/PageLeft/VBoxContainer" unique_id=1746270164]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Spies are not always your ally. These are some tips to distinguish the enemy messages from our very own liars!
+[ul]Trust your instinct! Sometimes the message is just the truth.
+Location, location, location! Check whether they are able to be where they claim they are.
+Does the encryption seem to fail? Maybe the encryption is not the problem.
+Spies may contact  you with a codeword. Be sure to check whether this codeword is actually correct."
+fit_content = true
+autowrap_mode = 2
+
+[node name="PageRight" type="PanelContainer" parent="Page2" unique_id=1864925008]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageLeft" unique_id=216489208]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageRight" unique_id=1845704227]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=450226905]
+[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1270876338]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -109,25 +207,30 @@ text = "Page 3"
 fit_content = true
 autowrap_mode = 0
 
-[node name="PageRight" type="PanelContainer" parent="Page2" unique_id=1060027897]
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-mouse_filter = 2
-theme = ExtResource("1_h4pn0")
-theme_type_variation = &"PagePanel"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageRight" unique_id=27430960]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1904316434]
+[node name="VSFD" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1808342163]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "Page 4"
+text = "The spy catalogue"
 fit_content = true
 autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Page2/PageRight/VBoxContainer" unique_id=176598447]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "We (of course) have a list of our own spies. The catalogue works as follows:"
+fit_content = true
+autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="." unique_id=1833457743]
 visible = false
