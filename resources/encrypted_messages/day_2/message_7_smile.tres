@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_p7k2m"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_reaqd"]
-[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="3_d2aue"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_2hrme"]
 
 [sub_resource type="Resource" id="Resource_isx0p"]
@@ -10,13 +9,9 @@ script = ExtResource("2_reaqd")
 shifts_amount = 5
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_boyim"]
-script = ExtResource("3_d2aue")
-metadata/_custom_type_script = "uid://bsw0dn00rku1c"
-
 [resource]
 script = ExtResource("4_2hrme")
 sender = "SMILE"
 plain_text = "Trip in RIO went bad. VIPER was killed."
-encryptions = Array[ExtResource("1_p7k2m")]([SubResource("Resource_isx0p"), SubResource("Resource_boyim")])
+encryptions = Array[ExtResource("1_p7k2m")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

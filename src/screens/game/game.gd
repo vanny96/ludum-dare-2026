@@ -4,7 +4,6 @@ class_name Game extends Node2D
 	$Camera1, $Camera2, $Camera3
 ]
 
-@onready var signal_emitter: SignalPanel = %Signal
 @onready var computer: Computer = $Computer
 @onready var buttons: MorseButtons = $UI/Buttons
 @onready var submit_buttons: SubmitButtons = $UI/SubmitButtons
@@ -30,7 +29,6 @@ func set_to_camera(i: int):
 func _ready() -> void:
 	self.left.pressed.connect(func(): self.set_to_camera(self.current_camera_idx - 1))
 	self.right.pressed.connect(func(): self.set_to_camera(self.current_camera_idx + 1))
-	self.signal_emitter.signal_played.connect(computer.add_char)
 	
 	await day_transition.play_start_day(1)
 	
@@ -48,8 +46,7 @@ func play_day(day: DailyMessages):
 
 func play_message(message: EncryptedMessage):
 	submit_buttons.hide()
-	await computer.add_sender(message.sender)
-	await signal_emitter.play_message(message.get_encrypted_message())
+	await computer.play_message(message)
 	submit_buttons.show()
 	
 	var enemy = await self.submit_buttons.submit_answer

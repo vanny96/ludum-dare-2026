@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_nalb6"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_oxslj"]
-[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="3_bwt4y"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_cm45n"]
 
 [sub_resource type="Resource" id="Resource_isx0p"]
@@ -10,13 +9,9 @@ script = ExtResource("2_oxslj")
 shifts_amount = 5
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_boyim"]
-script = ExtResource("3_bwt4y")
-metadata/_custom_type_script = "uid://bsw0dn00rku1c"
-
 [resource]
 script = ExtResource("4_cm45n")
 sender = "JELLY"
 plain_text = "Spilling Tea in Sydney. Ringo is a legend. together operation Cucumber will be ezpz."
-encryptions = Array[ExtResource("1_nalb6")]([SubResource("Resource_isx0p"), SubResource("Resource_boyim")])
+encryptions = Array[ExtResource("1_nalb6")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

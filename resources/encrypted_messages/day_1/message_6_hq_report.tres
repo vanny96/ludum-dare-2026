@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_r03f8"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_evuox"]
-[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="3_6ajbo"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_5a221"]
 
 [sub_resource type="Resource" id="Resource_isx0p"]
@@ -10,13 +9,9 @@ script = ExtResource("2_evuox")
 shifts_amount = 5
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_boyim"]
-script = ExtResource("3_6ajbo")
-metadata/_custom_type_script = "uid://bsw0dn00rku1c"
-
 [resource]
 script = ExtResource("4_5a221")
 sender = "HQ"
 plain_text = "Previous message was from an enemy. Keep an eye open. Good luck for tomorrow."
-encryptions = Array[ExtResource("1_r03f8")]([SubResource("Resource_isx0p"), SubResource("Resource_boyim")])
+encryptions = Array[ExtResource("1_r03f8")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

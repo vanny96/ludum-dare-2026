@@ -12,8 +12,6 @@ offset_right = -118.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qsouf")
-small_pause_break = 0.05
-big_pause_break = 0.15
 
 [node name="HFlowContainer" type="HBoxContainer" parent="." unique_id=1936409503]
 custom_minimum_size = Vector2(100, 0)

@@ -1,16 +1,10 @@
 [gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://dk1s5s4xqbw5m"]
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_hx6am"]
-[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="2_dcsms"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_nk285"]
-
-[sub_resource type="Resource" id="Resource_boyim"]
-script = ExtResource("2_dcsms")
-metadata/_custom_type_script = "uid://bsw0dn00rku1c"
 
 [resource]
 script = ExtResource("3_nk285")
 sender = "HQ"
 plain_text = "Welcome new spymaster. Check last page of red rulebook. "
-encryptions = Array[ExtResource("1_hx6am")]([SubResource("Resource_boyim")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
