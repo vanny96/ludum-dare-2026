@@ -79,6 +79,7 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="TextureRect" type="TextureButton" parent="MarginContainer/VBoxContainer/PinNote" unique_id=1025366231]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 texture_normal = ExtResource("2_6yx0d")
