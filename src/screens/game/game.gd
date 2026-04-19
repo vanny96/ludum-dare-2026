@@ -1,7 +1,5 @@
 class_name Game extends Node2D
 
-signal day_changed(d: int)
-
 @onready var cameras: Array[Camera2D] = [
 	$Camera1, $Camera2, $Camera3
 ]
@@ -13,19 +11,16 @@ signal day_changed(d: int)
 @onready var left: BaseButton = $UI/Left
 @onready var right: BaseButton = $UI/Right
 
+@export var rulebook: RuleBook
+@export var day_transition: DayTransition
 @export var daily_messages: Array[DailyMessages]
-
-@onready var current_message := daily_messages[current_day_idx].messages[current_message_idx]
 
 var current_camera_idx: int = 0
 
 var current_day_idx: int = 0
-var current_message_idx: int = 0
 
 var correct_guesses: int = 0
 var wrong_guesses: int = 0
-
-var day: int = 0
 
 func set_to_camera(i: int):
 	self.cameras[current_camera_idx % self.cameras.size()].enabled = false
@@ -36,33 +31,30 @@ func _ready() -> void:
 	self.left.pressed.connect(func(): self.set_to_camera(self.current_camera_idx - 1))
 	self.right.pressed.connect(func(): self.set_to_camera(self.current_camera_idx + 1))
 	self.signal_emitter.signal_played.connect(computer.add_char)
-	self.submit_buttons.submit_answer.connect(submit_answer)
 	
-	play_message()
+	await day_transition.play_start_day(1)
+	
+	var total_days = daily_messages.size()
+	for i in range(total_days):
+		rulebook.reveal_changelog(i)
+		await play_day(daily_messages[i])
+		if i < total_days - 1:
+			await day_transition.play_day_transition(i + 1, i + 2)
+	await day_transition.play_end_game()
 
-func play_message():
+func play_day(day: DailyMessages):
+	for message: EncryptedMessage in day.messages:
+		await play_message(message)
+
+func play_message(message: EncryptedMessage):
 	submit_buttons.hide()
-	await computer.add_sender(current_message.sender)
-	await signal_emitter.play_message(current_message.get_encrypted_message())
+	await computer.add_sender(message.sender)
+	await signal_emitter.play_message(message.get_encrypted_message())
 	submit_buttons.show()
 	
-func submit_answer(enemy: bool):
-	computer.reset()
-	if current_message.enemy == enemy:
+	var enemy = await self.submit_buttons.submit_answer
+	if message.enemy == enemy:
 		correct_guesses += 1
-		print("Correct")
 	else:
 		wrong_guesses += 1
-		print("Wrong")
-	
-	current_message_idx += 1
-	
-	if current_message_idx >= daily_messages[current_day_idx].messages.size():
-		current_message_idx = 0
-		current_day_idx += 1
-	
-	if current_day_idx < daily_messages.size():
-		current_message = daily_messages[current_day_idx].messages[current_message_idx]
-		play_message()
-	else:
-		print("All messages processed.")
+	computer.reset()

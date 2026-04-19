@@ -1,6 +1,7 @@
-extends Book
+class_name RuleBook extends Book
 
 @export var pages_parent: Control
+@export var change_log: Array[Control]
 
 @export var left_page_button: BaseButton
 @export var right_page_button: BaseButton
@@ -17,6 +18,11 @@ func _ready() -> void:
 			pages.append(child)
 	
 	_update_page_visibility()
+
+
+func reveal_changelog(day: int):
+	if day < change_log.size():
+		change_log[day].show()
 
 func get_toggle_action_name() -> String:
 	return "toggle_rulebook"

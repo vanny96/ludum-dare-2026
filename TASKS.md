@@ -7,8 +7,6 @@
 * Ally and Enemy buttons
 * End of day screen
 * Writing the plot
-* Make decoder 
-* Add Changelog to book
 
 ## Possible rules
 

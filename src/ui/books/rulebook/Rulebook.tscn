@@ -20,7 +20,7 @@ action = &"move_right"
 [sub_resource type="Shortcut" id="Shortcut_plfe5"]
 events = [SubResource("InputEventAction_pnqyo")]
 
-[node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "left_page_button", "right_page_button", "close_button")]
+[node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "change_log", "left_page_button", "right_page_button", "close_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,14 +38,16 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 pages_parent = NodePath("Pages")
-left_page_button = NodePath("Close/Left/TextureButton")
-right_page_button = NodePath("Close/Right/TextureButton")
-close_button = NodePath("Close/Close/TextureButton")
+change_log = [NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FirstDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/SecondDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/ThirdDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FourthDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FifthDay")]
+left_page_button = NodePath("Anchor/Left/TextureButton")
+right_page_button = NodePath("Anchor/Right/TextureButton")
+close_button = NodePath("Anchor/Close/TextureButton")
 
 [node name="Pages" type="CenterContainer" parent="." unique_id=1640546855]
 layout_mode = 2
 
 [node name="Page1" type="HBoxContainer" parent="Pages" unique_id=1225432686]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -367,36 +369,85 @@ autowrap_mode = 0
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 0
 
 [node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=687014771]
 layout_mode = 2
 
-[node name="FirstRule" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
+[node name="FirstDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "• HQ is always an ally"
+text = "Day 1:
+• HQ is always an ally."
+fit_content = true
+autowrap_mode = 2
+
+[node name="SecondDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1539460341]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Day 2:
+• Agents needs a good keyword in the message
+• Agents don't travel East."
+fit_content = true
+autowrap_mode = 2
+
+[node name="ThirdDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1954808182]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Day 3:
+• Agents use their preffered method of decoding.
+• Agents cannot won't repeat their current location."
+fit_content = true
+autowrap_mode = 2
+
+[node name="FourthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1144051374]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Day 4:
+• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. 
+• Agents older than 35 are on vacation today."
+fit_content = true
+autowrap_mode = 2
+
+[node name="FifthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1255939717]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Day 5:
+• There is a traitor among the agents"
 fit_content = true
 autowrap_mode = 2
 
 [node name="DecodeText2" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=820215842]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
-text = "More cyphers and extra rules can be added later."
+text = "More cyphers and extra rules will be added tomorrow."
 fit_content = true
 autowrap_mode = 2
 
-[node name="Close" type="Control" parent="." unique_id=910047544]
+[node name="Anchor" type="Control" parent="." unique_id=910047544]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Close" type="MarginContainer" parent="Close" unique_id=2109356256]
+[node name="Close" type="MarginContainer" parent="Anchor" unique_id=2109356256]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -404,13 +455,13 @@ mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureButton" type="TextureButton" parent="Close/Close" unique_id=1164080602]
+[node name="TextureButton" type="TextureButton" parent="Anchor/Close" unique_id=1164080602]
 texture_filter = 3
 layout_mode = 2
 texture_normal = ExtResource("5_b4kyx")
 stretch_mode = 0
 
-[node name="Left" type="MarginContainer" parent="Close" unique_id=1633171251]
+[node name="Left" type="MarginContainer" parent="Anchor" unique_id=1633171251]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -422,7 +473,7 @@ mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureButton" type="TextureButton" parent="Close/Left" unique_id=543811772]
+[node name="TextureButton" type="TextureButton" parent="Anchor/Left" unique_id=543811772]
 modulate = Color(0.6117647, 0.46666667, 0.3137255, 1)
 texture_filter = 3
 layout_mode = 2
@@ -431,7 +482,7 @@ shortcut = SubResource("Shortcut_pnqyo")
 texture_normal = ExtResource("6_y1w5f")
 stretch_mode = 0
 
-[node name="Right" type="MarginContainer" parent="Close" unique_id=507772028]
+[node name="Right" type="MarginContainer" parent="Anchor" unique_id=507772028]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -446,7 +497,7 @@ mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureButton" type="TextureButton" parent="Close/Right" unique_id=1157877959]
+[node name="TextureButton" type="TextureButton" parent="Anchor/Right" unique_id=1157877959]
 modulate = Color(0.6117647, 0.46666667, 0.3137255, 1)
 texture_filter = 3
 layout_mode = 2

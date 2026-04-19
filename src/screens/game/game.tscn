@@ -24,14 +24,17 @@
 [ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://assets/textures/rulebook.png" id="19_wsdsm"]
 [ext_resource type="Texture2D" uid="uid://blmd5o784xx5s" path="res://assets/textures/notest.png" id="20_cr6s4"]
 [ext_resource type="PackedScene" uid="uid://cja2dwe052o38" path="res://src/ui/decoderv2/Decoder.tscn" id="23_wsdsm"]
+[ext_resource type="Script" uid="uid://cgrx3ldq2mom7" path="res://src/screens/game/day_end_transitions.gd" id="25_qknql"]
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
 messages = Array[ExtResource("2_ls45d")]([ExtResource("3_ijd1l"), ExtResource("4_4caxw"), ExtResource("6_7vusn"), ExtResource("7_cr6s4"), ExtResource("8_qknql"), ExtResource("9_8dx84")])
 metadata/_custom_type_script = "uid://c12aylqpvesix"
 
-[node name="Game" type="Node2D" unique_id=1570700222]
+[node name="Game" type="Node2D" unique_id=1570700222 node_paths=PackedStringArray("rulebook", "day_transition")]
 script = ExtResource("1_qmidl")
+rulebook = NodePath("UI/Rulebook")
+day_transition = NodePath("DayEndTransitions")
 daily_messages = Array[ExtResource("2_ijd1l")]([SubResource("Resource_4caxw")])
 
 [node name="Camera1" type="Camera2D" parent="." unique_id=809105464]
@@ -78,6 +81,32 @@ offset_bottom = 846.0
 grow_horizontal = 1
 grow_vertical = 1
 small_pause_break = 0.02
+
+[node name="Next" type="Button" parent="." unique_id=917125478]
+visible = false
+offset_left = 435.0
+offset_top = 865.0
+offset_right = 735.0
+offset_bottom = 905.0
+text = "Next"
+
+[node name="Catalogue" parent="." unique_id=234251754 instance=ExtResource("16_wwvri")]
+offset_left = 2959.0
+offset_top = 91.0
+offset_right = 3774.0
+offset_bottom = 991.0
+
+[node name="Worldmap" parent="." unique_id=79710952 instance=ExtResource("17_yqpbo")]
+offset_left = 2421.0
+offset_top = 523.0
+offset_right = 2421.0
+offset_bottom = 523.0
+
+[node name="Decoder" parent="." unique_id=1765702412 instance=ExtResource("23_wsdsm")]
+offset_left = 1133.0
+offset_top = 141.0
+offset_right = 1733.0
+offset_bottom = 783.0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
 
@@ -177,28 +206,36 @@ layout_mode = 2
 book = NodePath("../../Notebook")
 texture = ExtResource("20_cr6s4")
 
-[node name="Next" type="Button" parent="." unique_id=917125478]
+[node name="DayEndTransitions" type="CanvasLayer" parent="." unique_id=2072352399 node_paths=PackedStringArray("text", "panel")]
+script = ExtResource("25_qknql")
+text = NodePath("Control/RichTextLabel")
+panel = NodePath("Control")
+
+[node name="Control" type="ColorRect" parent="DayEndTransitions" unique_id=61917348]
 visible = false
-offset_left = 435.0
-offset_top = 865.0
-offset_right = 735.0
-offset_bottom = 905.0
-text = "Next"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="Catalogue" parent="." unique_id=234251754 instance=ExtResource("16_wwvri")]
-offset_left = 2959.0
-offset_top = 91.0
-offset_right = 3774.0
-offset_bottom = 991.0
-
-[node name="Worldmap" parent="." unique_id=79710952 instance=ExtResource("17_yqpbo")]
-offset_left = 2421.0
-offset_top = 523.0
-offset_right = 2421.0
-offset_bottom = 523.0
-
-[node name="Decoder" parent="." unique_id=1765702412 instance=ExtResource("23_wsdsm")]
-offset_left = 1133.0
-offset_top = 141.0
-offset_right = 1733.0
-offset_bottom = 783.0
+[node name="RichTextLabel" type="RichTextLabel" parent="DayEndTransitions/Control" unique_id=1366775309]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 62
+text = "DAY 1 ENDED"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
