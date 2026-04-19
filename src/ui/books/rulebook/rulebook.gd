@@ -13,9 +13,13 @@ func _ready() -> void:
 	super()
 	left_page_button.pressed.connect(_change_page.bind(-1))
 	right_page_button.pressed.connect(_change_page.bind(1))
+	
 	for child in pages_parent.get_children():
 		if child is Control:
 			pages.append(child)
+			
+	for control in change_log:
+		control.hide()
 	
 	_update_page_visibility()
 

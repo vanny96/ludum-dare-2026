@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Spy" format=3 uid="uid://d0d0pn3kdwlfv"]
 
 [ext_resource type="Texture2D" uid="uid://dw325eo8ouo5q" path="res://resources/spies/assets/smile.png" id="1_qse2r"]
-[ext_resource type="Script" path="res://src/data/spy.gd" id="2_13rgy"]
+[ext_resource type="Script" uid="uid://bcfp4h21ta8f8" path="res://src/data/spy.gd" id="2_13rgy"]
 
 [resource]
 script = ExtResource("2_13rgy")
 name = "SMILE"
 gender = "Woman"
 picture = ExtResource("1_qse2r")
-age = 19
+age = 36
 good_keywords = Array[String](["Vacation", "Trip", "Break"])
 bad_keywords = Array[String](["Work", "Work", "Work"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

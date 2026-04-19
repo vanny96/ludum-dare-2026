@@ -3,7 +3,7 @@ class_name Computer extends Control
 @onready var blips: TypiningText = %Blips
 
 func add_sender(sender: String):
-	add_char("INCOMING %s MESSAGE...\n" % sender)
+	add_char("INCOMING %s MESSAGE...\n\n" % sender)
 	await blips.completed
 
 func add_char(s: String):

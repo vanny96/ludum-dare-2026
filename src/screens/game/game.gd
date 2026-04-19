@@ -53,7 +53,7 @@ func play_message(message: EncryptedMessage):
 	submit_buttons.show()
 	
 	var enemy = await self.submit_buttons.submit_answer
-	if message.enemy == enemy:
+	if message.allow_any or message.enemy == enemy:
 		correct_guesses += 1
 	else:
 		wrong_guesses += 1

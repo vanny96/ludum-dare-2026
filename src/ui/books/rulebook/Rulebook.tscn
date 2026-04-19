@@ -376,7 +376,6 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 
 [node name="FirstDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -387,7 +386,6 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="SecondDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1539460341]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -399,7 +397,6 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="ThirdDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1954808182]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -411,19 +408,16 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="FourthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1144051374]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 4:
-• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. 
-• Agents older than 35 are on vacation today."
+• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. "
 fit_content = true
 autowrap_mode = 2
 
 [node name="FifthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1255939717]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26

@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://bsw0dn00rku1c"
 [resource]
 script = ExtResource("4_eqt2l")
 sender = "SMILE"
-plain_text = "Vacation in RIO. I might stay here."
+plain_text = "Vacation in RIO. Will take down Gibson with Viper and Funky."
 encryptions = Array[ExtResource("1_xtemi")]([SubResource("Resource_isx0p"), SubResource("Resource_boyim")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

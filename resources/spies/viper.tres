@@ -8,6 +8,6 @@ script = ExtResource("1_4sj06")
 name = "VIPER"
 gender = "Man"
 picture = ExtResource("1_0gx2i")
-age = 24
+age = 45
 good_keywords = Array[String](["Pain", "Suffer", "Kitty"])
 bad_keywords = Array[String](["Love", "Happy", "Milk"])

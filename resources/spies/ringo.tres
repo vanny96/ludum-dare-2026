@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Spy" format=3 uid="uid://jwg8ffms7kx4"]
 
 [ext_resource type="Texture2D" uid="uid://bnw2lx3jey52r" path="res://resources/spies/assets/ringo.png" id="1_dtsrw"]
-[ext_resource type="Script" path="res://src/data/spy.gd" id="2_sgaxl"]
+[ext_resource type="Script" uid="uid://bcfp4h21ta8f8" path="res://src/data/spy.gd" id="2_sgaxl"]
 
 [resource]
 script = ExtResource("2_sgaxl")
@@ -9,6 +9,6 @@ name = "RINGO"
 gender = "Man"
 picture = ExtResource("1_dtsrw")
 age = 51
-good_keywords = Array[String](["Order", "Rights", "Security"])
+good_keywords = Array[String](["Order", "Rights", "Double"])
 bad_keywords = Array[String](["Evil", "Corruption", "Traitor"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

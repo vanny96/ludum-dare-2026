@@ -77,6 +77,7 @@ vertical_alignment = 1
 
 [node name="PinNote" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1357525651]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureButton" parent="MarginContainer/VBoxContainer/PinNote" unique_id=1025366231]
 visible = false

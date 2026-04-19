@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DailyMessages" format=3 uid="uid://d4l77kyjdqxvd"]
+
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="1_0atku"]
+[ext_resource type="Resource" uid="uid://dk1s5s4xqbw5m" path="res://resources/encrypted_messages/day_1/message_1_intro.tres" id="2_itmcu"]
+[ext_resource type="Resource" uid="uid://bvnq8ykphaiue" path="res://resources/encrypted_messages/day_1/message_2_pre_decoder.tres" id="3_g12oc"]
+[ext_resource type="Resource" uid="uid://o44ru7knjox0" path="res://resources/encrypted_messages/day_1/message_3_decoder.tres" id="4_ipavs"]
+[ext_resource type="Resource" uid="uid://d3c2vhxmumtfj" path="res://resources/encrypted_messages/day_1/message_4_viper_intro.tres" id="5_ermna"]
+[ext_resource type="Resource" uid="uid://crjt35mm801w" path="res://resources/encrypted_messages/day_1/message_5_first_enemy.tres" id="6_o66lo"]
+[ext_resource type="Resource" uid="uid://l0liq6xdbvwb" path="res://resources/encrypted_messages/day_1/message_6_hq_report.tres" id="7_7dlpl"]
+[ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="8_34o4u"]
+
+[resource]
+script = ExtResource("8_34o4u")
+messages = Array[ExtResource("1_0atku")]([ExtResource("2_itmcu"), ExtResource("3_g12oc"), ExtResource("4_ipavs"), ExtResource("5_ermna"), ExtResource("6_o66lo"), ExtResource("7_7dlpl")])
+metadata/_custom_type_script = "uid://c12aylqpvesix"
