@@ -19,7 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://b8pir64hau5y1" path="res://src/ui/catalogue/catalogue.tscn" id="16_wwvri"]
 [ext_resource type="Texture2D" uid="uid://cfh3fbeq4m4di" path="res://assets/textures/arrowSilver_right.png" id="17_7vusn"]
 [ext_resource type="PackedScene" uid="uid://mdx8f2o5axab" path="res://src/ui/world_map/worldmap.tscn" id="17_yqpbo"]
+[ext_resource type="PackedScene" uid="uid://5pwnsiqkmeey" path="res://src/ui/bookbutton/BookButton.tscn" id="18_7vusn"]
 [ext_resource type="PackedScene" uid="uid://5buboe08s5wb" path="res://src/ui/decoder/Decoder.tscn" id="18_vaiev"]
+[ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://assets/textures/rulebook.png" id="19_wsdsm"]
+[ext_resource type="Texture2D" uid="uid://blmd5o784xx5s" path="res://assets/textures/notest.png" id="20_cr6s4"]
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
@@ -125,7 +128,7 @@ grow_horizontal = 1
 
 [node name="Left" type="TextureButton" parent="UI" unique_id=1500445093]
 custom_minimum_size = Vector2(50, 50)
-anchors_preset = -1
+anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 20.0
@@ -138,7 +141,7 @@ stretch_mode = 0
 
 [node name="Right" type="TextureButton" parent="UI" unique_id=1334775235]
 custom_minimum_size = Vector2(50, 50)
-anchors_preset = -1
+anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -151,6 +154,26 @@ grow_horizontal = 0
 grow_vertical = 2
 texture_normal = ExtResource("17_7vusn")
 stretch_mode = 0
+
+[node name="BooksButtons" type="HBoxContainer" parent="UI" unique_id=1277583159]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="BookButton" parent="UI/BooksButtons" unique_id=902615539 node_paths=PackedStringArray("book") instance=ExtResource("18_7vusn")]
+layout_mode = 2
+book = NodePath("../../Rulebook")
+texture = ExtResource("19_wsdsm")
+
+[node name="NotesButton" parent="UI/BooksButtons" unique_id=558954336 node_paths=PackedStringArray("book") instance=ExtResource("18_7vusn")]
+layout_mode = 2
+book = NodePath("../../Notebook")
+texture = ExtResource("20_cr6s4")
 
 [node name="Next" type="Button" parent="." unique_id=917125478]
 offset_left = 435.0

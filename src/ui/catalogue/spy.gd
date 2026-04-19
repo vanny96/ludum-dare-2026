@@ -16,7 +16,6 @@ extends Control
 
 func _ready() -> void:
 	notes_button.pressed.connect(spy_note.show)
-	print("Ready %s" % name)
 	
 func _process(_delta: float) -> void:
 	if not Engine.is_editor_hint():
