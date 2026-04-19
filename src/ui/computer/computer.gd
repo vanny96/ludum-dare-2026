@@ -10,5 +10,4 @@ func add_char(s: String):
 	blips.simulate_typing(s)
 	
 func reset():
-	await blips.stop()
 	blips._display_text = ""
