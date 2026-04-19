@@ -4,15 +4,21 @@
 
 ### Immediate
 
-* Ally and Enemy buttons
-* End of day screen
-* Writing the plot
+* Writing the plot - Gio
+* Ally and Enemy buttons - Gio
+* Update Decoder appearence - Gio
+* Add preferred encryption - Alex
+* Update Rulesbook
+  * Remove Morse reference - Alex
+  * Add instructions about notebook
+  * Add instructions about decoder
 
-## Possible rules
+### Polish
+* Add OST
+* Replace some sprites
+* Show settings button
+* Bug fixes
 
-* If the translate message starts with N, perform Atbash decryption (Start message with M)
-* If you hear boops it's always Caesar
-* If both Caesar and Atbash apply, decrypt Caesar first
 
 ## Days
 
