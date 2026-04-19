@@ -109,7 +109,9 @@ script = ExtResource("3_buqrj")
 [node name="Input" type="TextEdit" parent="HBoxContainer/VBoxContainer" unique_id=1919932069]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 placeholder_text = "Input"
+wrap_mode = 1
 
 [node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer" unique_id=430237120]
 layout_mode = 2
@@ -117,5 +119,7 @@ layout_mode = 2
 [node name="Output" type="TextEdit" parent="HBoxContainer/VBoxContainer" unique_id=1582242652]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 placeholder_text = "Output"
 editable = false
+wrap_mode = 1

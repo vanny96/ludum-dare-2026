@@ -25,6 +25,7 @@ var current_message_idx: int = 0
 var correct_guesses: int = 0
 var wrong_guesses: int = 0
 
+var day: int = 0
 
 func set_to_camera(i: int):
 	self.cameras[current_camera_idx % self.cameras.size()].enabled = false
@@ -40,10 +41,12 @@ func _ready() -> void:
 	play_message()
 
 func play_message():
-	signal_emitter.play_message(current_message.get_encrypted_message())
+	submit_buttons.hide()
+	await computer.add_sender(current_message.sender)
+	await signal_emitter.play_message(current_message.get_encrypted_message())
+	submit_buttons.show()
 	
 func submit_answer(enemy: bool):
-	computer.reset()
 	if current_message.enemy == enemy:
 		correct_guesses += 1
 		print("Correct")

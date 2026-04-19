@@ -5,8 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
 [ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
+[ext_resource type="Texture2D" uid="uid://bghawut7pdv7d" path="res://kenney_assets/Default/keyboard_arrow_left.png" id="6_y1w5f"]
+[ext_resource type="Texture2D" uid="uid://ccdmf8npo0gh7" path="res://kenney_assets/Default/keyboard_arrow_right.png" id="7_pnqyo"]
 
-[node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "close_button")]
+[sub_resource type="InputEventAction" id="InputEventAction_y1w5f"]
+action = &"move_left"
+
+[sub_resource type="Shortcut" id="Shortcut_pnqyo"]
+events = [SubResource("InputEventAction_y1w5f")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_pnqyo"]
+action = &"move_right"
+
+[sub_resource type="Shortcut" id="Shortcut_plfe5"]
+events = [SubResource("InputEventAction_pnqyo")]
+
+[node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "left_page_button", "right_page_button", "close_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -24,7 +38,9 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 pages_parent = NodePath("Pages")
-close_button = NodePath("Anchor/Margin/TextureButton")
+left_page_button = NodePath("Close/Left/TextureButton")
+right_page_button = NodePath("Close/Right/TextureButton")
+close_button = NodePath("Close/Close/TextureButton")
 
 [node name="Pages" type="CenterContainer" parent="." unique_id=1640546855]
 layout_mode = 2
@@ -65,15 +81,15 @@ autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageLeft/VBoxContainer" unique_id=1622534094]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageLeft/VBoxContainer/MarginContainer" unique_id=520887492]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "If you read this, you are chosen to be the next junior spymaster. Take heed of the task at hand:
 [ul] Decode the incoming message using our modern decoding system, found on page 2.
@@ -135,7 +151,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[font_size=10]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
+text = "[font_size=15]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
 fit_content = true
 autowrap_mode = 2
 
@@ -176,15 +192,15 @@ autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=1746270164]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "Spies are not always your ally. These are some tips to distinguish the enemy messages from our very own liars!
 [ul]Trust your instinct! Sometimes the message is just the truth.
@@ -225,15 +241,15 @@ autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=176598447]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
 fit_content = true
@@ -248,21 +264,22 @@ stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=594292604]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
 fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1833457743]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -350,15 +367,24 @@ autowrap_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
 [node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=687014771]
 layout_mode = 2
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
+[node name="FirstRule" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "• HQ is always an ally"
+fit_content = true
+autowrap_mode = 2
+
+[node name="DecodeText2" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=820215842]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -367,11 +393,11 @@ text = "More cyphers and extra rules can be added later."
 fit_content = true
 autowrap_mode = 2
 
-[node name="Anchor" type="Control" parent="." unique_id=910047544]
+[node name="Close" type="Control" parent="." unique_id=910047544]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Margin" type="MarginContainer" parent="Anchor" unique_id=2109356256]
+[node name="Close" type="MarginContainer" parent="Close" unique_id=2109356256]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -379,8 +405,53 @@ mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureButton" type="TextureButton" parent="Anchor/Margin" unique_id=1164080602]
+[node name="TextureButton" type="TextureButton" parent="Close/Close" unique_id=1164080602]
 texture_filter = 3
 layout_mode = 2
 texture_normal = ExtResource("5_b4kyx")
+stretch_mode = 0
+
+[node name="Left" type="MarginContainer" parent="Close" unique_id=1633171251]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -74.0
+offset_right = 74.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureButton" type="TextureButton" parent="Close/Left" unique_id=543811772]
+modulate = Color(0.6117647, 0.46666667, 0.3137255, 1)
+texture_filter = 3
+layout_mode = 2
+focus_mode = 0
+shortcut = SubResource("Shortcut_pnqyo")
+texture_normal = ExtResource("6_y1w5f")
+stretch_mode = 0
+
+[node name="Right" type="MarginContainer" parent="Close" unique_id=507772028]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureButton" type="TextureButton" parent="Close/Right" unique_id=1157877959]
+modulate = Color(0.6117647, 0.46666667, 0.3137255, 1)
+texture_filter = 3
+layout_mode = 2
+focus_mode = 0
+shortcut = SubResource("Shortcut_plfe5")
+texture_normal = ExtResource("7_pnqyo")
 stretch_mode = 0

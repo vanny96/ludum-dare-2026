@@ -2,23 +2,21 @@ extends Book
 
 @export var pages_parent: Control
 
+@export var left_page_button: BaseButton
+@export var right_page_button: BaseButton
+
 var pages: Array[Control] = []
 var current_page: int = 0
 
 func _ready() -> void:
 	super()
+	left_page_button.pressed.connect(_change_page.bind(-1))
+	right_page_button.pressed.connect(_change_page.bind(1))
 	for child in pages_parent.get_children():
 		if child is Control:
 			pages.append(child)
 	
 	_update_page_visibility()
-
-func _unhandled_input(event: InputEvent) -> void:	
-	if self.visible and self.has_focus():
-		if event.is_action_pressed("move_right"):
-			_change_page(1)
-		elif event.is_action_pressed("move_left"):
-			_change_page(-1)
 
 func get_toggle_action_name() -> String:
 	return "toggle_rulebook"

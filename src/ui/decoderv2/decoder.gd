@@ -31,7 +31,7 @@ func _update_decoder(idx: int):
 	_update_translatation()
 
 func _update_translatation():
-	output_box.text = active_decoder.encode(input_box.text)
+	output_box.text = active_decoder.decode(input_box.text)
 	
 func _update_caesar(mod: int):
 	caesar_decoder.shifts_amount += mod

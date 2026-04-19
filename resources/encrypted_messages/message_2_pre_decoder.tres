@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://bvnq8ykphaiue"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_em7ux"]
+[ext_resource type="Script" uid="uid://bsw0dn00rku1c" path="res://src/data/encryptions/morse_encode.gd" id="2_oavsb"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_mnu42"]
+
+[sub_resource type="Resource" id="Resource_boyim"]
+script = ExtResource("2_oavsb")
+metadata/_custom_type_script = "uid://bsw0dn00rku1c"
+
+[resource]
+script = ExtResource("3_mnu42")
+sender = "HQ"
+plain_text = "Next messages will be Caesar 5 encoded. Click Ally to continue."
+encryptions = Array[ExtResource("1_em7ux")]([SubResource("Resource_boyim")])
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

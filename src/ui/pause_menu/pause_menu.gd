@@ -15,8 +15,8 @@ func _ready() -> void:
 	if OS.has_feature("web"):
 		exit_button.visible = false
 		
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause"):
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
 		if visible:
 			resume()
 		else:

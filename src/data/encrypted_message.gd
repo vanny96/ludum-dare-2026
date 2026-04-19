@@ -1,6 +1,7 @@
 class_name EncryptedMessage extends Resource
 
-@export var plain_text: String = ""
+@export var sender: String = ""
+@export_multiline() var plain_text: String = ""
 @export var encryptions: Array[Encryption] = []
 @export var enemy: bool = false
 

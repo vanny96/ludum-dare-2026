@@ -1,4 +1,6 @@
-extends RichTextLabel
+class_name TypiningText extends RichTextLabel
+
+signal completed
 
 @export var cursor_char: String = "_" # Or "_"
 @export var blink_speed: float = 0.5
@@ -28,6 +30,7 @@ func simulate_typing(new_text: String):
 		_update_display()
 		# Small delay for typewriter effect
 		await get_tree().create_timer(type_speed).timeout
+	completed.emit()
 
 func _update_display():
 	# If cursor is visible, show it; otherwise, show a space to prevent "jumping"

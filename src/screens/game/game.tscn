@@ -5,13 +5,14 @@
 [ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="2_ijd1l"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="2_ls45d"]
 [ext_resource type="PackedScene" uid="uid://cytnhn07d8yx3" path="res://src/ui/signal/signal.tscn" id="2_osde3"]
-[ext_resource type="Resource" uid="uid://dk1s5s4xqbw5m" path="res://resources/encrypted_messages/message_1_ally.tres" id="3_ijd1l"]
+[ext_resource type="Resource" uid="uid://dk1s5s4xqbw5m" path="res://resources/encrypted_messages/message_1_intro.tres" id="3_ijd1l"]
 [ext_resource type="PackedScene" uid="uid://b1wuuay28w42i" path="res://src/ui/buttons/buttons.tscn" id="3_osde3"]
-[ext_resource type="Resource" uid="uid://bvnq8ykphaiue" path="res://resources/encrypted_messages/message_2_enemy.tres" id="4_4caxw"]
+[ext_resource type="Resource" uid="uid://bvnq8ykphaiue" path="res://resources/encrypted_messages/message_2_pre_decoder.tres" id="4_4caxw"]
 [ext_resource type="PackedScene" uid="uid://dpjpgk3ukisng" path="res://src/ui/computer/Computer.tscn" id="4_047u2"]
-[ext_resource type="Resource" uid="uid://csimh2p7dna5f" path="res://resources/encrypted_messages/message_3_viper.tres" id="5_b2esr"]
-[ext_resource type="Resource" uid="uid://cbpp42gc1ugct" path="res://resources/encrypted_messages/message_4_swine.tres" id="6_2kkvg"]
-[ext_resource type="Resource" uid="uid://76oxywkq5ak8" path="res://resources/encrypted_messages/message_5_swine_compromised.tres" id="7_wwvri"]
+[ext_resource type="Resource" uid="uid://o44ru7knjox0" path="res://resources/encrypted_messages/message_3_decoder.tres" id="6_7vusn"]
+[ext_resource type="Resource" uid="uid://d3c2vhxmumtfj" path="res://resources/encrypted_messages/message_4_viper_intro.tres" id="7_cr6s4"]
+[ext_resource type="Resource" uid="uid://crjt35mm801w" path="res://resources/encrypted_messages/message_5_first_enemy.tres" id="8_qknql"]
+[ext_resource type="Resource" uid="uid://l0liq6xdbvwb" path="res://resources/encrypted_messages/message_6_hq_report.tres" id="9_8dx84"]
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
 [ext_resource type="PackedScene" uid="uid://cowiv31ahpvla" path="res://src/ui/books/notebook/Notebook.tscn" id="14_2kkvg"]
 [ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
@@ -26,7 +27,7 @@
 
 [sub_resource type="Resource" id="Resource_4caxw"]
 script = ExtResource("2_ijd1l")
-messages = Array[ExtResource("2_ls45d")]([ExtResource("3_ijd1l"), ExtResource("4_4caxw"), ExtResource("5_b2esr"), ExtResource("6_2kkvg"), ExtResource("7_wwvri")])
+messages = Array[ExtResource("2_ls45d")]([ExtResource("3_ijd1l"), ExtResource("4_4caxw"), ExtResource("6_7vusn"), ExtResource("7_cr6s4"), ExtResource("8_qknql"), ExtResource("9_8dx84")])
 metadata/_custom_type_script = "uid://c12aylqpvesix"
 
 [node name="Game" type="Node2D" unique_id=1570700222]
@@ -77,7 +78,6 @@ offset_bottom = 846.0
 grow_horizontal = 1
 grow_vertical = 1
 small_pause_break = 0.02
-big_pause_break = 0.15
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
 
@@ -178,6 +178,7 @@ book = NodePath("../../Notebook")
 texture = ExtResource("20_cr6s4")
 
 [node name="Next" type="Button" parent="." unique_id=917125478]
+visible = false
 offset_left = 435.0
 offset_top = 865.0
 offset_right = 735.0

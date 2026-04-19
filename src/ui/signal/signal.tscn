@@ -12,6 +12,8 @@ offset_right = -118.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qsouf")
+small_pause_break = 0.05
+big_pause_break = 0.15
 
 [node name="HFlowContainer" type="HBoxContainer" parent="." unique_id=1936409503]
 custom_minimum_size = Vector2(100, 0)
@@ -25,6 +27,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1952655909]
+volume_db = -40.0
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1745828411]
 layout_mode = 2
