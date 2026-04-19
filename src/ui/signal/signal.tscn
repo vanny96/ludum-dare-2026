@@ -14,7 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_qsouf")
 
 [node name="HFlowContainer" type="HBoxContainer" parent="." unique_id=1936409503]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
 [node name="Image" type="TextureRect" parent="HFlowContainer" unique_id=1589028292]
@@ -25,3 +25,6 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1952655909]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1745828411]
+layout_mode = 2

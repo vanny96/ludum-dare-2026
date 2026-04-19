@@ -24,6 +24,8 @@ var current_message_idx: int = 0
 var correct_guesses: int = 0
 var wrong_guesses: int = 0
 
+var day: int = 0
+
 func set_to_camera(i: int):
 	self.cameras[current_camera_idx % self.cameras.size()].enabled = false
 	self.cameras[i % self.cameras.size()].enabled = true

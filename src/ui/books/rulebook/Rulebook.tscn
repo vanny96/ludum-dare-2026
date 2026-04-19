@@ -30,7 +30,6 @@ close_button = NodePath("Anchor/Margin/TextureButton")
 layout_mode = 2
 
 [node name="Page1" type="HBoxContainer" parent="Pages" unique_id=1225432686]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -78,7 +77,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "If you read this, you are chosen to be the next junior spymaster. Take heed of the task at hand:
 [ul] Decode the incoming message using our modern decoding system, found on page 2.
-Determinte if the message is from an adversarial spy or not. You can find a list of tips on page 3.
+Determine if the message is from an adversarial spy or not. You can find a list of tips on page 3.
 Document the information where needed.
 Send your determination to the senior spymaster.
 [/ul]
@@ -340,6 +339,15 @@ text = "Page 5"
 fit_content = true
 autowrap_mode = 0
 
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=428857349]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "More rules"
+fit_content = true
+autowrap_mode = 0
+
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
 layout_mode = 2
 theme_override_constants/margin_left = 20
@@ -347,7 +355,10 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=1996717754]
+[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=687014771]
+layout_mode = 2
+
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
