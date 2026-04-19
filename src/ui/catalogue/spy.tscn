@@ -97,5 +97,5 @@ visible = false
 top_level = true
 z_index = 10
 offset_top = -475.0
-offset_bottom = 475.0
+offset_bottom = 145.0
 metadata/_edit_use_anchors_ = true

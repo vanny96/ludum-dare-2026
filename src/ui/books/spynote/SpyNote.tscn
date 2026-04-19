@@ -192,6 +192,8 @@ patch_margin_bottom = 10
 
 [node name="Anchor" type="Control" parent="." unique_id=429843162]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 mouse_filter = 2
 
 [node name="Margin" type="MarginContainer" parent="Anchor" unique_id=508555393]
