@@ -3,7 +3,8 @@
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
 [ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
 [ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
-[ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="4_fo450"]
+[ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
+[ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
 
 [node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "close_button")]
 anchors_preset = 8
@@ -23,9 +24,9 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 pages_parent = NodePath("Pages")
-close_button = NodePath("CloseButton/Margin/TextureButton")
+close_button = NodePath("Anchor/Margin/TextureButton")
 
-[node name="Pages" type="CenterContainer" parent="." unique_id=1831120770]
+[node name="Pages" type="CenterContainer" parent="." unique_id=1640546855]
 layout_mode = 2
 
 [node name="Page1" type="HBoxContainer" parent="Pages" unique_id=1225432686]
@@ -140,6 +141,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -238,21 +240,21 @@ text = "We (of course) have a list of our own spies. The catalogue looks like th
 fit_content = true
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Page2/PageRight/VBoxContainer" unique_id=1193539322]
+[node name="TextureRect" type="TextureRect" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1193539322]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 texture = ExtResource("4_fo450")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="Page2/PageRight/VBoxContainer" unique_id=594292604]
+[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=594292604]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -262,7 +264,6 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1833457743]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -274,11 +275,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageLeft" unique_id=170268624]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageLeft" unique_id=262888710]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=30070064]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=898307377]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -287,6 +288,38 @@ text = "Page 4"
 fit_content = true
 autowrap_mode = 0
 
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=459494110]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Cyphers and more"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=1693878242]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=918462879]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Not all text is what it seems. If the text seems garbled to you, it might be encrypted. These are some cyphers and how to decode them.
+
+[font_size=30]Ceasar[/font_size]
+A caesar cypher modifies text by [wave]shifting[/wave] along an alphabet. For example if A is shifted by 2, it becomes C (a->b->c). To undo this, find a shift that makes the text ungarbled, since any caesar cipher can be undone by just shifting back.
+
+[font_size=30]Atbash[/font_size]
+Atbash works similarly, but by [wave]mirroring[/wave] the alphabet instead! A becomes Z, Z becomes A. Use the handy decoder tool to find the correct letters.
+"
+fit_content = true
+autowrap_mode = 2
+
 [node name="PageRight" type="PanelContainer" parent="Pages/Page3" unique_id=961407434]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -294,11 +327,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageRight" unique_id=328168665]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageRight" unique_id=1764969505]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=1610900800]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=1779876465]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -307,19 +340,36 @@ text = "Page 5"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CloseButton" type="Control" parent="." unique_id=1415706529]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Margin" type="MarginContainer" parent="CloseButton" unique_id=1194382103]
-layout_mode = 1
-offset_right = 30.0
-offset_bottom = 30.0
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=1996717754]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "More cyphers and extra rules can be added later."
+fit_content = true
+autowrap_mode = 2
+
+[node name="Anchor" type="Control" parent="." unique_id=910047544]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="Anchor" unique_id=2109356256]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="TextureButton" type="TextureButton" parent="CloseButton/Margin" unique_id=559126201]
-texture_filter = 1
-custom_minimum_size = Vector2(30, 30)
+[node name="TextureButton" type="TextureButton" parent="Anchor/Margin" unique_id=1164080602]
+texture_filter = 3
 layout_mode = 2
-texture_normal = ExtResource("4_fo450")
+texture_normal = ExtResource("5_b4kyx")
 stretch_mode = 0

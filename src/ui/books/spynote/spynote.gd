@@ -7,19 +7,6 @@ class_name SpyNote extends Book
 @export var positive_keywords_parent: Control
 @export var negative_keywords_parent: Control
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and self.visible:
-		var click_pos = get_global_mouse_position()
-		if not get_global_rect().has_point(click_pos):
-			release_all_focus(self)
-			hide()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and self.visible:
-		var click_pos = get_global_mouse_position()
-		if not get_global_rect().has_point(click_pos):
-			release_all_focus(self)
-			hide()
 			
 func update_with_spy(spy: Spy):
 	name_value.text = spy.name

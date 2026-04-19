@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://b8h244888t554" path="res://src/ui/books/spynote/spynote.gd" id="2_7yh4w"]
 [ext_resource type="PackedScene" uid="uid://bqcbge8v2lsmy" path="res://src/ui/books/spynote/Keyword.tscn" id="3_7yh4w"]
 [ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/books/assets/theme/page.png" id="3_hwva0"]
+[ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_hwva0"]
 
-[node name="SpyNote" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("name_value", "gender_value", "age_value", "positive_keywords_parent", "negative_keywords_parent")]
+[node name="SpyNote" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("name_value", "gender_value", "age_value", "positive_keywords_parent", "negative_keywords_parent", "close_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -27,6 +28,7 @@ gender_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/GenderValue")
 age_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/AgeValue")
 positive_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/PostiveKeywords")
 negative_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/NegativeKeywords")
+close_button = NodePath("Anchor/Margin/TextureButton")
 
 [node name="Page" type="HBoxContainer" parent="." unique_id=854456512]
 layout_mode = 2
@@ -187,3 +189,21 @@ region_rect = Rect2(0, 5.4521685, 100, 94.54783)
 patch_margin_left = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
+
+[node name="Anchor" type="Control" parent="." unique_id=429843162]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="Anchor" unique_id=508555393]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureButton" type="TextureButton" parent="Anchor/Margin" unique_id=1563494792]
+texture_filter = 3
+layout_mode = 2
+texture_normal = ExtResource("5_hwva0")
+stretch_mode = 0

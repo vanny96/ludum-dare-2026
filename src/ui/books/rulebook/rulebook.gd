@@ -6,15 +6,14 @@ var pages: Array[Control] = []
 var current_page: int = 0
 
 func _ready() -> void:
+	super()
 	for child in pages_parent.get_children():
 		if child is Control:
 			pages.append(child)
 	
 	_update_page_visibility()
 
-func _unhandled_input(event: InputEvent) -> void:
-	super(event)
-	
+func _unhandled_input(event: InputEvent) -> void:	
 	if self.visible and self.has_focus():
 		if event.is_action_pressed("move_right"):
 			_change_page(1)
