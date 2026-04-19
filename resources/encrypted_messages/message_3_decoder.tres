@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://bsw0dn00rku1c"
 [resource]
 script = ExtResource("4_ndidi")
 sender = "HQ"
-plain_text = "Next you'll meet one of our agents. Click Ally to continue."
+plain_text = "Next you'll meet one of our agents. "
 encryptions = Array[ExtResource("1_rkgom")]([SubResource("Resource_isx0p"), SubResource("Resource_boyim")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://bsw0dn00rku1c"
 [resource]
 script = ExtResource("3_mnu42")
 sender = "HQ"
-plain_text = "Next messages will be Caesar 5 encoded. Click Ally to continue."
+plain_text = "Next messages will be Caesar 5 encoded. "
 encryptions = Array[ExtResource("1_em7ux")]([SubResource("Resource_boyim")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
