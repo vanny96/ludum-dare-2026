@@ -1,8 +1,14 @@
 @abstract
 class_name Book extends Control
 
+@export var close_button: BaseButton
+
 var dragging: bool = false
 var drag_offset: Vector2 = Vector2.ZERO
+
+func _ready() -> void:
+	if close_button:
+		close_button.pressed.connect(close)
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -30,6 +36,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			
 @abstract
 func get_toggle_action_name() -> String
+
+func close():
+	release_all_focus(self)
+	visible = false
 
 func release_all_focus(parent_node: Control):
 	if parent_node.has_focus():

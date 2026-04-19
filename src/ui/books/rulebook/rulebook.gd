@@ -1,10 +1,12 @@
 extends Book
 
+@export var pages_parent: Control
+
 var pages: Array[Control] = []
 var current_page: int = 0
 
 func _ready() -> void:
-	for child in get_children():
+	for child in pages_parent.get_children():
 		if child is Control:
 			pages.append(child)
 	

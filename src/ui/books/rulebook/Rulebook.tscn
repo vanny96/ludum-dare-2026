@@ -3,9 +3,9 @@
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
 [ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
 [ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
-[ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
+[ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="4_fo450"]
 
-[node name="Rulebook" type="PanelContainer" unique_id=1129416725]
+[node name="Rulebook" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("pages_parent", "close_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -22,25 +22,30 @@ focus_mode = 1
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
+pages_parent = NodePath("Pages")
+close_button = NodePath("CloseButton/Margin/TextureButton")
 
-[node name="Page1" type="HBoxContainer" parent="." unique_id=1225432686]
+[node name="Pages" type="CenterContainer" parent="." unique_id=1831120770]
+layout_mode = 2
+
+[node name="Page1" type="HBoxContainer" parent="Pages" unique_id=1225432686]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="PageLeft" type="PanelContainer" parent="Page1" unique_id=235781307]
+[node name="PageLeft" type="PanelContainer" parent="Pages/Page1" unique_id=235781307]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page1/PageLeft" unique_id=249678148]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page1/PageLeft" unique_id=249678148]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=1380327837]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageLeft/VBoxContainer" unique_id=1380327837]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -49,7 +54,7 @@ text = "Page 1"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer" unique_id=1620541598]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page1/PageLeft/VBoxContainer" unique_id=1620541598]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -58,14 +63,14 @@ text = "A guide to being a good spymaster"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Page1/PageLeft/VBoxContainer" unique_id=1622534094]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageLeft/VBoxContainer" unique_id=1622534094]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page1/PageLeft/VBoxContainer/MarginContainer" unique_id=520887492]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageLeft/VBoxContainer/MarginContainer" unique_id=520887492]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -82,18 +87,18 @@ Make sure to do your task diligently. You will be docked pay for every mistake. 
 fit_content = true
 autowrap_mode = 2
 
-[node name="PageRight" type="PanelContainer" parent="Page1" unique_id=1060027897]
+[node name="PageRight" type="PanelContainer" parent="Pages/Page1" unique_id=1060027897]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Page1/PageRight" unique_id=1303698221]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page1/PageRight" unique_id=1303698221]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2" unique_id=439416690]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=439416690]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -102,7 +107,7 @@ text = "Page 2"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CodeDescription" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2" unique_id=1026195951]
+[node name="CodeDescription" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1026195951]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -112,20 +117,20 @@ text = "Super Secret Code Map"
 fit_content = true
 autowrap_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="Page1/PageRight/VBoxContainer2" unique_id=1948858273]
+[node name="TextureRect" type="TextureRect" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1948858273]
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("3_3h2gt")
 expand_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="Page1/PageRight/VBoxContainer2" unique_id=481632005]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=481632005]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=671703697]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=671703697]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -134,24 +139,23 @@ text = "[font_size=10]Note: rules are subject to change when needed. Not rights 
 fit_content = true
 autowrap_mode = 2
 
-[node name="Page2" type="HBoxContainer" parent="." unique_id=854456512]
-visible = false
+[node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="PageLeft" type="PanelContainer" parent="Page2" unique_id=216568599]
+[node name="PageLeft" type="PanelContainer" parent="Pages/Page2" unique_id=216568599]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageLeft" unique_id=575457465]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageLeft" unique_id=575457465]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=924667756]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=924667756]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -160,7 +164,7 @@ text = "Page 2"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer" unique_id=1262004685]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=1262004685]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -169,14 +173,14 @@ text = "Verifying spies for dummies"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Page2/PageLeft/VBoxContainer" unique_id=1746270164]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=1746270164]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -189,18 +193,18 @@ Spies may contact  you with a codeword. Be sure to check whether this codeword i
 fit_content = true
 autowrap_mode = 2
 
-[node name="PageRight" type="PanelContainer" parent="Page2" unique_id=1864925008]
+[node name="PageRight" type="PanelContainer" parent="Pages/Page2" unique_id=1864925008]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page2/PageRight" unique_id=1845704227]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageRight" unique_id=1845704227]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1270876338]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1270876338]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -209,7 +213,7 @@ text = "Page 3"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer" unique_id=1808342163]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1808342163]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -218,14 +222,14 @@ text = "The spy catalogue"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Page2/PageRight/VBoxContainer" unique_id=176598447]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=176598447]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -257,23 +261,24 @@ text = "Click the [wave][notes][/wave] button to be able to see their codewords 
 fit_content = true
 autowrap_mode = 2
 
-[node name="Page3" type="HBoxContainer" parent="." unique_id=1833457743]
+[node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1833457743]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="PageLeft" type="PanelContainer" parent="Page3" unique_id=1098185818]
+[node name="PageLeft" type="PanelContainer" parent="Pages/Page3" unique_id=1098185818]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageLeft" unique_id=262888710]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageLeft" unique_id=170268624]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=898307377]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=30070064]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -282,50 +287,18 @@ text = "Page 4"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=459494110]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-bbcode_enabled = true
-text = "Cyphers and more"
-fit_content = true
-autowrap_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Page3/PageLeft/VBoxContainer" unique_id=1693878242]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="DecodeText" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=918462879]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
-bbcode_enabled = true
-text = "Not all text is what it seems. If the text seems garbled to you, it might be encrypted. These are some cyphers and how to decode them.
-
-[font_size=30]Ceasar[/font_size]
-A caesar cypher modifies text by [wave]shifting[/wave] along an alphabet. For example if A is shifted by 2, it becomes C (a->b->c). To undo this, find a shift that makes the text ungarbled, since any caesar cipher can be undone by just shifting back.
-
-[font_size=30]Atbash[/font_size]
-Atbash works similarly, but by [wave]mirroring[/wave] the alphabet instead! A becomes Z, Z becomes A. Use the handy decoder tool to find the correct letters.
-"
-fit_content = true
-autowrap_mode = 2
-
-[node name="PageRight" type="PanelContainer" parent="Page3" unique_id=961407434]
+[node name="PageRight" type="PanelContainer" parent="Pages/Page3" unique_id=961407434]
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageRight" unique_id=1764969505]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageRight" unique_id=328168665]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer" unique_id=1779876465]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=1610900800]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -334,18 +307,19 @@ text = "Page 5"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Page3/PageRight/VBoxContainer" unique_id=983425681]
+[node name="CloseButton" type="Control" parent="." unique_id=1415706529]
 layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer/MarginContainer" unique_id=1996717754]
+[node name="Margin" type="MarginContainer" parent="CloseButton" unique_id=1194382103]
+layout_mode = 1
+offset_right = 30.0
+offset_bottom = 30.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureButton" type="TextureButton" parent="CloseButton/Margin" unique_id=559126201]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 20
-bbcode_enabled = true
-text = "More cyphers and extra rules can be added later."
-fit_content = true
-autowrap_mode = 2
+texture_normal = ExtResource("4_fo450")
+stretch_mode = 0
