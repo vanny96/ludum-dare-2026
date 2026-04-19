@@ -9,8 +9,8 @@ extends Node2D
 @onready var computer: Computer = $Computer
 @onready var buttons: MorseButtons = $UI/Buttons
 @onready var submit_buttons: SubmitButtons = $UI/SubmitButtons
-@onready var left: Button = $UI/Left
-@onready var right: Button = $UI/Right
+@onready var left: BaseButton = $UI/Left
+@onready var right: BaseButton = $UI/Right
 
 @export var daily_messages: Array[DailyMessages]
 
