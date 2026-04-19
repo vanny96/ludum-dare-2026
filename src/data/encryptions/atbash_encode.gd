@@ -14,3 +14,6 @@ func encode(input: String) -> String:
 			result += input[i]
 			
 	return result
+	
+func decode(input: String) -> String:
+	return encode(input)
