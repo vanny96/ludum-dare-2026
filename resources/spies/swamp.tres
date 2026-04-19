@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Spy" format=3 uid="uid://bab3vudmvja6u"]
 
 [ext_resource type="Texture2D" uid="uid://dkentw3ofwg7" path="res://resources/spies/assets/swamp.png" id="1_ce3jr"]
-[ext_resource type="Script" uid="uid://bcfp4h21ta8f8" path="res://src/data/spy.gd" id="2_43024"]
+[ext_resource type="Script" path="res://src/data/spy.gd" id="2_43024"]
 
 [resource]
 script = ExtResource("2_43024")

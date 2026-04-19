@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
 [ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
 [ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
+[ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
 
 [node name="Rulebook" type="PanelContainer" unique_id=1129416725]
 anchors_preset = 8
@@ -134,6 +135,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page2" type="HBoxContainer" parent="." unique_id=854456512]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -228,12 +230,34 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "We (of course) have a list of our own spies. The catalogue works as follows:"
+text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
+fit_content = true
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Page2/PageRight/VBoxContainer" unique_id=1193539322]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("4_fo450")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Page2/PageRight/VBoxContainer" unique_id=594292604]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
 fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="." unique_id=1833457743]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -245,18 +269,50 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageLeft" unique_id=170268624]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageLeft" unique_id=262888710]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=30070064]
+[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=898307377]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "Page 5"
+text = "Page 4"
 fit_content = true
 autowrap_mode = 0
+
+[node name="VSFD" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer" unique_id=459494110]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Cyphers and more"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Page3/PageLeft/VBoxContainer" unique_id=1693878242]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=918462879]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Not all text is what it seems. If the text seems garbled to you, it might be encrypted. These are some cyphers and how to decode them.
+
+[font_size=30]Ceasar[/font_size]
+A caesar cypher modifies text by [wave]shifting[/wave] along an alphabet. For example if A is shifted by 2, it becomes C (a->b->c). To undo this, find a shift that makes the text ungarbled, since any caesar cipher can be undone by just shifting back.
+
+[font_size=30]Atbash[/font_size]
+Atbash works similarly, but by [wave]mirroring[/wave] the alphabet instead! A becomes Z, Z becomes A. Use the handy decoder tool to find the correct letters.
+"
+fit_content = true
+autowrap_mode = 2
 
 [node name="PageRight" type="PanelContainer" parent="Page3" unique_id=961407434]
 custom_minimum_size = Vector2(400, 600)
@@ -265,15 +321,31 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageRight" unique_id=328168665]
+[node name="VBoxContainer" type="VBoxContainer" parent="Page3/PageRight" unique_id=1764969505]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer" unique_id=1610900800]
+[node name="RichTextLabel" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer" unique_id=1779876465]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "Page 6"
+text = "Page 5"
 fit_content = true
 autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Page3/PageRight/VBoxContainer" unique_id=983425681]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Page3/PageRight/VBoxContainer/MarginContainer" unique_id=1996717754]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "More cyphers and extra rules can be added later."
+fit_content = true
+autowrap_mode = 2
