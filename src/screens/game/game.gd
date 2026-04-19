@@ -47,6 +47,7 @@ func play_message():
 	submit_buttons.show()
 	
 func submit_answer(enemy: bool):
+	computer.reset()
 	if current_message.enemy == enemy:
 		correct_guesses += 1
 		print("Correct")

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://bsw0dn00rku1c"
 [resource]
 script = ExtResource("3_nk285")
 sender = "HQ"
-plain_text = "Welcome new spymaster. Open the red rulebook for guidance. "
+plain_text = "Welcome new spymaster. Check last page of red rulebook. "
 encryptions = Array[ExtResource("1_hx6am")]([SubResource("Resource_boyim")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
