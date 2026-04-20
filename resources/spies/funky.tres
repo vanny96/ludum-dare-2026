@@ -9,6 +9,7 @@ name = "FUNKY"
 gender = "All"
 picture = ExtResource("1_8glx5")
 age = 39
+preferred_encryption = "Vigenere"
 good_keywords = Array[String](["Music", "Feeling", "Vibes"])
 bad_keywords = Array[String](["Law", "Politics", "Hate"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="1_k45rn"]
 [ext_resource type="Resource" uid="uid://dk1s5s4xqbw5m" path="res://resources/encrypted_messages/day_1/message_1_intro.tres" id="2_ym5c2"]
 [ext_resource type="Resource" uid="uid://bvnq8ykphaiue" path="res://resources/encrypted_messages/day_1/message_2_pre_decoder.tres" id="3_g3ewi"]
-[ext_resource type="Resource" uid="uid://o44ru7knjox0" path="res://resources/encrypted_messages/day_1/message_3_decoder.tres" id="4_wlntr"]
 [ext_resource type="Resource" uid="uid://d3c2vhxmumtfj" path="res://resources/encrypted_messages/day_1/message_4_viper_intro.tres" id="5_l76oj"]
 [ext_resource type="Resource" uid="uid://crjt35mm801w" path="res://resources/encrypted_messages/day_1/message_5_first_enemy.tres" id="6_o3kt7"]
 [ext_resource type="Resource" uid="uid://l0liq6xdbvwb" path="res://resources/encrypted_messages/day_1/message_6_hq_report.tres" id="7_km58r"]
@@ -11,5 +10,5 @@
 
 [resource]
 script = ExtResource("8_6r5qi")
-messages = Array[ExtResource("1_k45rn")]([ExtResource("2_ym5c2"), ExtResource("3_g3ewi"), ExtResource("4_wlntr"), ExtResource("5_l76oj"), ExtResource("6_o3kt7"), ExtResource("7_km58r")])
+messages = Array[ExtResource("1_k45rn")]([ExtResource("2_ym5c2"), ExtResource("3_g3ewi"), ExtResource("5_l76oj"), ExtResource("6_o3kt7"), ExtResource("7_km58r")])
 metadata/_custom_type_script = "uid://c12aylqpvesix"

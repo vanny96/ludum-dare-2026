@@ -4,6 +4,7 @@ class_name SpyNote extends Book
 @export var name_value: RichTextLabel
 @export var gender_value: RichTextLabel
 @export var age_value: RichTextLabel
+@export var favorite_encoding_value: RichTextLabel
 @export var positive_keywords_parent: Control
 @export var negative_keywords_parent: Control
 
@@ -12,6 +13,7 @@ func update_with_spy(spy: Spy):
 	name_value.text = spy.name
 	gender_value.text = spy.gender
 	age_value.text = str(spy.age)
+	favorite_encoding_value.text = spy.preferred_encryption
 	
 	_update_keywords(positive_keywords_parent, spy.good_keywords, true)
 	_update_keywords(negative_keywords_parent, spy.bad_keywords, false)

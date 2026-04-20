@@ -513,7 +513,7 @@ theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 3:
 • Agents use their preffered method of decoding.
-• Agents using Vigenere will use their 1st favorite word as their decoding keyword.
+• Agents using Vigenere will use their 1st negative word as their decoding keyword.
 • Agents won't travel from West to East. "
 fit_content = true
 autowrap_mode = 2

@@ -9,6 +9,7 @@ name = "SMILE"
 gender = "Woman"
 picture = ExtResource("1_qse2r")
 age = 36
+preferred_encryption = "Atbash"
 good_keywords = Array[String](["Vacation", "Trip", "Break"])
 bad_keywords = Array[String](["Work", "Work", "Work"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

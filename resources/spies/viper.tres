@@ -9,5 +9,6 @@ name = "VIPER"
 gender = "Man"
 picture = ExtResource("1_0gx2i")
 age = 45
+preferred_encryption = "Caesar"
 good_keywords = Array[String](["Pain", "Suffer", "Kitty"])
 bad_keywords = Array[String](["Love", "Happy", "Milk"])

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bilv26tccnwbl" path="res://src/ui/books/assets/theme/page.png" id="3_hwva0"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_hwva0"]
 
-[node name="SpyNote" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("name_value", "gender_value", "age_value", "positive_keywords_parent", "negative_keywords_parent", "close_button")]
+[node name="SpyNote" type="PanelContainer" unique_id=1129416725 node_paths=PackedStringArray("name_value", "gender_value", "age_value", "favorite_encoding_value", "positive_keywords_parent", "negative_keywords_parent", "close_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,6 +26,7 @@ script = ExtResource("2_7yh4w")
 name_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/NameValue")
 gender_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/GenderValue")
 age_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/AgeValue")
+favorite_encoding_value = NodePath("Page/PageLeft/VBoxContainer/BaseData/EncodingValue")
 positive_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/PostiveKeywords")
 negative_keywords_parent = NodePath("Page/PageLeft/VBoxContainer/Keywords/NegativeKeywords")
 close_button = NodePath("Anchor/Margin/TextureButton")
@@ -92,6 +93,18 @@ autowrap_mode = 0
 [node name="AgeValue" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=928395751]
 layout_mode = 2
 text = "29"
+fit_content = true
+autowrap_mode = 0
+
+[node name="EncodingLabel" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=837407271]
+layout_mode = 2
+text = "Favorite Encoding"
+fit_content = true
+autowrap_mode = 0
+
+[node name="EncodingValue" type="RichTextLabel" parent="Page/PageLeft/VBoxContainer/BaseData" unique_id=1296386604]
+layout_mode = 2
+text = "Vigenere"
 fit_content = true
 autowrap_mode = 0
 

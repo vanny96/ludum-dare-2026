@@ -9,6 +9,7 @@ name = "JELLY"
 gender = "Woman"
 picture = ExtResource("1_3grto")
 age = 19
+preferred_encryption = "Caesar"
 good_keywords = Array[String](["Tea", "Sugar", "Cake"])
 bad_keywords = Array[String](["Salt", "Coffe", "Money"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"
