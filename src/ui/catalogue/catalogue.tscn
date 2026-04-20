@@ -7,6 +7,16 @@
 [ext_resource type="Resource" uid="uid://d0d0pn3kdwlfv" path="res://resources/spies/smile.tres" id="5_g6ps7"]
 [ext_resource type="Resource" uid="uid://bab3vudmvja6u" path="res://resources/spies/swamp.tres" id="6_3ybha"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ybha"]
+bg_color = Color(0.2160379, 0.20986152, 0.3237094, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_detail = 20
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
 [node name="Catalogue" type="PanelContainer" unique_id=234251754]
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,39 +29,33 @@ offset_right = 275.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ybha")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=530159427]
-layout_mode = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=1534226195]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1534226195]
 layout_mode = 2
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 columns = 2
 
-[node name="Spy" parent="MarginContainer/GridContainer" unique_id=581583109 instance=ExtResource("1_ilbgr")]
+[node name="Spy" parent="GridContainer" unique_id=581583109 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 
-[node name="Spy2" parent="MarginContainer/GridContainer" unique_id=1727683009 instance=ExtResource("1_ilbgr")]
+[node name="Spy2" parent="GridContainer" unique_id=1727683009 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 spy = ExtResource("2_pylqo")
 
-[node name="Spy3" parent="MarginContainer/GridContainer" unique_id=1174152066 instance=ExtResource("1_ilbgr")]
+[node name="Spy3" parent="GridContainer" unique_id=1174152066 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 spy = ExtResource("3_e6hov")
 
-[node name="Spy4" parent="MarginContainer/GridContainer" unique_id=1716702487 instance=ExtResource("1_ilbgr")]
+[node name="Spy4" parent="GridContainer" unique_id=1716702487 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 spy = ExtResource("4_h1p4j")
 
-[node name="Spy5" parent="MarginContainer/GridContainer" unique_id=1364740593 instance=ExtResource("1_ilbgr")]
+[node name="Spy5" parent="GridContainer" unique_id=1364740593 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 spy = ExtResource("5_g6ps7")
 
-[node name="Spy6" parent="MarginContainer/GridContainer" unique_id=1893660843 instance=ExtResource("1_ilbgr")]
+[node name="Spy6" parent="GridContainer" unique_id=1893660843 instance=ExtResource("1_ilbgr")]
 layout_mode = 2
 spy = ExtResource("6_3ybha")
