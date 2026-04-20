@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://dqqbsgethp5so"]
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_5lvjs"]
-[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_4ktqb"]
+[ext_resource type="Script" uid="uid://b7qons3qt7m8i" path="res://src/data/encryptions/vigener_encode.gd" id="2_3xiae"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_df0hk"]
 
-[sub_resource type="Resource" id="Resource_isx0p"]
-script = ExtResource("2_4ktqb")
-shifts_amount = 5
-metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+[sub_resource type="Resource" id="Resource_5lvjs"]
+script = ExtResource("2_3xiae")
+keyword = "EYES"
+metadata/_custom_type_script = "uid://b7qons3qt7m8i"
 
 [resource]
 script = ExtResource("4_df0hk")
 sender = "SWAMP"
 plain_text = "Swamp is human. Swamp in Berlin."
-encryptions = Array[ExtResource("1_5lvjs")]([SubResource("Resource_isx0p")])
+encryptions = Array[ExtResource("1_5lvjs")]([SubResource("Resource_5lvjs")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

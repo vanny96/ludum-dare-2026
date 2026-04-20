@@ -6,17 +6,17 @@
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_jn62n")
-shifts_amount = 3
+shifts_amount = 4
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_jn62n")
-shifts_amount = 5
+shifts_amount = 22
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("3_owniw")
 sender = "???"
-plain_text = "Won't let them die. No more suffer. I've already died once, I'll hold the button."
+plain_text = "Won't |et them die. No more suffer. |'ve already died once, I'|| hold the button."
 encryptions = Array[ExtResource("1_xnu4r")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

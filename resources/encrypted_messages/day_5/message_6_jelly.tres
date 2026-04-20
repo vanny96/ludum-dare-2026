@@ -6,18 +6,17 @@
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_3grcy")
-shifts_amount = 3
+shifts_amount = 2
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_3grcy")
-shifts_amount = 5
+shifts_amount = 25
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("3_awrik")
 sender = "JELLY"
-plain_text = "Jamming device destroyed. Ringo was a double agent. He's now under custody. Operation cucumber complete."
+plain_text = "Jamming device destroyed. Ringo was a | double | agent. He's now under custody. Operation cucumber complete."
 encryptions = Array[ExtResource("1_ga8a4")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
-enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

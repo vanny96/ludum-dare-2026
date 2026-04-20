@@ -11,5 +11,5 @@ picture = ExtResource("1_ce3jr")
 age = 999
 preferred_encryption = "Vigenere"
 good_keywords = Array[String](["Human", "Earth", "Planet"])
-bad_keywords = Array[String](["Alien", "Weird", "Eyes"])
+bad_keywords = Array[String](["Eyes", "Weird", "Alien"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

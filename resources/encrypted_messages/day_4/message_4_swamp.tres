@@ -2,21 +2,22 @@
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_jyvbm"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_r8qnd"]
+[ext_resource type="Script" uid="uid://b7qons3qt7m8i" path="res://src/data/encryptions/vigener_encode.gd" id="3_jyvbm"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_73njv"]
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_r8qnd")
-shifts_amount = 3
+shifts_amount = 2
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_isx0p"]
-script = ExtResource("2_r8qnd")
-shifts_amount = 5
-metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+[sub_resource type="Resource" id="Resource_r8qnd"]
+script = ExtResource("3_jyvbm")
+keyword = "EYES"
+metadata/_custom_type_script = "uid://b7qons3qt7m8i"
 
 [resource]
 script = ExtResource("4_73njv")
 sender = "SWAMP 1"
-plain_text = "HUMAN IN DELHI. "
-encryptions = Array[ExtResource("1_jyvbm")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
+plain_text = "HUMAN | IN | DELHI. "
+encryptions = Array[ExtResource("1_jyvbm")]([SubResource("Resource_opkeh"), SubResource("Resource_r8qnd")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

@@ -14,4 +14,5 @@ script = ExtResource("3_v6wve")
 sender = "SWAMP"
 plain_text = "Aliens are in Berlin."
 encryptions = Array[ExtResource("1_xuvvc")]([SubResource("Resource_pt2og")])
+enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

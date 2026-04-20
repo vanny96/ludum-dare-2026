@@ -481,7 +481,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer" unique_id=541513272]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 10
 
 [node name="FirstDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1097011958]
 layout_mode = 2
@@ -547,7 +547,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer" unique_id=152790436]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 10
 
 [node name="FourthDay" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=403972068]
 layout_mode = 2
@@ -555,7 +555,9 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 4:
-• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. "
+• Perform a Caesar decode after the preferred decode. There will be as many shifts as characters \"|\" in the message. 
+• Agents can travel in every direction.
+• Agents can only travel to cities with other agents."
 fit_content = true
 autowrap_mode = 2
 
@@ -566,6 +568,7 @@ theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 5:
 • Agents need to be either in Delhi or in Rio.
+• Agents need to use the preferred encoding of their operation partner if any.
 • Last day of operations. We can do this SPYMASTER."
 fit_content = true
 autowrap_mode = 2

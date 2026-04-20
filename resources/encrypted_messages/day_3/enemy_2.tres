@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://dom00x78qtx10"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_ih6d6"]
+[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_evqcu"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_1rc0p"]
+
+[sub_resource type="Resource" id="Resource_u2rwj"]
+script = ExtResource("2_evqcu")
+shifts_amount = 10
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[resource]
+script = ExtResource("3_1rc0p")
+sender = "JELLY"
+plain_text = "Found sugar in Sidney. Moving there."
+encryptions = Array[ExtResource("1_ih6d6")]([SubResource("Resource_u2rwj")])
+enemy = true
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

@@ -6,18 +6,17 @@
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_q6tcn")
-shifts_amount = 3
+shifts_amount = 4
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_q6tcn")
-shifts_amount = 5
+shifts_amount = 24
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("3_ytnbw")
 sender = "SWAMP"
-plain_text = "SWAMP IS PERSON. PERSON HELPS JELLY. JAMMING IS NO MORE."
+plain_text = "SWAMP IS PERSON. PERSON | HELPS | JELLY. JAMMING | IS |NO MORE."
 encryptions = Array[ExtResource("1_j3yk7")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
-enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

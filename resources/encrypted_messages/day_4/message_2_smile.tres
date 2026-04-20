@@ -2,21 +2,21 @@
 
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_y5qfi"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_yg8tk"]
+[ext_resource type="Script" uid="uid://601e8ynawogu" path="res://src/data/encryptions/atbash_encode.gd" id="3_y5qfi"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_42n6h"]
 
 [sub_resource type="Resource" id="Resource_y5qfi"]
 script = ExtResource("2_yg8tk")
-shifts_amount = 2
+shifts_amount = 4
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_isx0p"]
-script = ExtResource("2_yg8tk")
-shifts_amount = 5
-metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+[sub_resource type="Resource" id="Resource_yg8tk"]
+script = ExtResource("3_y5qfi")
+metadata/_custom_type_script = "uid://601e8ynawogu"
 
 [resource]
 script = ExtResource("4_42n6h")
 sender = "SMILE"
 plain_text = "Today we take | Gibson | down. I'll need a | Trip | after this."
-encryptions = Array[ExtResource("1_y5qfi")]([SubResource("Resource_y5qfi"), SubResource("Resource_isx0p")])
+encryptions = Array[ExtResource("1_y5qfi")]([SubResource("Resource_y5qfi"), SubResource("Resource_yg8tk")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

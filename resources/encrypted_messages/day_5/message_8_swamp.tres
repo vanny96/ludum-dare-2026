@@ -6,12 +6,11 @@
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_ovnaw")
-shifts_amount = 3
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_ovnaw")
-shifts_amount = 5
+shifts_amount = 28
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
@@ -19,5 +18,4 @@ script = ExtResource("3_pntim")
 sender = "SWAMP"
 plain_text = "EARTH NOW HAS 1 SWAMPS."
 encryptions = Array[ExtResource("1_fch1t")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
-enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

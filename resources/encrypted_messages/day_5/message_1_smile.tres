@@ -3,20 +3,21 @@
 [ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_u7o38"]
 [ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_qyt62"]
 [ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_csimc"]
+[ext_resource type="Script" uid="uid://b7qons3qt7m8i" path="res://src/data/encryptions/vigener_encode.gd" id="3_rv2lm"]
 
 [sub_resource type="Resource" id="Resource_opkeh"]
 script = ExtResource("2_qyt62")
 shifts_amount = 3
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
-[sub_resource type="Resource" id="Resource_isx0p"]
-script = ExtResource("2_qyt62")
-shifts_amount = 5
-metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+[sub_resource type="Resource" id="Resource_3n4qp"]
+script = ExtResource("3_rv2lm")
+keyword = "WORK"
+metadata/_custom_type_script = "uid://b7qons3qt7m8i"
 
 [resource]
 script = ExtResource("3_csimc")
 sender = "SMILE"
-plain_text = "The base is self destroying. I'm holding the button. Funky needs to survive. No vacation for me."
-encryptions = Array[ExtResource("1_u7o38")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
+plain_text = "The base is | self destroying |. I'm holding the button. Funky | needs | to survive. No vacation for me."
+encryptions = Array[ExtResource("1_u7o38")]([SubResource("Resource_opkeh"), SubResource("Resource_3n4qp")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

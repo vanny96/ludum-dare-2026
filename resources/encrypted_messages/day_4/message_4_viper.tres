@@ -6,17 +6,17 @@
 
 [sub_resource type="Resource" id="Resource_6527h"]
 script = ExtResource("2_17imq")
-shifts_amount = 6
+shifts_amount = 3
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_17imq")
-shifts_amount = 5
+shifts_amount = 17
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("3_s4cxk")
 sender = "???"
-plain_text = "I feel pain will soon come. I hope my kitty is fine. "
+plain_text = "I feel pain | will soon come. I hope my | kitty | is fine. "
 encryptions = Array[ExtResource("1_x6vyx")]([SubResource("Resource_6527h"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

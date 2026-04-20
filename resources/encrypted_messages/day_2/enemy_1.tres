@@ -13,4 +13,5 @@ script = ExtResource("3_kvs0f")
 sender = "SMILE"
 plain_text = "I'll work in Tokyo."
 encryptions = Array[ExtResource("1_qhurj")]([SubResource("Resource_q22tv")])
+enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

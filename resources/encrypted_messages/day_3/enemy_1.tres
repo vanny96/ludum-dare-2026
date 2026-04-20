@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://d444i1011ixq"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_8hljn"]
+[ext_resource type="Script" uid="uid://b7qons3qt7m8i" path="res://src/data/encryptions/vigener_encode.gd" id="2_eddfu"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_sw0pk"]
+
+[sub_resource type="Resource" id="Resource_hau0n"]
+script = ExtResource("2_eddfu")
+keyword = "LAW"
+metadata/_custom_type_script = "uid://b7qons3qt7m8i"
+
+[resource]
+script = ExtResource("3_sw0pk")
+sender = "FUNKY"
+plain_text = "Good music in Tokyo. Going there."
+encryptions = Array[ExtResource("1_8hljn")]([SubResource("Resource_hau0n")])
+enemy = true
+metadata/_custom_type_script = "uid://s70u6m5sxcud"
