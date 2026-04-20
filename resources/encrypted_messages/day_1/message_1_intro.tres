@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("3_nk285")
 sender = "HQ"
-plain_text = "Welcome new spymaster. Check last page of red rulebook. "
+plain_text = "Welcome new spymaster. Check the last pages of the red rulebook for the \"Extra Rules\". "
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

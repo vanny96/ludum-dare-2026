@@ -38,7 +38,7 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 pages_parent = NodePath("Pages")
-change_log = [NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FirstDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/SecondDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/ThirdDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FourthDay"), NodePath("Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog/FifthDay")]
+change_log = [NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/FirstDay"), NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/SecondDay"), NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/ThirdDay"), NodePath("Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FourthDay"), NodePath("Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FifthDay")]
 left_page_button = NodePath("Anchor/Left/TextureButton")
 right_page_button = NodePath("Anchor/Right/TextureButton")
 close_button = NodePath("Anchor/Close/TextureButton")
@@ -280,6 +280,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1833457743]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -368,7 +369,7 @@ autowrap_mode = 0
 [node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
 layout_mode = 2
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 5
+theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 
@@ -381,7 +382,8 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 1:
-• HQ is always an ally."
+• HQ is always an ally.
+"
 fit_content = true
 autowrap_mode = 2
 
@@ -391,8 +393,8 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 2:
-• Agents needs a good keyword in the message
-• Agents today don't travel East."
+• Agents needs a good keyword in the message.
+• Caesar shifts increases by 1 for each ally message."
 fit_content = true
 autowrap_mode = 2
 
@@ -403,7 +405,7 @@ theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Day 3:
 • Agents use their preffered method of decoding.
-• Agents cannot won't repeat their current location."
+• Agents won't travel from West to East. "
 fit_content = true
 autowrap_mode = 2
 
@@ -433,6 +435,138 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "More cyphers and extra rules will be added tomorrow."
+fit_content = true
+autowrap_mode = 2
+
+[node name="Page4" type="HBoxContainer" parent="Pages" unique_id=1980311545]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PageLeft" type="PanelContainer" parent="Pages/Page4" unique_id=1492540506]
+custom_minimum_size = Vector2(450, 700)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_h4pn0")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page4/PageLeft" unique_id=173935737]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=268540373]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Extra Rules"
+fit_content = true
+autowrap_mode = 0
+
+[node name="DecodeText2" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=1539732478]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Every day new rules will be added. A new rule can override an older one."
+fit_content = true
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=560799495]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer" unique_id=541513272]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="FirstDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1097011958]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Day 1:
+• HQ is always an ally.
+• All agents will use Caesar 1 encoding.
+"
+fit_content = true
+autowrap_mode = 2
+
+[node name="SecondDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1112146053]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Day 2:
+• Agents needs a good keyword in the message.
+• Caesar shifts increases by 1 for each ally message. Start from 1."
+fit_content = true
+autowrap_mode = 2
+
+[node name="ThirdDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1728713689]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Day 3:
+• Agents use their preffered method of decoding.
+• Agents using Vigenere will use their 1st favorite word as their decoding keyword.
+• Agents won't travel from West to East. "
+fit_content = true
+autowrap_mode = 2
+
+[node name="PageRight" type="PanelContainer" parent="Pages/Page4" unique_id=955819679]
+custom_minimum_size = Vector2(450, 700)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_h4pn0")
+theme_type_variation = &"PagePanel"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page4/PageRight" unique_id=1973588809]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2" unique_id=431252720]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Extra Rules"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page4/PageRight/VBoxContainer2" unique_id=146861052]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer" unique_id=152790436]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="FourthDay" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=403972068]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Day 4:
+• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. "
+fit_content = true
+autowrap_mode = 2
+
+[node name="FifthDay" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=1444697969]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Day 5:
+• Agents need to be either in Delhi or in Rio.
+• Last day of operations. We can do this SPYMASTER."
 fit_content = true
 autowrap_mode = 2
 

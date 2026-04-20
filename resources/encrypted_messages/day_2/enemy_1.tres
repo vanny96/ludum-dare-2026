@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://jmv5bkwwqsvu"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_qhurj"]
+[ext_resource type="Script" uid="uid://601e8ynawogu" path="res://src/data/encryptions/atbash_encode.gd" id="2_qhurj"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_kvs0f"]
+
+[sub_resource type="Resource" id="Resource_q22tv"]
+script = ExtResource("2_qhurj")
+metadata/_custom_type_script = "uid://601e8ynawogu"
+
+[resource]
+script = ExtResource("3_kvs0f")
+sender = "SMILE"
+plain_text = "I'll work in Tokyo."
+encryptions = Array[ExtResource("1_qhurj")]([SubResource("Resource_q22tv")])
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("3_mnu42")
 sender = "HQ"
-plain_text = "Next messages will be Caesar 5 encoded. "
+plain_text = "Next you'll meet one of our agents. Check the rulebook to decode his message, and write down his location in his notes."
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

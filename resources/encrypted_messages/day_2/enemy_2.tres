@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://b2egn6e0kpfb4"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_xuvvc"]
+[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_xuvvc"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="3_v6wve"]
+
+[sub_resource type="Resource" id="Resource_pt2og"]
+script = ExtResource("2_xuvvc")
+shifts_amount = 7
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[resource]
+script = ExtResource("3_v6wve")
+sender = "SWAMP"
+plain_text = "Aliens are in Berlin."
+encryptions = Array[ExtResource("1_xuvvc")]([SubResource("Resource_pt2og")])
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

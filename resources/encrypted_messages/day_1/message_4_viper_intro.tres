@@ -6,12 +6,12 @@
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_jvc5d")
-shifts_amount = 5
+shifts_amount = 1
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("4_gixy7")
 sender = "VIPER"
-plain_text = "Hello Spymaster. Starting Operation RIO MARE tomorrow."
+plain_text = "Hello Spymaster. Starting Operation RIO MARE tomorrow. Currently in RIO."
 encryptions = Array[ExtResource("1_w5ioh")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
