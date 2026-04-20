@@ -46,4 +46,4 @@ fit_content = true
 scroll_active = false
 selection_enabled = true
 script = ExtResource("2_uwduk")
-type_speed = 0.1
+type_speed = 0.03
