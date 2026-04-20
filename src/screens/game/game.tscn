@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cfh3fbeq4m4di" path="res://assets/textures/arrowSilver_right.png" id="17_7vusn"]
 [ext_resource type="PackedScene" uid="uid://mdx8f2o5axab" path="res://src/ui/world_map/worldmap.tscn" id="17_yqpbo"]
 [ext_resource type="PackedScene" uid="uid://5pwnsiqkmeey" path="res://src/ui/bookbutton/BookButton.tscn" id="18_7vusn"]
-[ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://assets/textures/rulebook.png" id="19_wsdsm"]
-[ext_resource type="Texture2D" uid="uid://blmd5o784xx5s" path="res://assets/textures/notest.png" id="20_cr6s4"]
+[ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://src/ui/bookbutton/assets/rulebook.png" id="19_wsdsm"]
+[ext_resource type="Texture2D" uid="uid://blmd5o784xx5s" path="res://src/ui/bookbutton/assets/notest.png" id="20_cr6s4"]
 [ext_resource type="PackedScene" uid="uid://cja2dwe052o38" path="res://src/ui/decoderv2/Decoder.tscn" id="23_wsdsm"]
 [ext_resource type="Script" uid="uid://cgrx3ldq2mom7" path="res://src/screens/game/day_end_transitions.gd" id="25_qknql"]
 
@@ -68,9 +68,9 @@ anchor_left = 0.25
 anchor_top = 0.6
 anchor_right = 0.3
 anchor_bottom = 0.7
-offset_left = 485.0
+offset_left = 176.0
 offset_top = 646.0
-offset_right = 685.0
+offset_right = 376.0
 offset_bottom = 846.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -101,6 +101,20 @@ offset_top = 141.0
 offset_right = 1733.0
 offset_bottom = 783.0
 
+[node name="SubmitButtons" parent="." unique_id=1264457131 instance=ExtResource("13_4caxw")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 690.0
+offset_top = 754.0
+offset_right = 690.0
+offset_bottom = 785.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
 
 [node name="Buttons" parent="UI" unique_id=2035185175 instance=ExtResource("3_osde3")]
@@ -113,20 +127,6 @@ anchor_bottom = 0.9
 offset_right = 0.0
 offset_bottom = 0.0
 grow_vertical = 0
-
-[node name="SubmitButtons" parent="UI" unique_id=1264457131 instance=ExtResource("13_4caxw")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 0.0
-offset_top = -31.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 8
 
 [node name="Rulebook" parent="UI" unique_id=1129416725 instance=ExtResource("14_b2esr")]
 visible = false
@@ -183,10 +183,10 @@ stretch_mode = 0
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
+offset_left = -82.0
 offset_top = -10.0
-offset_right = 20.0
-offset_bottom = 40.0
+offset_right = 82.0
+offset_bottom = 70.0
 grow_horizontal = 2
 
 [node name="BookButton" parent="UI/BooksButtons" unique_id=902615539 node_paths=PackedStringArray("book") instance=ExtResource("18_7vusn")]

@@ -6,7 +6,7 @@ class_name Game extends Node2D
 
 @onready var computer: Computer = $Computer
 @onready var buttons: MorseButtons = $UI/Buttons
-@onready var submit_buttons: SubmitButtons = $UI/SubmitButtons
+@onready var submit_buttons: SubmitButtons = $SubmitButtons
 @onready var left: BaseButton = $UI/Left
 @onready var right: BaseButton = $UI/Right
 
@@ -45,9 +45,9 @@ func play_day(day: DailyMessages):
 		await play_message(message)
 
 func play_message(message: EncryptedMessage):
-	submit_buttons.hide()
+	submit_buttons.set_disabled(true)
 	await computer.play_message(message)
-	submit_buttons.show()
+	submit_buttons.set_disabled(false)
 	
 	var enemy = await self.submit_buttons.submit_answer
 	if message.allow_any or message.enemy == enemy:

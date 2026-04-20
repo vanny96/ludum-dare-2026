@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 [resource]
 script = ExtResource("4_mdkae")
 sender = "RINGO"
-plain_text = "Dro$$ed | J!!y. G@ing | so!o | gives | () | m@re | se%urity."
+plain_text = "Dro$$ed | Je!!y. G@ing | so!o | gives | () | m@re | se%urity."
 encryptions = Array[ExtResource("1_6527h")]([SubResource("Resource_6527h"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

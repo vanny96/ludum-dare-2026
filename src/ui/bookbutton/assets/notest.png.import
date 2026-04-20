@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://so8yhy6mgwel"
-path="res://.godot/imported/rulebook.png-27f52f99c0da1d7e7321f99ec215305c.ctex"
+uid="uid://blmd5o784xx5s"
+path="res://.godot/imported/notest.png-9bcb19146cc0d72bed5dbeea79a27970.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/rulebook.png"
-dest_files=["res://.godot/imported/rulebook.png-27f52f99c0da1d7e7321f99ec215305c.ctex"]
+source_file="res://src/ui/bookbutton/assets/notest.png"
+dest_files=["res://.godot/imported/notest.png-9bcb19146cc0d72bed5dbeea79a27970.ctex"]
 
 [params]
 

@@ -18,6 +18,6 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 script = ExtResource("3_xbbxc")
 sender = "FUNKY"
 plain_text = "OPERATION | COMPLETE! Good vibes,  Gibson is dead! | Viper must be hap-
-What is this tremor...?"
+Why is the ground shaking...?"
 encryptions = Array[ExtResource("1_ctbwr")]([SubResource("Resource_6527h"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

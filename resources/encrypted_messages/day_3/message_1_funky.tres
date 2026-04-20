@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
 script = ExtResource("4_smerv")
-sender = "FUNKy"
+sender = "FUNKY"
 plain_text = "Feeling sad. Viper was my friend. Will confess to Smile after operation. Life is short."
 encryptions = Array[ExtResource("1_62cje")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

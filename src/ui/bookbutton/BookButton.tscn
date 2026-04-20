@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwscebaigh1rw" path="res://src/ui/bookbutton/book_button.gd" id="1_3o5y2"]
 [ext_resource type="Texture2D" uid="uid://tl2cnw7dteik" path="res://src/ui/bookbutton/assets/panel_beige_button.png" id="1_kamn2"]
-[ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://assets/textures/rulebook.png" id="2_p6dt1"]
+[ext_resource type="Texture2D" uid="uid://so8yhy6mgwel" path="res://src/ui/bookbutton/assets/rulebook.png" id="2_p6dt1"]
 
 [node name="BookButton" type="CenterContainer" unique_id=902615539 node_paths=PackedStringArray("button", "texture_rect")]
 anchors_preset = 8
