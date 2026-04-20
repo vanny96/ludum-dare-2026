@@ -301,7 +301,8 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "The tool offers help with translating the 3 most common encryption methods:
+text = "[font_size=20]N.B. Text can be copied and pasted from one screen to the other[/font_size]
+The tool offers help with translating the 3 most common encryption methods:
 • Caesar: Shifts alphabet by a fixed numeric offset.
 • Atbash: Reverses alphabet; A->Z, B->Y, etc...
 • Vigenere: Uses a keyword to encrypt.

@@ -1,8 +1,8 @@
 godot:
   version: 4.6.1
 itch_io:
-  name: ludum-dare-2026
-  game: vanny96/ludum-dare-2026
+  name: spymaster
+  game: vanny96/spymaster
   exports:
   - name: Web
     tag: web
@@ -11,8 +11,8 @@ itch_io:
   - name: Windows Desktop
     tag: windows
     exportDir: /tmp/windows
-    exportRelease: /tmp/windows/ludum-dare-2026.exe
+    exportRelease: /tmp/windows/spymaster.exe
   - name: macOS
     tag: mac
     exportDir: /tmp/mac
-    exportRelease: /tmp/mac/ludum-dare-2026.app
+    exportRelease: /tmp/mac/spymaster.app
