@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b8w6wjcls4g2b" path="res://src/ui/submitbuttons/SubmitButtons.tscn" id="13_4caxw"]
 [ext_resource type="PackedScene" uid="uid://cowiv31ahpvla" path="res://src/ui/books/notebook/Notebook.tscn" id="14_2kkvg"]
 [ext_resource type="PackedScene" uid="uid://b3dr3rogfv37e" path="res://src/ui/books/rulebook/Rulebook.tscn" id="14_b2esr"]
+[ext_resource type="PackedScene" uid="uid://bt78sqjuuqxs0" path="res://src/ui/settings/SettingsButton.tscn" id="14_qknql"]
 [ext_resource type="Texture2D" uid="uid://cxw3ayvh4edcx" path="res://assets/textures/arrowSilver_left.png" id="16_65fhu"]
 [ext_resource type="PackedScene" uid="uid://b8pir64hau5y1" path="res://src/ui/catalogue/catalogue.tscn" id="16_wwvri"]
 [ext_resource type="Texture2D" uid="uid://cfh3fbeq4m4di" path="res://assets/textures/arrowSilver_right.png" id="17_7vusn"]
@@ -110,6 +111,19 @@ size_flags_vertical = 8
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
 
+[node name="SettingsButton" parent="UI" unique_id=264060215 instance=ExtResource("14_qknql")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -80.0
+offset_top = -10.0
+offset_right = -20.0
+offset_bottom = 70.0
+grow_horizontal = 0
+grow_vertical = 1
+
 [node name="Rulebook" parent="UI" unique_id=1129416725 instance=ExtResource("14_b2esr")]
 visible = false
 anchors_preset = 6
@@ -129,8 +143,6 @@ anchor_right = 0.0
 offset_left = 0.0
 offset_right = 824.0
 grow_horizontal = 1
-
-[node name="PauseMenu" parent="UI" unique_id=1333480980 instance=ExtResource("2_047u2")]
 
 [node name="Left" type="TextureButton" parent="UI" unique_id=1500445093]
 custom_minimum_size = Vector2(50, 50)
@@ -215,6 +227,10 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=12624761]
+
+[node name="PauseMenu" parent="PauseMenu" unique_id=1333480980 instance=ExtResource("2_047u2")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=264070360]
 stream = ExtResource("24_qknql")

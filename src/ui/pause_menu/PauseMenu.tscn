@@ -14,14 +14,14 @@ expand_margin_top = 50.0
 expand_margin_right = 50.0
 expand_margin_bottom = 50.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lc7sy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4f0a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77m1y"]
 bg_color = Color(0.698039, 0.698039, 0.698039, 0.376471)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4f0a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lc7sy"]
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=474334803]
 process_mode = 3
 visible = false
 layout_mode = 3
@@ -32,7 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r23i5")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=685504995]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,7 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.145098, 0.145098, 0.145098, 0.509804)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1351791102]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
@@ -54,34 +54,34 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r23i5")
 
-[node name="Buttons" type="VBoxContainer" parent="PanelContainer"]
+[node name="Buttons" type="VBoxContainer" parent="PanelContainer" unique_id=531535042]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Resume" type="Button" parent="PanelContainer/Buttons"]
+[node name="Resume" type="Button" parent="PanelContainer/Buttons" unique_id=1532943915]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e4f0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
 text = "Resume"
 
-[node name="Settings" type="Button" parent="PanelContainer/Buttons"]
+[node name="Settings" type="Button" parent="PanelContainer/Buttons" unique_id=1834690586]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e4f0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
 text = "Settings"
 
-[node name="Exit" type="Button" parent="PanelContainer/Buttons"]
+[node name="Exit" type="Button" parent="PanelContainer/Buttons" unique_id=1454569628]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e4f0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_77m1y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lc7sy")
 text = "Exit"
 
-[node name="Settings" parent="." instance=ExtResource("2_lc7sy")]
+[node name="Settings" parent="." unique_id=589143283 instance=ExtResource("2_lc7sy")]
 visible = false
 layout_mode = 1

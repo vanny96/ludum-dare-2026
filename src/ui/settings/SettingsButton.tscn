@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bt78sqjuuqxs0"]
+
+[ext_resource type="Texture2D" uid="uid://tl2cnw7dteik" path="res://src/ui/bookbutton/assets/panel_beige_button.png" id="1_0r3k6"]
+[ext_resource type="Script" uid="uid://ca46vg6iorscb" path="res://src/ui/settings/action_button.gd" id="1_nr5xd"]
+[ext_resource type="Texture2D" uid="uid://ds4tsobce5qsp" path="res://src/ui/settings/assets/settings.png" id="2_0r3k6"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_kaud8"]
+action = &"pause"
+pressed = true
+
+[node name="Button" type="CenterContainer" unique_id=264060215]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=333899147]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("1_0r3k6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_nr5xd")
+input_action = SubResource("InputEventAction_kaud8")
+
+[node name="TextureRect" type="TextureRect" parent="TextureButton" unique_id=591626192]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0r3k6")
