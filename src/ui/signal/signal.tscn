@@ -26,6 +26,7 @@ stretch_mode = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1952655909]
 volume_db = -40.0
+bus = &"SFX"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1745828411]
 layout_mode = 2

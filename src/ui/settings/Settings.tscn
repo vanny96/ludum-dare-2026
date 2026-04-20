@@ -13,14 +13,14 @@ expand_margin_top = 30.0
 expand_margin_right = 30.0
 expand_margin_bottom = 30.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uer2j"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_js8by"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vv5p"]
 bg_color = Color(0.698039, 0.698039, 0.698039, 0.376471)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_js8by"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uer2j"]
 
-[node name="Settings" type="Control"]
+[node name="Settings" type="Control" unique_id=1609771110]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uer2j")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=533908902]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,9 +38,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.145098, 0.145098, 0.145098, 0.509804)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Background"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Background" unique_id=138231568]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=366898749]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -57,30 +57,30 @@ scale = Vector2(2, 2)
 pivot_offset = Vector2(200, 33)
 theme_override_styles/panel = SubResource("StyleBoxFlat_ju6ba")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1630764419]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=953889694]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Settings"
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer" unique_id=482213476]
 layout_mode = 2
 theme_override_constants/h_separation = 70
 theme_override_constants/v_separation = 10
 columns = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1678752112]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Master Audio"
 
-[node name="MasterAudio" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="MasterAudio" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1146384290]
 layout_mode = 2
 
-[node name="MasterAudio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/MasterAudio"]
+[node name="MasterAudio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/MasterAudio" unique_id=1072247101]
 custom_minimum_size = Vector2(200, 10)
 layout_mode = 2
 step = 10.0
@@ -88,15 +88,47 @@ rounded = true
 tick_count = 10
 ticks_on_borders = true
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=988863373]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SFX Audio"
+
+[node name="SFX" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=350283835]
+layout_mode = 2
+
+[node name="MasterAudio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/SFX" unique_id=395716918]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+step = 10.0
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Label4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=743213227]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Music Audio"
+
+[node name="Music" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=1464461531]
+layout_mode = 2
+
+[node name="MasterAudio" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/Music" unique_id=1987773639]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+step = 10.0
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=890763926]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Sensibility"
 
-[node name="Sensibility" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+[node name="Sensibility" type="CenterContainer" parent="PanelContainer/VBoxContainer/GridContainer" unique_id=16806424]
 layout_mode = 2
 
-[node name="Sensibility" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/Sensibility"]
+[node name="Sensibility" type="HSlider" parent="PanelContainer/VBoxContainer/GridContainer/Sensibility" unique_id=118386516]
 custom_minimum_size = Vector2(200, 10)
 layout_mode = 2
 min_value = 50.0
@@ -106,10 +138,10 @@ value = 50.0
 tick_count = 10
 ticks_on_borders = true
 
-[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=356495461]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-theme_override_styles/focus = SubResource("StyleBoxEmpty_uer2j")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8vv5p")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_js8by")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vv5p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uer2j")
 text = "Close"
