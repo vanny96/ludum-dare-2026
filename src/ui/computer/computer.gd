@@ -7,10 +7,9 @@ class_name Computer extends Control
 func _ready() -> void:
 	blips.letter_typed.connect(signal_panel.play_random_signal)
 
-func play_message(message: EncryptedMessage):
-	await blips.simulate_typing("INCOMING %s MESSAGE...\n\n%s" % [message.sender, message.get_encrypted_message()])
-	signal_panel.reset()
+func play_message(message: String):
+	await blips.simulate_typing(message)
 	
 func reset():
-	blips.clear()
+	blips.text = ""
 	blips.visible_characters = 0

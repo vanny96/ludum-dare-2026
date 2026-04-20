@@ -46,12 +46,20 @@ func play_day(day: DailyMessages):
 
 func play_message(message: EncryptedMessage):
 	submit_buttons.set_disabled(true)
-	await computer.play_message(message)
+	await computer.play_message("INCOMING %s MESSAGE...\n\n" % message.sender)
+	await computer.play_message(message.get_encrypted_message())
 	submit_buttons.set_disabled(false)
 	
 	var enemy = await self.submit_buttons.submit_answer
-	if message.allow_any or message.enemy == enemy:
+	submit_buttons.set_disabled(true)
+	var result_template := "\n\nSUBMISSION IS... %s"
+	if message.allow_any:
+		await computer.play_message(result_template % "???")
+	elif message.enemy == enemy:
 		correct_guesses += 1
+		await computer.play_message(result_template % "CORRECT")
 	else:
 		wrong_guesses += 1
+		await computer.play_message(result_template % "WRONG")
+	await get_tree().create_timer(2).timeout
 	computer.reset()
