@@ -1,3 +1,4 @@
+@tool
 class_name ReverseMorseEncode extends MorseEncode
 
 func char_to_morse(char: String) -> String:

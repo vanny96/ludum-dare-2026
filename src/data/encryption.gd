@@ -1,4 +1,5 @@
 @abstract
+@tool
 class_name Encryption extends Resource
 
 @abstract

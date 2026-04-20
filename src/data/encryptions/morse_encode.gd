@@ -1,3 +1,4 @@
+@tool
 class_name MorseEncode extends Encryption
 
 const MORSE_DATA = {

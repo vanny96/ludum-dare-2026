@@ -1,3 +1,4 @@
+@tool
 class_name AtbashEncode extends Encryption
 
 func encode(input: String) -> String:

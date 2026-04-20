@@ -1,3 +1,4 @@
+@tool
 class_name CeasarEncode extends Encryption
 
 @export var shifts_amount: int = 0

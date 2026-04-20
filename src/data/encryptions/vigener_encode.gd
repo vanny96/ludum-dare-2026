@@ -1,3 +1,4 @@
+@tool
 class_name VigenereEncode extends Encryption
 
 @export var keyword: String = ""
