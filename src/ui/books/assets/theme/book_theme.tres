@@ -22,10 +22,12 @@ texture_margin_bottom = 10.0
 
 [resource]
 default_font = ExtResource("3_jxihg")
+BookText/base_type = &"RichTextLabel"
+BookText/font_sizes/normal_font_size = 30
 PagePanel/base_type = &"PanelContainer"
 PagePanel/styles/panel = SubResource("StyleBoxTexture_h1gth")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/font_sizes/normal_font_size = 38
 RulebookPanel/base_type = &"PanelContainer"
 RulebookPanel/styles/panel = SubResource("StyleBoxTexture_txlko")
 TextEdit/colors/caret_background_color = Color(0, 0, 0, 0)
