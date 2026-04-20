@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_s4rjc"]
 script = ExtResource("2_42uuy")
-shifts_amount = 23
+shifts_amount = 13
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]

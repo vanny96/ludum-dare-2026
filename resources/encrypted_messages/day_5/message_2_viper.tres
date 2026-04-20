@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [sub_resource type="Resource" id="Resource_isx0p"]
 script = ExtResource("2_jn62n")
-shifts_amount = 22
+shifts_amount = 13
 metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 
 [resource]
@@ -19,4 +19,5 @@ script = ExtResource("3_owniw")
 sender = "???"
 plain_text = "Won't |et them die. No more suffer. |'ve already died once, I'|| hold the button."
 encryptions = Array[ExtResource("1_xnu4r")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
+allow_any = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
