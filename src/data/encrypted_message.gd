@@ -18,7 +18,8 @@ class_name EncryptedMessage extends Resource
 func get_encrypted_message() -> String:
 	var encrypted_text = plain_text
 	for encryption in encryptions:
-		encrypted_text = encryption.encode(encrypted_text)
+		if encryption:
+			encrypted_text = encryption.encode(encrypted_text)
 	return encrypted_text
 
 

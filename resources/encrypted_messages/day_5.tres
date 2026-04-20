@@ -10,8 +10,10 @@
 [ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="8_34o4u"]
 [ext_resource type="Resource" uid="uid://itrfcx1ct35j" path="res://resources/encrypted_messages/day_5/message_7_viper.tres" id="8_fcql4"]
 [ext_resource type="Resource" uid="uid://dggt6yxv28run" path="res://resources/encrypted_messages/day_5/message_8_swamp.tres" id="9_oqmqc"]
+[ext_resource type="Resource" uid="uid://cgy15gf75j6wq" path="res://resources/encrypted_messages/day_5/enemy_1.tres" id="10_ermna"]
+[ext_resource type="Resource" uid="uid://bfd06k6n53aa" path="res://resources/encrypted_messages/day_5/enemy_2.tres" id="11_o66lo"]
 
 [resource]
 script = ExtResource("8_34o4u")
-messages = Array[ExtResource("1_0atku")]([ExtResource("2_g12oc"), ExtResource("3_ipavs"), ExtResource("4_ermna"), ExtResource("5_o66lo"), ExtResource("6_7dlpl"), ExtResource("7_34o4u"), ExtResource("8_fcql4"), ExtResource("9_oqmqc")])
+messages = Array[ExtResource("1_0atku")]([ExtResource("2_g12oc"), ExtResource("11_o66lo"), ExtResource("3_ipavs"), ExtResource("10_ermna"), ExtResource("4_ermna"), ExtResource("5_o66lo"), ExtResource("6_7dlpl"), ExtResource("7_34o4u"), ExtResource("8_fcql4"), ExtResource("9_oqmqc")])
 metadata/_custom_type_script = "uid://c12aylqpvesix"

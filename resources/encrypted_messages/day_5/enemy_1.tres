@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://cgy15gf75j6wq"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_0ibgx"]
+[ext_resource type="Script" uid="uid://c5ye2js6dhqvo" path="res://src/data/encryptions/ceasar_encode.gd" id="2_42uuy"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_loupu"]
+
+[sub_resource type="Resource" id="Resource_opkeh"]
+script = ExtResource("2_42uuy")
+shifts_amount = 2
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[sub_resource type="Resource" id="Resource_s4rjc"]
+script = ExtResource("2_42uuy")
+shifts_amount = 23
+metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
+
+[resource]
+script = ExtResource("4_loupu")
+sender = "RINGO"
+plain_text = "Leaving | for | NYC."
+encryptions = Array[ExtResource("1_0ibgx")]([SubResource("Resource_opkeh"), SubResource("Resource_s4rjc")])
+metadata/_custom_type_script = "uid://s70u6m5sxcud"

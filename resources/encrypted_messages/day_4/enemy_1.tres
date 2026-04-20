@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EncryptedMessage" format=3 uid="uid://cbc3dq5ovppph"]
+
+[ext_resource type="Script" uid="uid://dxbmpdt4n1a7a" path="res://src/data/encryption.gd" id="1_u1lra"]
+[ext_resource type="Script" uid="uid://601e8ynawogu" path="res://src/data/encryptions/atbash_encode.gd" id="3_o8v7x"]
+[ext_resource type="Script" uid="uid://s70u6m5sxcud" path="res://src/data/encrypted_message.gd" id="4_kk05o"]
+
+[sub_resource type="Resource" id="Resource_yg8tk"]
+script = ExtResource("3_o8v7x")
+metadata/_custom_type_script = "uid://601e8ynawogu"
+
+[resource]
+script = ExtResource("4_kk05o")
+sender = "SMILE"
+plain_text = "Trip to Delhi. Taking care of other operation."
+encryptions = Array[ExtResource("1_u1lra")]([SubResource("Resource_yg8tk")])
+enemy = true
+metadata/_custom_type_script = "uid://s70u6m5sxcud"
