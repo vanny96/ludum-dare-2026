@@ -10,6 +10,6 @@ gender = "Man"
 picture = ExtResource("1_dtsrw")
 age = 51
 preferred_encryption = "Caesar"
-good_keywords = Array[String](["Order", "Rights", "Double"])
+good_keywords = Array[String](["Order", "Security", "Double"])
 bad_keywords = Array[String](["Evil", "Corruption", "Traitor"])
 metadata/_custom_type_script = "uid://bcfp4h21ta8f8"

@@ -20,4 +20,5 @@ script = ExtResource("3_q4tid")
 sender = "FUNKY"
 plain_text = "Opeartion | RIO MARE | fully resolved. Will vibe and wait for udpates."
 encryptions = Array[ExtResource("1_hflfr")]([SubResource("Resource_opkeh"), SubResource("Resource_q4tid")])
+enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

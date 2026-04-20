@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 [resource]
 script = ExtResource("3_1rc0p")
 sender = "JELLY"
-plain_text = "Found sugar in Sidney. Moving there."
+plain_text = "Found sugar in Sydney. Moving there."
 encryptions = Array[ExtResource("1_ih6d6")]([SubResource("Resource_u2rwj")])
 enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

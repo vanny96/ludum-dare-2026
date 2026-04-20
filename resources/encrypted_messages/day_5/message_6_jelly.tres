@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 [resource]
 script = ExtResource("3_awrik")
 sender = "JELLY"
-plain_text = "Jamming device destroyed. Ringo was a | double | agent. He's now under custody. Operation cucumber complete."
+plain_text = "Jamming device destroyed. Ringo was a | double | agent. He'll spill the tea on everything. Operation cucumber complete."
 encryptions = Array[ExtResource("1_ga8a4")]([SubResource("Resource_opkeh"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

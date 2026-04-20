@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://601e8ynawogu"
 [resource]
 script = ExtResource("4_kk05o")
 sender = "SMILE"
-plain_text = "Trip to Delhi. Taking care of other operation."
+plain_text = "Work in Delhi now. Taking care of other operation."
 encryptions = Array[ExtResource("1_u1lra")]([SubResource("Resource_yg8tk")])
 enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

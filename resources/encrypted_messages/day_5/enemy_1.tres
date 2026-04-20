@@ -19,4 +19,5 @@ script = ExtResource("4_loupu")
 sender = "RINGO"
 plain_text = "Leaving | for | NYC."
 encryptions = Array[ExtResource("1_0ibgx")]([SubResource("Resource_opkeh"), SubResource("Resource_s4rjc")])
+enemy = true
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

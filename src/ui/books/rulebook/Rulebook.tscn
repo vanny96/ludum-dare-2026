@@ -311,7 +311,6 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1980311545]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -459,7 +458,7 @@ theme_type_variation = &"BookText"
 bbcode_enabled = true
 text = "Day 5:
 • Agents need to be either in Delhi or in Rio.
-• Agents need to use the preferred encoding of their operation partner if any.
+• Agents need to use the preferred encoding of their operation partner if any. (Keywords remain personal!)
 • Last day of operations. We can do this SPYMASTER."
 fit_content = true
 autowrap_mode = 2

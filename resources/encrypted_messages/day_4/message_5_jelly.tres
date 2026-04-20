@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 [resource]
 script = ExtResource("3_qa7sl")
 sender = "JELLY"
-plain_text = "F@und || my c0unt^r j@mm|ng d€v!c€ in R!ng0's r00m. @nd th€s€ | L€tt€rs... I MU$T G0!"
+plain_text = "F@und || cak€ and my c0unt^r j@mm|ng d€v!c€ in R!ng0's r00m. @nd thes€ | L€tters... I MU$T G0!"
 encryptions = Array[ExtResource("1_4w8wh")]([SubResource("Resource_6527h"), SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"

@@ -12,6 +12,6 @@ metadata/_custom_type_script = "uid://c5ye2js6dhqvo"
 [resource]
 script = ExtResource("4_l1l2p")
 sender = "RINGO"
-plain_text = "Bringing order in Tokyo. I don't trust new recruit. The jamming device must be destroyed."
+plain_text = "Bringing order in Delhi. I don't trust new recruit. The jamming device must be destroyed."
 encryptions = Array[ExtResource("1_nrwup")]([SubResource("Resource_isx0p")])
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
