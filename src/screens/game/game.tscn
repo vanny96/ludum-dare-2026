@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://blmd5o784xx5s" path="res://src/ui/bookbutton/assets/notest.png" id="20_cr6s4"]
 [ext_resource type="PackedScene" uid="uid://cja2dwe052o38" path="res://src/ui/decoderv2/Decoder.tscn" id="23_wsdsm"]
 [ext_resource type="FontFile" uid="uid://cvregxmf5ttbh" path="res://src/ui/decoderv2/assets/Mx437_IBM_VGA_8x16.ttf" id="24_cr6s4"]
+[ext_resource type="AudioStream" uid="uid://dm8cd65fbgd38" path="res://assets/ost/ost.mp3" id="24_qknql"]
 [ext_resource type="Script" uid="uid://cgrx3ldq2mom7" path="res://src/screens/game/day_end_transitions.gd" id="25_qknql"]
 
 [node name="Game" type="Node2D" unique_id=1570700222 node_paths=PackedStringArray("rulebook", "day_transition")]
@@ -214,3 +215,9 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=264070360]
+stream = ExtResource("24_qknql")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"

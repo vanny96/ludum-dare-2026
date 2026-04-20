@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func play_message(message: String):
 	await blips.simulate_typing(message)
+	signal_panel.reset()
 	
 func reset():
 	blips.text = ""
