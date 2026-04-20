@@ -27,7 +27,9 @@ func _update_decoder(idx: int):
 	match idx:
 		0: active_decoder = caesar_decoder
 		1: active_decoder = atbash_decoder
-		2: active_decoder = vigenere_decoder
+		2: 
+			active_decoder = vigenere_decoder
+			vigenere_key.grab_focus()
 	_update_translatation()
 
 func _update_translatation():

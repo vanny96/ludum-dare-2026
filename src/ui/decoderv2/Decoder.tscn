@@ -3,6 +3,16 @@
 [ext_resource type="Theme" uid="uid://h4kd0cei86lv" path="res://src/ui/decoderv2/assets/decoder_theme.tres" id="1_0wwdc"]
 [ext_resource type="Script" uid="uid://dorovemye6ghg" path="res://src/ui/decoderv2/decoder.gd" id="2_l6kem"]
 [ext_resource type="Script" uid="uid://cgolxvl6qbf05" path="res://src/ui/decoderv2/vigener_input.gd" id="3_buqrj"]
+[ext_resource type="FontFile" uid="uid://cvregxmf5ttbh" path="res://src/ui/decoderv2/assets/Mx437_IBM_VGA_8x16.ttf" id="4_2wnnj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wnnj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_buqrj"]
+bg_color = Color(0, 0.06666667, 0, 1)
 
 [node name="Decoder" type="PanelContainer" unique_id=1765702412 node_paths=PackedStringArray("input_box", "output_box", "tabs_container", "caesar_input_label", "caesar_decrease_button", "caesar_increase_button", "vigenere_key")]
 anchors_preset = 8
@@ -50,7 +60,11 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/TabContainer/Caesar" unique_id=974269432]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/TabContainer/Caesar" unique_id=1617617218]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/TabContainer/Caesar/MarginContainer" unique_id=974269432]
 layout_mode = 2
 bbcode_enabled = true
 text = "SHIFTS"
@@ -91,7 +105,11 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/TabContainer/Vigenere" unique_id=2017586367]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/TabContainer/Vigenere" unique_id=69741876]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/TabContainer/Vigenere/MarginContainer" unique_id=2017586367]
 layout_mode = 2
 bbcode_enabled = true
 text = "DECRIPTION KEY"
@@ -103,13 +121,19 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wnnj")
 alignment = 1
 script = ExtResource("3_buqrj")
 
 [node name="Input" type="TextEdit" parent="HBoxContainer/VBoxContainer" unique_id=1919932069]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.2, 1)
+theme_override_colors/font_readonly_color = Color(0.2, 1, 0.2, 1)
+theme_override_fonts/font = ExtResource("4_2wnnj")
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_buqrj")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_buqrj")
 placeholder_text = "Input"
 wrap_mode = 1
 
@@ -119,7 +143,12 @@ layout_mode = 2
 [node name="Output" type="TextEdit" parent="HBoxContainer/VBoxContainer" unique_id=1582242652]
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.2, 1)
+theme_override_colors/font_readonly_color = Color(0.2, 1, 0.2, 1)
+theme_override_fonts/font = ExtResource("4_2wnnj")
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_buqrj")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_buqrj")
 placeholder_text = "Output"
 editable = false
 wrap_mode = 1

@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
 [ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
-[ext_resource type="Texture2D" uid="uid://bupwge5b68xe2" path="res://src/ui/books/rulebook/assets/morse-clean1.png" id="3_3h2gt"]
 [ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
 [ext_resource type="Texture2D" uid="uid://dkttrby7w03cm" path="res://src/ui/books/assets/sprites/keyboard_arrow_left.png" id="6_y1w5f"]
@@ -38,7 +37,7 @@ theme = ExtResource("1_h4pn0")
 theme_type_variation = &"RulebookPanel"
 script = ExtResource("2_y32yx")
 pages_parent = NodePath("Pages")
-change_log = [NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/FirstDay"), NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/SecondDay"), NodePath("Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog/ThirdDay"), NodePath("Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FourthDay"), NodePath("Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FifthDay")]
+change_log = [NodePath("Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog/FirstDay"), NodePath("Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog/SecondDay"), NodePath("Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog/ThirdDay"), NodePath("Pages/Page3/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FourthDay"), NodePath("Pages/Page3/PageRight/VBoxContainer2/MarginContainer/ChangeLog/FifthDay")]
 left_page_button = NodePath("Anchor/Left/TextureButton")
 right_page_button = NodePath("Anchor/Right/TextureButton")
 close_button = NodePath("Anchor/Close/TextureButton")
@@ -111,11 +110,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page1/PageRight" unique_id=1303698221]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page1/PageRight" unique_id=1118072132]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=439416690]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1254159526]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -124,40 +123,55 @@ text = "Page 2"
 fit_content = true
 autowrap_mode = 0
 
-[node name="CodeDescription" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1026195951]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1251701542]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "Super Secret Code Map"
+text = "The spy catalogue"
 fit_content = true
 autowrap_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1948858273]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=2104019090]
 layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("3_3h2gt")
-expand_mode = 5
-
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=481632005]
-layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=671703697]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer/MarginContainer" unique_id=304972298]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "[font_size=22]Note: rules are subject to change when needed. Not rights can be attained by looking at this picture."
+text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
+fit_content = true
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=31615973]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("4_fo450")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1410959802]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer/MarginContainer2" unique_id=453123586]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
 fit_content = true
 autowrap_mode = 2
 
 [node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -178,7 +192,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "Page 2"
+text = "Page 3"
 fit_content = true
 autowrap_mode = 0
 
@@ -218,85 +232,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageRight" unique_id=1845704227]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageRight" unique_id=1859638889]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1270876338]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-bbcode_enabled = true
-text = "Page 3"
-fit_content = true
-autowrap_mode = 0
-
-[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1808342163]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-bbcode_enabled = true
-text = "The spy catalogue"
-fit_content = true
-autowrap_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=176598447]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer" unique_id=95655523]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
-fit_content = true
-autowrap_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1193539322]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-texture = ExtResource("4_fo450")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=594292604]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1475997062]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
-fit_content = true
-autowrap_mode = 2
-
-[node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1833457743]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-
-[node name="PageLeft" type="PanelContainer" parent="Pages/Page3" unique_id=1098185818]
-custom_minimum_size = Vector2(450, 700)
-layout_mode = 2
-mouse_filter = 2
-theme = ExtResource("1_h4pn0")
-theme_type_variation = &"PagePanel"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageLeft" unique_id=262888710]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=898307377]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1211283487]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -305,7 +245,7 @@ text = "Page 4"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=459494110]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=31880141]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -314,14 +254,14 @@ text = "Cyphers and more"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=1693878242]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1519533493]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=918462879]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer" unique_id=513002061]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -337,18 +277,23 @@ Atbash works similarly, but by [wave]mirroring[/wave] the alphabet instead! A be
 fit_content = true
 autowrap_mode = 2
 
-[node name="PageRight" type="PanelContainer" parent="Pages/Page3" unique_id=961407434]
+[node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1980311545]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PageLeft" type="PanelContainer" parent="Pages/Page3" unique_id=1492540506]
 custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageRight" unique_id=1764969505]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page3/PageLeft" unique_id=173935737]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=1779876465]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=268540373]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -357,104 +302,7 @@ text = "Page 5"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=428857349]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-bbcode_enabled = true
-text = "More rules"
-fit_content = true
-autowrap_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer" unique_id=983425681]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 0
-
-[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer" unique_id=687014771]
-layout_mode = 2
-
-[node name="FirstDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1996717754]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Day 1:
-• HQ is always an ally.
-"
-fit_content = true
-autowrap_mode = 2
-
-[node name="SecondDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1539460341]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Day 2:
-• Agents needs a good keyword in the message.
-• Caesar shifts increases by 1 for each ally message."
-fit_content = true
-autowrap_mode = 2
-
-[node name="ThirdDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1954808182]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Day 3:
-• Agents use their preffered method of decoding.
-• Agents won't travel from West to East. "
-fit_content = true
-autowrap_mode = 2
-
-[node name="FourthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1144051374]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Day 4:
-• Perform a Caesar decode after the preferred decode. Add as many \"|\" as you hear in the message. "
-fit_content = true
-autowrap_mode = 2
-
-[node name="FifthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=1255939717]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Day 5:
-• There is a traitor among the agents"
-fit_content = true
-autowrap_mode = 2
-
-[node name="DecodeText2" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer/MarginContainer/ChangeLog" unique_id=820215842]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "More cyphers and extra rules will be added tomorrow."
-fit_content = true
-autowrap_mode = 2
-
-[node name="Page4" type="HBoxContainer" parent="Pages" unique_id=1980311545]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-
-[node name="PageLeft" type="PanelContainer" parent="Pages/Page4" unique_id=1492540506]
-custom_minimum_size = Vector2(450, 700)
-layout_mode = 2
-mouse_filter = 2
-theme = ExtResource("1_h4pn0")
-theme_type_variation = &"PagePanel"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page4/PageLeft" unique_id=173935737]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=268540373]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=1683072970]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -463,27 +311,27 @@ text = "Extra Rules"
 fit_content = true
 autowrap_mode = 0
 
-[node name="DecodeText2" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=1539732478]
+[node name="DecodeText2" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=1539732478]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "Every day new rules will be added. A new rule can override an older one."
+text = "[u][wave]Every day[/wave] new rules will be added. A new rule can override an older one."
 fit_content = true
 autowrap_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page4/PageLeft/VBoxContainer" unique_id=560799495]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageLeft/VBoxContainer" unique_id=560799495]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 
-[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer" unique_id=541513272]
+[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer" unique_id=541513272]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="FirstDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1097011958]
+[node name="FirstDay" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1097011958]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -495,7 +343,7 @@ text = "Day 1:
 fit_content = true
 autowrap_mode = 2
 
-[node name="SecondDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1112146053]
+[node name="SecondDay" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1112146053]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -506,7 +354,7 @@ text = "Day 2:
 fit_content = true
 autowrap_mode = 2
 
-[node name="ThirdDay" type="RichTextLabel" parent="Pages/Page4/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1728713689]
+[node name="ThirdDay" type="RichTextLabel" parent="Pages/Page3/PageLeft/VBoxContainer/MarginContainer/ChangeLog" unique_id=1728713689]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -518,18 +366,27 @@ text = "Day 3:
 fit_content = true
 autowrap_mode = 2
 
-[node name="PageRight" type="PanelContainer" parent="Pages/Page4" unique_id=955819679]
+[node name="PageRight" type="PanelContainer" parent="Pages/Page3" unique_id=955819679]
 custom_minimum_size = Vector2(450, 700)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page4/PageRight" unique_id=1973588809]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page3/PageRight" unique_id=1973588809]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2" unique_id=431252720]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer2" unique_id=676029543]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+bbcode_enabled = true
+text = "Page 6"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer2" unique_id=431252720]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -538,18 +395,18 @@ text = "Extra Rules"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page4/PageRight/VBoxContainer2" unique_id=146861052]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page3/PageRight/VBoxContainer2" unique_id=146861052]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 
-[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer" unique_id=152790436]
+[node name="ChangeLog" type="VBoxContainer" parent="Pages/Page3/PageRight/VBoxContainer2/MarginContainer" unique_id=152790436]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="FourthDay" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=403972068]
+[node name="FourthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=403972068]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
@@ -561,7 +418,7 @@ text = "Day 4:
 fit_content = true
 autowrap_mode = 2
 
-[node name="FifthDay" type="RichTextLabel" parent="Pages/Page4/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=1444697969]
+[node name="FifthDay" type="RichTextLabel" parent="Pages/Page3/PageRight/VBoxContainer2/MarginContainer/ChangeLog" unique_id=1444697969]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26

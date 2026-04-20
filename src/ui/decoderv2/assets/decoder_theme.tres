@@ -1,4 +1,18 @@
 [gd_resource type="Theme" format=3 uid="uid://h4kd0cei86lv"]
 
+[ext_resource type="FontFile" uid="uid://cvregxmf5ttbh" path="res://src/ui/decoderv2/assets/Mx437_IBM_VGA_8x16.ttf" id="1_cetuj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e35it"]
+bg_color = Color(0.09239706, 0.09239707, 0.092397, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_detail = 10
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
 [resource]
+default_font = ExtResource("1_cetuj")
 default_font_size = 26
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_e35it")
