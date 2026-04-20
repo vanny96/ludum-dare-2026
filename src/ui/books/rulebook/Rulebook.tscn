@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
 [ext_resource type="Texture2D" uid="uid://c5bmk0y7gkfkj" path="res://src/ui/books/rulebook/assets/buttons.png" id="4_y1w5f"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
+[ext_resource type="Texture2D" uid="uid://co2qqeuxrkft0" path="res://src/ui/books/rulebook/assets/decoder.png" id="5_pnqyo"]
 [ext_resource type="Texture2D" uid="uid://dkttrby7w03cm" path="res://src/ui/books/assets/sprites/keyboard_arrow_left.png" id="6_y1w5f"]
 [ext_resource type="Texture2D" uid="uid://dmejxxwr2bdnb" path="res://src/ui/books/assets/sprites/keyboard_arrow_right.png" id="7_pnqyo"]
 
@@ -93,11 +94,10 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "If you read this, you are chosen to be the next junior spymaster. Take heed of the task at hand:
-[ul] Decode the incoming message using our modern decoding system, found on page 2.
-Determine if the message is from an adversarial spy or not. You can find a list of tips on page 3.
-Document the information where needed.
-Send your determination to the senior spymaster.
-[/ul]
+• Determine if the message is from an adversarial spy or not. You can find a list of tips on page 2.
+• Decode the incoming message using our modern decoding system, found on page 3
+• Document the information where needed.
+• Send your determination to the senior spymaster.
 
 Make sure to do your task diligently. You will be docked pay for every mistake. You need our money more than we need you, so do your task quickly, cheaply and good at the same time.
 "
@@ -150,7 +150,7 @@ text = "Spies are not always your ally. These are some tips to distinguish the e
 Does the encryption seem to fail? Maybe the encryption is not the problem.
 Spies may contact you with a codeword. Be sure to check whether this codeword is actually correct.
 [/ul]
-Once you have made a decision, make a decision"
+Once you're sure, make a decision."
 fit_content = true
 autowrap_mode = 2
 
@@ -162,6 +162,7 @@ texture = ExtResource("4_y1w5f")
 expand_mode = 1
 
 [node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -244,6 +245,7 @@ theme_type_variation = &"PagePanel"
 [node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageRight" unique_id=1859638889]
 layout_mode = 2
 mouse_filter = 2
+theme_override_constants/separation = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1211283487]
 layout_mode = 2
@@ -275,13 +277,34 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "Not all text is what it seems. If the text seems garbled to you, it might be encrypted. These are some cyphers and how to decode them.
+text = "Not all text is what it seems. If the text seems garbled to you, it might be [shake]encrypted[/shake]. These are some cyphers and how to decode them.
+You can use the latest model of our decoding device as an aid in your decryption efforts."
+fit_content = true
+autowrap_mode = 2
 
-[font_size=30]Ceasar[/font_size]
-A caesar cypher modifies text by [wave]shifting[/wave] along an alphabet. For example if A is shifted by 2, it becomes C (a->b->c). To undo this, find a shift that makes the text ungarbled, since any caesar cipher can be undone by just shifting back.
+[node name="TextureRect" type="TextureRect" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1679996933]
+custom_minimum_size = Vector2(220, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_pnqyo")
+expand_mode = 1
 
-[font_size=30]Atbash[/font_size]
-Atbash works similarly, but by [wave]mirroring[/wave] the alphabet instead! A becomes Z, Z becomes A. Use the handy decoder tool to find the correct letters.
+[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page2/PageRight/VBoxContainer" unique_id=1481794360]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageRight/VBoxContainer/MarginContainer2" unique_id=1297809113]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "The tool offers help with translating the 3 most common encryption methods:
+• Caesar: Shifts alphabet by a fixed numeric offset.
+• Atbash: Reverses alphabet; A->Z, B->Y, etc...
+• Vigenere: Uses a keyword to encrypt.
 "
 fit_content = true
 autowrap_mode = 2

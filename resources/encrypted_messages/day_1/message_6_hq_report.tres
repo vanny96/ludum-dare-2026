@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("4_5a221")
 sender = "HQ"
-plain_text = "Previous message was from an enemy. Keep an eye open. Good luck for tomorrow."
+plain_text = "Previous message was from an enemy. Keep your eyes open. Good luck for tomorrow."
 metadata/_custom_type_script = "uid://s70u6m5sxcud"
