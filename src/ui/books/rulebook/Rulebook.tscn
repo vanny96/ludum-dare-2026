@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dydlnfrc4bise" path="res://src/ui/books/assets/theme/book_theme.tres" id="1_h4pn0"]
 [ext_resource type="Script" uid="uid://43hwvq6wp6ga" path="res://src/ui/books/rulebook/rulebook.gd" id="2_y32yx"]
 [ext_resource type="Texture2D" uid="uid://dji5470gjoo7e" path="res://src/ui/books/rulebook/assets/cata.png" id="4_fo450"]
+[ext_resource type="Texture2D" uid="uid://c5bmk0y7gkfkj" path="res://src/ui/books/rulebook/assets/buttons.png" id="4_y1w5f"]
 [ext_resource type="Texture2D" uid="uid://bw1i45pj6lgw1" path="res://src/ui/books/assets/iconCross_blue.png" id="5_b4kyx"]
 [ext_resource type="Texture2D" uid="uid://dkttrby7w03cm" path="res://src/ui/books/assets/sprites/keyboard_arrow_left.png" id="6_y1w5f"]
 [ext_resource type="Texture2D" uid="uid://dmejxxwr2bdnb" path="res://src/ui/books/assets/sprites/keyboard_arrow_right.png" id="7_pnqyo"]
@@ -110,11 +111,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page1/PageRight" unique_id=1118072132]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page1/PageRight" unique_id=413664826]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1254159526]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=805463729]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -123,56 +124,44 @@ text = "Page 2"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1251701542]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=941126160]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "The spy catalogue"
+text = "Verifying spies for dummies"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=2104019090]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1229873343]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer/MarginContainer" unique_id=304972298]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer2/MarginContainer" unique_id=1368408209]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "We (of course) have a list of our own spies, each with their own traits. The catalogue looks like the picture below."
+text = "Spies are not always your ally. These are some tips to distinguish the enemy messages from our very own liars!
+[ul]Trust your instinct! Sometimes the message is just the truth.
+Does the encryption seem to fail? Maybe the encryption is not the problem.
+Spies may contact you with a codeword. Be sure to check whether this codeword is actually correct.
+[/ul]
+Once you have made a decision, make a decision"
 fit_content = true
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=31615973]
-custom_minimum_size = Vector2(0, 200)
+[node name="TextureRect" type="TextureRect" parent="Pages/Page1/PageRight/VBoxContainer2" unique_id=1911106090]
+custom_minimum_size = Vector2(300, 125)
 layout_mode = 2
-texture = ExtResource("4_fo450")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page1/PageRight/VBoxContainer" unique_id=1410959802]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page1/PageRight/VBoxContainer/MarginContainer2" unique_id=453123586]
-layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 26
-bbcode_enabled = true
-text = "Click the [wave][notes][/wave] button to be able to see their details and to be able to document your findings."
-fit_content = true
-autowrap_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_y1w5f")
+expand_mode = 1
 
 [node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -184,11 +173,11 @@ mouse_filter = 2
 theme = ExtResource("1_h4pn0")
 theme_type_variation = &"PagePanel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page2/PageLeft" unique_id=575457465]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pages/Page2/PageLeft" unique_id=485408705]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=924667756]
+[node name="RichTextLabel" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer2" unique_id=726140143]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -197,32 +186,51 @@ text = "Page 3"
 fit_content = true
 autowrap_mode = 0
 
-[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=1262004685]
+[node name="VSFD" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer2" unique_id=1739231473]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "Verifying spies for dummies"
+text = "The spy catalogue"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageLeft/VBoxContainer" unique_id=1746270164]
+[node name="MarginContainer" type="MarginContainer" parent="Pages/Page2/PageLeft/VBoxContainer2" unique_id=1387362784]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer/MarginContainer" unique_id=373947129]
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer2/MarginContainer" unique_id=270595748]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "Spies are not always your ally. These are some tips to distinguish the enemy messages from our very own liars!
-[ul]Trust your instinct! Sometimes the message is just the truth.
-Location, location, location! Check whether they are able to be where they claim they are.
-Does the encryption seem to fail? Maybe the encryption is not the problem.
-Spies may contact  you with a codeword. Be sure to check whether this codeword is actually correct."
+text = "We (of course) have a list of our own spies, each with their own traits. The catalogue looks like the picture below."
+fit_content = true
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Pages/Page2/PageLeft/VBoxContainer2" unique_id=126317969]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("4_fo450")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Pages/Page2/PageLeft/VBoxContainer2" unique_id=2000012855]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="DecodeText" type="RichTextLabel" parent="Pages/Page2/PageLeft/VBoxContainer2/MarginContainer2" unique_id=2137376855]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Click the [wave][notes][/wave] button to be able to see their details and to be able to document your findings."
 fit_content = true
 autowrap_mode = 2
 
