@@ -45,7 +45,7 @@ func play_day(day: DailyMessages):
 
 func play_message(message: EncryptedMessage):
 	submit_buttons.set_disabled(true)
-	await computer.play_message("INCOMING %s MESSAGE...\n\n" % message.sender)
+	await computer.play_message("INCOMING MESSAGE FROM %s...\n\n" % message.sender)
 	await computer.play_message(message.get_encrypted_message())
 	submit_buttons.set_disabled(false)
 	
