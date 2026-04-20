@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://c12aylqpvesix" path="res://src/data/daily_messages.gd" id="2_ijd1l"]
 [ext_resource type="PackedScene" uid="uid://cytnhn07d8yx3" path="res://src/ui/signal/signal.tscn" id="2_osde3"]
 [ext_resource type="Resource" uid="uid://cnffi30n6hsfn" path="res://resources/encrypted_messages/day_1.tres" id="3_7vusn"]
-[ext_resource type="PackedScene" uid="uid://b1wuuay28w42i" path="res://src/ui/buttons/buttons.tscn" id="3_osde3"]
 [ext_resource type="PackedScene" uid="uid://dpjpgk3ukisng" path="res://src/ui/computer/Computer.tscn" id="4_047u2"]
 [ext_resource type="Resource" uid="uid://5o0ehsj4tdpg" path="res://resources/encrypted_messages/day_2.tres" id="4_wsdsm"]
 [ext_resource type="Resource" uid="uid://dgqiltax0ie8a" path="res://resources/encrypted_messages/day_3.tres" id="5_cr6s4"]
@@ -76,14 +75,6 @@ offset_bottom = 846.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Next" type="Button" parent="." unique_id=917125478]
-visible = false
-offset_left = 435.0
-offset_top = 865.0
-offset_right = 735.0
-offset_bottom = 905.0
-text = "Next"
-
 [node name="Catalogue" parent="." unique_id=234251754 instance=ExtResource("16_wwvri")]
 offset_left = 2959.0
 offset_top = 91.0
@@ -117,17 +108,6 @@ grow_vertical = 0
 size_flags_vertical = 8
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1028572295]
-
-[node name="Buttons" parent="UI" unique_id=2035185175 instance=ExtResource("3_osde3")]
-visible = false
-anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.9
-anchor_right = 0.4
-anchor_bottom = 0.9
-offset_right = 0.0
-offset_bottom = 0.0
-grow_vertical = 0
 
 [node name="Rulebook" parent="UI" unique_id=1129416725 instance=ExtResource("14_b2esr")]
 visible = false

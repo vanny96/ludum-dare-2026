@@ -144,7 +144,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "We (of course) have a list of our own spies. The catalogue looks like the picture below."
+text = "We (of course) have a list of our own spies, each with their own traits. The catalogue looks like the picture below."
 fit_content = true
 autowrap_mode = 2
 
@@ -167,11 +167,12 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "Click the [wave][notes][/wave] button to be able to see their codewords and to be able to document your findings. The [wave]pin[/wave] allows you to put their latest known location on the world map."
+text = "Click the [wave][notes][/wave] button to be able to see their details and to be able to document your findings."
 fit_content = true
 autowrap_mode = 2
 
 [node name="Page2" type="HBoxContainer" parent="Pages" unique_id=854456512]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -278,6 +279,7 @@ fit_content = true
 autowrap_mode = 2
 
 [node name="Page3" type="HBoxContainer" parent="Pages" unique_id=1980311545]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2

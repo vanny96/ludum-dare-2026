@@ -5,7 +5,6 @@ class_name Game extends Node2D
 ]
 
 @onready var computer: Computer = $Computer
-@onready var buttons: MorseButtons = $UI/Buttons
 @onready var submit_buttons: SubmitButtons = $SubmitButtons
 @onready var left: BaseButton = $UI/Left
 @onready var right: BaseButton = $UI/Right
